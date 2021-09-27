@@ -43,7 +43,6 @@ public class ViewModeSwap : MonoBehaviour
 
     public void EnterFullView()
     {
-        Debug.Log("SAS");
         if (camera1.activeInHierarchy)
         {
             lastCamCounter = 1;
@@ -113,8 +112,6 @@ public class ViewModeSwap : MonoBehaviour
 
     public void ExitFullView()
     {
-        Debug.Log("SNE");
-
         fullView = false;
 
         if (lastCamCounter == 1)

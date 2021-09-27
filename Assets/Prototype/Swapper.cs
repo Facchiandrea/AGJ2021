@@ -4,24 +4,44 @@ using UnityEngine;
 
 public class Swapper : MonoBehaviour
 {
-    public float distance = 50f;
+    public ViewModeSwap viewModeSwap;
+    private Transform _selection;
+    public Sprite notSelectedSprite;
+    public Sprite selectedSprite;
+
+
 
     void FixedUpdate()
     {
-        //if mouse button (left hand side) pressed instantiate a raycast
-        if (Input.GetMouseButtonDown(0))
-        {
-            //create a ray cast and set it to the mouses cursor position in game
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, distance))
-            {
-                //draw invisible ray cast/vector
-                Debug.DrawLine(ray.origin, hit.point);
-                //log hit area to the console
-                Debug.Log(hit.point);
 
-            }
+        if (_selection != null)
+        {
+            var selectionRenderer = _selection.GetComponent<SpriteRenderer>();
+            selectionRenderer.sprite = notSelectedSprite;
+            _selection = null;
         }
+
+        int layerMask = 1 << 8;
+        Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, layerMask);
+        var selection = cubeHit.transform;
+
+        if (cubeHit && cubeHit.collider.CompareTag("Painting"))
+        {
+            Debug.Log("We hit " + cubeHit.collider.name);
+            var selectionRenderer = selection.GetComponent<SpriteRenderer>();
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("Funge");
+            }
+            if (selectionRenderer != null)
+            {
+                selectionRenderer.sprite = selectedSprite;
+            }
+
+
+        }
+        _selection = selection;
     }
 }
