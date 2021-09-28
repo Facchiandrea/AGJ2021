@@ -14,6 +14,11 @@ public class Swapper : MonoBehaviour
     public Transform selectedPaint1;
     public Transform selectedPaint2;
 
+    public bool OnPaintSelected;
+    public bool PaintHovered;
+
+    public Transform selection;
+
     private void Start()
     {
         selectionCounter = 0;
@@ -28,58 +33,42 @@ public class Swapper : MonoBehaviour
             Swap();
         }
 
+        if (_selection != null)
+        {
+            var selectionRenderer = _selection.GetComponent<SpriteRenderer>();
+            selectionRenderer.sprite = notSelectedSprite;
+            _selection = null;
+            PaintHovered = false;
+            OnPaintSelected = false;
+        }
 
         if (viewModeSwap.fullView)
         {
 
-            if (_selection != null)
-            {
-                var selectionRenderer = _selection.GetComponent<SpriteRenderer>();
-                selectionRenderer.sprite = notSelectedSprite;
-                _selection = null;
-            }
 
             int layerMask = 1 << 8 | 1 << 9;
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, layerMask);
-            var selection = cubeHit.transform;
+            selection = cubeHit.transform;
 
             if (cubeHit && cubeHit.collider.CompareTag("SelectedPainting"))
             {
                 Debug.Log("We hit " + cubeHit.collider.name);
-                if (Input.GetMouseButtonDown(0) && selectionCounter == 1)
+                if (OnPaintSelected == false)
                 {
-                    selectionCounter--;
-                    selectedPaint1.root.tag = "Painting";
-                    selectedPaint1.GetChild(0).gameObject.SetActive(false);
+                    OnPaintSelected = true;
                 }
             }
 
             else if (cubeHit && cubeHit.collider.CompareTag("Painting"))
             {
                 Debug.Log("We hit " + cubeHit.collider.name);
-                var selectionRenderer = selection.GetComponent<SpriteRenderer>();
-
-                if (Input.GetMouseButtonDown(0))
+                if (PaintHovered == false)
                 {
-                    if (selectionCounter == 0)
-                    {
-                        Debug.Log("Funge");
-                        cubeHit.collider.transform.root.tag = "SelectedPainting";
-                        cubeHit.collider.transform.GetChild(0).gameObject.SetActive(true);
-                        selectionCounter++;
-                        selectedPaint1 = cubeHit.transform;
-
-                    }
-                    else if (selectionCounter == 1)
-                    {
-                        Debug.Log("Funge");
-                        cubeHit.collider.transform.root.tag = "SelectedPainting";
-                        cubeHit.collider.transform.GetChild(0).gameObject.SetActive(true);
-                        selectionCounter++;
-                        selectedPaint2 = cubeHit.transform;
-                    }
+                    PaintHovered = true;
                 }
+
+                var selectionRenderer = selection.GetComponent<SpriteRenderer>();
 
                 if (selectionRenderer != null)
                 {
@@ -90,8 +79,40 @@ public class Swapper : MonoBehaviour
             }
             _selection = selection;
 
-
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && selectionCounter == 1 && OnPaintSelected)
+        {
+            selectionCounter--;
+            selectedPaint1.root.tag = "Painting";
+            selectedPaint1.GetChild(0).gameObject.SetActive(false);
+        }
+
+        if (Input.GetMouseButtonDown(0) && PaintHovered)
+        {
+            if (selectionCounter == 0)
+            {
+                Debug.Log("Funge");
+                selection.root.tag = "SelectedPainting";
+                selection.GetChild(0).gameObject.SetActive(true);
+                selectionCounter++;
+                selectedPaint1 = selection.transform;
+
+            }
+            else if (selectionCounter == 1)
+            {
+                Debug.Log("Funge");
+                selection.root.tag = "SelectedPainting";
+                selection.GetChild(0).gameObject.SetActive(true);
+                selectionCounter++;
+                selectedPaint2 = selection.transform;
+            }
+        }
+
+
     }
     public void Swap()
     {
