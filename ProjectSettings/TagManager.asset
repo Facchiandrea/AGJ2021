@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Painting
   - SelectedPainting
+  - Activator
   layers:
   - Default
   - TransparentFX
