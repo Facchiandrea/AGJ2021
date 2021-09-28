@@ -45,8 +45,7 @@ public class Swapper : MonoBehaviour
         if (viewModeSwap.fullView)
         {
 
-
-            int layerMask = 1 << 8 | 1 << 9;
+            int layerMask = 1 << 8;
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, layerMask);
             selection = cubeHit.transform;
