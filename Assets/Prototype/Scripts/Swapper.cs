@@ -52,7 +52,6 @@ public class Swapper : MonoBehaviour
 
             if (cubeHit && cubeHit.collider.CompareTag("SelectedPainting"))
             {
-                Debug.Log("We hit " + cubeHit.collider.name);
                 if (OnPaintSelected == false)
                 {
                     OnPaintSelected = true;
@@ -61,7 +60,6 @@ public class Swapper : MonoBehaviour
 
             else if (cubeHit && cubeHit.collider.CompareTag("Painting"))
             {
-                Debug.Log("We hit " + cubeHit.collider.name);
                 if (PaintHovered == false)
                 {
                     PaintHovered = true;
@@ -94,7 +92,6 @@ public class Swapper : MonoBehaviour
         {
             if (selectionCounter == 0)
             {
-                Debug.Log("Funge");
                 selection.root.tag = "SelectedPainting";
                 selection.GetChild(0).gameObject.SetActive(true);
                 selectionCounter++;
@@ -103,7 +100,6 @@ public class Swapper : MonoBehaviour
             }
             else if (selectionCounter == 1)
             {
-                Debug.Log("Funge");
                 selection.root.tag = "SelectedPainting";
                 selection.GetChild(0).gameObject.SetActive(true);
                 selectionCounter++;

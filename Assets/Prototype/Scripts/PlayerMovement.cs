@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
+    SpriteRenderer spriteRenderer;
     public float movementSpeed = 2f;
     float horizontalMovement = 0f;
     public ViewModeSwap viewModeSwap;
@@ -13,20 +14,28 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void FixedUpdate()
     {
         if (viewModeSwap.fullView == false)
         {
-            horizontalMovement = Input.GetAxis("Horizontal");
+            horizontalMovement = Input.GetAxisRaw("Horizontal");
             if (horizontalMovement > 0f)
             {
                 rb.velocity = new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
+                spriteRenderer.flipX = false;
             }
-            if (horizontalMovement < 0f)
+            else if (horizontalMovement < 0f)
             {
                 rb.velocity = new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
+                spriteRenderer.flipX = true;
             }
+            else
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
+
         }
 
     }

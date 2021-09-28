@@ -26,7 +26,6 @@ public class ItemSelection : MonoBehaviour
             if (cubeHit)
             {
                 selection = cubeHit.transform;
-                Debug.Log("SNE");
                 selection.GetChild(0).gameObject.SetActive(true);
 
                 _selectionItem = selection;
