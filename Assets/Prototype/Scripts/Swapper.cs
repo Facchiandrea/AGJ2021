@@ -21,6 +21,20 @@ public class Swapper : MonoBehaviour
 
     public bool transition = false;
 
+    public GameObject barriersPaint1;
+    public GameObject barriersPaint2;
+    public GameObject barriersPaint3;
+    public GameObject barriersPaint4;
+    public GameObject barriersPaint5;
+    public GameObject barriersPaint6;
+    public GameObject barriersPaint7;
+    public GameObject barriersPaint8;
+    public GameObject barriersPaint9;
+    public GameObject barriersPaint10;
+    public GameObject barriersPaint11;
+    public GameObject barriersPaint12;
+
+
     private void Start()
     {
         selectionCounter = 0;
@@ -156,6 +170,8 @@ public class Swapper : MonoBehaviour
         selectedPaint1 = null;
         selectedPaint2 = null;
 
+        ResetBarriers();
+
     }
     public void FadeIn()
     {
@@ -169,6 +185,58 @@ public class Swapper : MonoBehaviour
 
         selectedPaint1.GetChild(2).gameObject.SetActive(true);
         selectedPaint2.GetChild(2).gameObject.SetActive(true);
+
+    }
+
+    public void ResetBarriers()
+    {
+        barriersPaint1.SetActive(true);
+        barriersPaint1.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint1.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint2.SetActive(true);
+        barriersPaint2.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint2.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint3.SetActive(true);
+        barriersPaint3.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint3.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint4.SetActive(true);
+        barriersPaint4.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint4.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint5.SetActive(true);
+        barriersPaint5.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint5.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint6.SetActive(true);
+        barriersPaint6.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint6.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint7.SetActive(true);
+        barriersPaint7.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint7.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint8.SetActive(true);
+        barriersPaint8.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint8.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint9.SetActive(true);
+        barriersPaint9.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint9.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint10.SetActive(true);
+        barriersPaint10.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint10.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint11.SetActive(true);
+        barriersPaint11.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint11.transform.GetChild(1).gameObject.SetActive(true);
+
+        barriersPaint12.SetActive(true);
+        barriersPaint12.transform.GetChild(0).gameObject.SetActive(true);
+        barriersPaint12.transform.GetChild(1).gameObject.SetActive(true);
 
     }
 }

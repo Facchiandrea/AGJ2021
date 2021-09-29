@@ -37,7 +37,7 @@ public class PaintSpace12 : MonoBehaviour
             camera11.SetActive(false);
             camera12.SetActive(false);
 
-            Painting12.transform.GetChild(3).gameObject.SetActive(false);
+            //Painting12.transform.GetChild(3).gameObject.SetActive(false);
 
         }
     }
@@ -46,7 +46,7 @@ public class PaintSpace12 : MonoBehaviour
     {
         if (collision.CompareTag("Activator"))
         {
-            Painting12.transform.GetChild(3).gameObject.SetActive(true);
+            //Painting12.transform.GetChild(3).gameObject.SetActive(true);
         }
     }
 

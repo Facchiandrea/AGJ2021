@@ -49,7 +49,7 @@ public class PaintSpace8 : MonoBehaviour
 
             playerIn = true;
 
-            tempPainting.transform.GetChild(3).gameObject.SetActive(false);
+            //tempPainting.transform.GetChild(3).gameObject.SetActive(false);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -68,7 +68,7 @@ public class PaintSpace8 : MonoBehaviour
             tempPainting.gameObject.tag = "Painting";
 
             playerIn = false;
-            tempPainting.transform.GetChild(3).gameObject.SetActive(true);
+            //tempPainting.transform.GetChild(3).gameObject.SetActive(true);
 
         }
     }

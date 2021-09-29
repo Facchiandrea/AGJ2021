@@ -9,6 +9,7 @@ TagManager:
   - Activator
   - Item
   - BlockedPainting
+  - Barrier
   layers:
   - Default
   - TransparentFX

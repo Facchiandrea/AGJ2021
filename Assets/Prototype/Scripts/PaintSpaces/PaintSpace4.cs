@@ -37,7 +37,7 @@ public class PaintSpace4 : MonoBehaviour
             camera11.SetActive(false);
             camera12.SetActive(false);
 
-            Painting4.transform.GetChild(3).gameObject.SetActive(false);
+            //Painting4.transform.GetChild(3).gameObject.SetActive(false);
 
         }
     }
@@ -46,7 +46,7 @@ public class PaintSpace4 : MonoBehaviour
     {
         if (collision.CompareTag("Activator"))
         {
-            Painting4.transform.GetChild(3).gameObject.SetActive(true);
+            //Painting4.transform.GetChild(3).gameObject.SetActive(true);
         }
     }
 

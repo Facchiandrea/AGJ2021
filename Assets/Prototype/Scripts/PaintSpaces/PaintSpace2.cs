@@ -46,7 +46,7 @@ public class PaintSpace2 : MonoBehaviour
             camera12.SetActive(false);
 
             playerIn = true;
-            tempPainting.transform.GetChild(3).gameObject.SetActive(false);
+            // tempPainting.transform.GetChild(3).gameObject.SetActive(false);
 
         }
 
@@ -67,7 +67,7 @@ public class PaintSpace2 : MonoBehaviour
             tempPainting.gameObject.tag = "Painting";
 
             playerIn = false;
-            tempPainting.transform.GetChild(3).gameObject.SetActive(true);
+            // tempPainting.transform.GetChild(3).gameObject.SetActive(true);
 
         }
     }

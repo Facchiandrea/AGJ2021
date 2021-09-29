@@ -46,7 +46,7 @@ public class PaintSpace3 : MonoBehaviour
             camera12.SetActive(false);
 
             playerIn = true;
-            tempPainting.transform.GetChild(3).gameObject.SetActive(false);
+            //tempPainting.transform.GetChild(3).gameObject.SetActive(false);
 
         }
 
@@ -55,7 +55,7 @@ public class PaintSpace3 : MonoBehaviour
     {
         if (collision.CompareTag("Painting"))
         {
-            tempPainting = collision.gameObject;
+            //tempPainting = collision.gameObject;
         }
 
     }
