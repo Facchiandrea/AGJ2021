@@ -54,7 +54,7 @@ public class PaintSpace7 : MonoBehaviour
     {
         if (collision.CompareTag("Painting"))
         {
-            tempPainting.gameObject.tag = "Painting";
+            tempPainting = collision.gameObject;
         }
 
     }
@@ -63,8 +63,7 @@ public class PaintSpace7 : MonoBehaviour
     {
         if (collision.CompareTag("Activator"))
         {
-            this.gameObject.transform.root.tag = "Painting";
-            Debug.Log("playeruscito");
+            tempPainting.gameObject.tag = "Painting";
 
             playerIn = false;
         }
