@@ -6,7 +6,7 @@ public class ItemSelection : MonoBehaviour
 {
     public ViewModeSwap viewModeSwap;
     private Transform _selectionItem;
-    private Transform selection;
+    public Transform selection;
 
 
     private void FixedUpdate()
@@ -15,19 +15,19 @@ public class ItemSelection : MonoBehaviour
         {
             selection.GetChild(0).gameObject.SetActive(false);
             _selectionItem = null;
+            selection = null;
         }
 
-        if (viewModeSwap.fullView == false)
+        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
         {
             int layerMask = LayerMask.GetMask("ObjectsLayer");
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, 1000f, layerMask);
 
-            if (cubeHit)
+            if (cubeHit && cubeHit.transform.CompareTag("Item"))
             {
                 selection = cubeHit.transform;
                 selection.GetChild(0).gameObject.SetActive(true);
-
                 _selectionItem = selection;
             }
 

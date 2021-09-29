@@ -19,6 +19,8 @@ public class Swapper : MonoBehaviour
 
     public Transform selection;
 
+    public bool transition = false;
+
     private void Start()
     {
         selectionCounter = 0;
@@ -28,9 +30,10 @@ public class Swapper : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (selectionCounter == 2)
+        if (selectionCounter == 2 && transition == false)
         {
-            Swap();
+            StartSwap();
+            transition = true;
         }
 
         if (_selection != null)
@@ -42,7 +45,7 @@ public class Swapper : MonoBehaviour
             OnPaintSelected = false;
         }
 
-        if (viewModeSwap.fullView)
+        if (viewModeSwap.fullView && transition == false)
         {
 
             int layerMask = 1 << 8;
@@ -50,7 +53,7 @@ public class Swapper : MonoBehaviour
             RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, 1000f, layerMask);
             selection = cubeHit.transform;
 
-            if (cubeHit && cubeHit.collider.CompareTag("SelectedPainting"))
+            if (cubeHit && cubeHit.collider.transform.root.CompareTag("SelectedPainting"))
             {
                 if (OnPaintSelected == false)
                 {
@@ -58,8 +61,9 @@ public class Swapper : MonoBehaviour
                 }
             }
 
-            else if (cubeHit && cubeHit.collider.CompareTag("Painting"))
+            else if (cubeHit && cubeHit.collider.transform.root.CompareTag("Painting"))
             {
+
                 if (PaintHovered == false)
                 {
                     PaintHovered = true;
@@ -81,18 +85,28 @@ public class Swapper : MonoBehaviour
 
     private void Update()
     {
+        if (viewModeSwap.fullView == false && selectedPaint1 != null)
+        {
+            selectedPaint1.GetChild(0).gameObject.SetActive(false);
+            selectedPaint1.gameObject.tag = "Painting";
+            selectedPaint1 = null;
+            selectionCounter = 0;
+        }
+
         if (Input.GetMouseButtonDown(0) && selectionCounter == 1 && OnPaintSelected)
         {
             selectionCounter--;
-            selectedPaint1.root.tag = "Painting";
+            selectedPaint1.transform.gameObject.tag = "Painting";
             selectedPaint1.GetChild(0).gameObject.SetActive(false);
+            OnPaintSelected = false;
+            selectedPaint1 = null;
         }
 
         if (Input.GetMouseButtonDown(0) && PaintHovered)
         {
             if (selectionCounter == 0)
             {
-                selection.root.tag = "SelectedPainting";
+                selection.transform.gameObject.tag = "SelectedPainting";
                 selection.GetChild(0).gameObject.SetActive(true);
                 selectionCounter++;
                 selectedPaint1 = selection.transform;
@@ -100,7 +114,7 @@ public class Swapper : MonoBehaviour
             }
             else if (selectionCounter == 1)
             {
-                selection.root.tag = "SelectedPainting";
+                selection.transform.gameObject.tag = "SelectedPainting";
                 selection.GetChild(0).gameObject.SetActive(true);
                 selectionCounter++;
                 selectedPaint2 = selection.transform;
@@ -109,16 +123,52 @@ public class Swapper : MonoBehaviour
 
 
     }
-    public void Swap()
+    public void StartSwap()
     {
         selectedPaint1.GetChild(0).gameObject.SetActive(false);
         selectedPaint2.GetChild(0).gameObject.SetActive(false);
 
+        FadeIn();
+        Invoke("FadeOut", 1f);
+        Invoke("Swap", 1f);
+        Invoke("EndSwap", 2f);
+
+
+    }
+    public void Swap()
+    {
         Vector3 tempPosition = selectedPaint1.transform.position;
         selectedPaint1.transform.position = selectedPaint2.transform.position;
         selectedPaint2.transform.position = tempPosition;
+    }
+
+    public void EndSwap()
+    {
+        selectedPaint1.GetChild(2).gameObject.SetActive(false);
+        selectedPaint2.GetChild(2).gameObject.SetActive(false);
+
+
         selectionCounter = 0;
-        selectedPaint1.root.tag = "Painting";
-        selectedPaint2.root.tag = "Painting";
+        selectedPaint1.transform.gameObject.tag = "Painting";
+        selectedPaint2.transform.gameObject.tag = "Painting";
+        transition = false;
+
+        selectedPaint1 = null;
+        selectedPaint2 = null;
+
+    }
+    public void FadeIn()
+    {
+        selectedPaint1.GetChild(1).gameObject.SetActive(true);
+        selectedPaint2.GetChild(1).gameObject.SetActive(true);
+    }
+    public void FadeOut()
+    {
+        selectedPaint1.GetChild(1).gameObject.SetActive(false);
+        selectedPaint2.GetChild(1).gameObject.SetActive(false);
+
+        selectedPaint1.GetChild(2).gameObject.SetActive(true);
+        selectedPaint2.GetChild(2).gameObject.SetActive(true);
+
     }
 }

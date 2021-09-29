@@ -19,7 +19,7 @@ public class PaintSpace7 : MonoBehaviour
 
     public GameObject tempPainting;
 
-    private bool playerIn;
+    public bool playerIn;
 
     private void Update()
     {
@@ -27,10 +27,7 @@ public class PaintSpace7 : MonoBehaviour
         {
             tempPainting.tag = "Untagged";
         }
-        else if (tempPainting != null)
-        {
-            tempPainting.tag = "Painting";
-        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -52,10 +49,14 @@ public class PaintSpace7 : MonoBehaviour
             playerIn = true;
         }
 
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if (collision.CompareTag("Painting"))
         {
-            tempPainting = collision.gameObject;
+            tempPainting.gameObject.tag = "Painting";
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -63,6 +64,7 @@ public class PaintSpace7 : MonoBehaviour
         if (collision.CompareTag("Activator"))
         {
             this.gameObject.transform.root.tag = "Painting";
+            Debug.Log("playeruscito");
 
             playerIn = false;
         }

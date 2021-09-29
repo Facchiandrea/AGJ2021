@@ -19,25 +19,62 @@ public class ViewModeSwap : MonoBehaviour
     public GameObject fullViewCam;
     private int lastCamCounter;
 
+
+    public Swapper swapper;
+
     [HideInInspector]
     public bool fullView;
+
+
+    public bool transitionToSingle = false;
+    public bool transitionToFull = false;
+    private float timerCameraTransition;
+    private float timer;
 
     private void Start()
     {
         fullView = false;
         lastCamCounter = 1;
+        timer = 0;
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && fullView == false)
+        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false)
         {
             EnterFullView();
+            transitionToFull = true;
+            transitionToSingle = false;
+
         }
 
-        else if (Input.GetKeyDown(KeyCode.V) && fullView == true)
+        else if (Input.GetKeyDown(KeyCode.V) && fullView == true && swapper.transition == false)
         {
             ExitFullView();
+            transitionToSingle = true;
+            transitionToFull = false;
+
         }
+
+        if (transitionToFull == true)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 2)
+            {
+                timer = 2;
+                transitionToFull = false;
+            }
+        }
+
+        if (transitionToSingle == true)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                timer = 0;
+                transitionToSingle = false;
+            }
+        }
+
 
     }
 
