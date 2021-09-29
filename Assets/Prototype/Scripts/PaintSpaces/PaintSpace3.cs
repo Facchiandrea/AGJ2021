@@ -55,7 +55,7 @@ public class PaintSpace3 : MonoBehaviour
     {
         if (collision.CompareTag("Painting"))
         {
-            //tempPainting = collision.gameObject;
+            tempPainting = collision.gameObject;
         }
 
     }
@@ -67,7 +67,7 @@ public class PaintSpace3 : MonoBehaviour
             tempPainting.gameObject.tag = "Painting";
 
             playerIn = false;
-            tempPainting.transform.GetChild(3).gameObject.SetActive(true);
+            //tempPainting.transform.GetChild(3).gameObject.SetActive(true);
 
         }
     }
