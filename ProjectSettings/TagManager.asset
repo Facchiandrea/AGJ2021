@@ -10,6 +10,7 @@ TagManager:
   - Item
   - BlockedPainting
   - Barrier
+  - InactiveItem
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,7 @@ public class PaintSpace3 : MonoBehaviour
 
     public bool playerIn;
 
+
     private void Update()
     {
         if (playerIn && tempPainting != null)
@@ -49,7 +50,6 @@ public class PaintSpace3 : MonoBehaviour
             //tempPainting.transform.GetChild(3).gameObject.SetActive(false);
 
         }
-
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
