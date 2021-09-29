@@ -8,6 +8,7 @@ TagManager:
   - SelectedPainting
   - Activator
   - Item
+  - BlockedPainting
   layers:
   - Default
   - TransparentFX

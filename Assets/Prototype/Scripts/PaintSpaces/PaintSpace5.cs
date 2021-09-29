@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintSpace11 : MonoBehaviour
+public class PaintSpace5 : MonoBehaviour
 {
     public GameObject camera1;
     public GameObject camera2;
@@ -36,17 +36,20 @@ public class PaintSpace11 : MonoBehaviour
             camera2.SetActive(false);
             camera3.SetActive(false);
             camera4.SetActive(false);
-            camera5.SetActive(false);
+            camera5.SetActive(true);
             camera6.SetActive(false);
             camera7.SetActive(false);
             camera8.SetActive(false);
             camera9.SetActive(false);
             camera10.SetActive(false);
-            camera11.SetActive(true);
+            camera11.SetActive(false);
             camera12.SetActive(false);
 
             playerIn = true;
+            tempPainting.transform.GetChild(3).gameObject.SetActive(false);
+
         }
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -64,6 +67,8 @@ public class PaintSpace11 : MonoBehaviour
             tempPainting.gameObject.tag = "Painting";
 
             playerIn = false;
+            tempPainting.transform.GetChild(3).gameObject.SetActive(true);
+
         }
     }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintSpace1 : MonoBehaviour
+public class PaintSpace4 : MonoBehaviour
 {
     public GameObject camera1;
     public GameObject camera2;
@@ -17,14 +17,17 @@ public class PaintSpace1 : MonoBehaviour
     public GameObject camera11;
     public GameObject camera12;
 
+    public GameObject Painting4;
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Activator"))
         {
-            camera1.SetActive(true);
+            camera1.SetActive(false);
             camera2.SetActive(false);
             camera3.SetActive(false);
-            camera4.SetActive(false);
+            camera4.SetActive(true);
             camera5.SetActive(false);
             camera6.SetActive(false);
             camera7.SetActive(false);
@@ -33,6 +36,18 @@ public class PaintSpace1 : MonoBehaviour
             camera10.SetActive(false);
             camera11.SetActive(false);
             camera12.SetActive(false);
+
+            Painting4.transform.GetChild(3).gameObject.SetActive(false);
+
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Activator"))
+        {
+            Painting4.transform.GetChild(3).gameObject.SetActive(true);
+        }
+    }
+
 }

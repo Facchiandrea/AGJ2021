@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintSpace7 : MonoBehaviour
+public class PaintSpace1 : MonoBehaviour
 {
     public GameObject camera1;
     public GameObject camera2;
@@ -17,55 +17,36 @@ public class PaintSpace7 : MonoBehaviour
     public GameObject camera11;
     public GameObject camera12;
 
-    public GameObject tempPainting;
+    public GameObject Painting1;
 
-    public bool playerIn;
 
-    private void Update()
-    {
-        if (playerIn && tempPainting != null)
-        {
-            tempPainting.tag = "Untagged";
-        }
-
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Activator"))
         {
-            camera1.SetActive(false);
+            camera1.SetActive(true);
             camera2.SetActive(false);
             camera3.SetActive(false);
             camera4.SetActive(false);
             camera5.SetActive(false);
             camera6.SetActive(false);
-            camera7.SetActive(true);
+            camera7.SetActive(false);
             camera8.SetActive(false);
             camera9.SetActive(false);
             camera10.SetActive(false);
             camera11.SetActive(false);
             camera12.SetActive(false);
 
-            playerIn = true;
-        }
+            Painting1.transform.GetChild(3).gameObject.SetActive(false);
 
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Painting"))
-        {
-            tempPainting = collision.gameObject;
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Activator"))
         {
-            tempPainting.gameObject.tag = "Painting";
-
-            playerIn = false;
+            Painting1.transform.GetChild(3).gameObject.SetActive(true);
         }
     }
 

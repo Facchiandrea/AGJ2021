@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintSpace5 : MonoBehaviour
+public class PaintSpace7 : MonoBehaviour
 {
     public GameObject camera1;
     public GameObject camera2;
@@ -27,6 +27,7 @@ public class PaintSpace5 : MonoBehaviour
         {
             tempPainting.tag = "Untagged";
         }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,9 +37,9 @@ public class PaintSpace5 : MonoBehaviour
             camera2.SetActive(false);
             camera3.SetActive(false);
             camera4.SetActive(false);
-            camera5.SetActive(true);
+            camera5.SetActive(false);
             camera6.SetActive(false);
-            camera7.SetActive(false);
+            camera7.SetActive(true);
             camera8.SetActive(false);
             camera9.SetActive(false);
             camera10.SetActive(false);
@@ -46,6 +47,8 @@ public class PaintSpace5 : MonoBehaviour
             camera12.SetActive(false);
 
             playerIn = true;
+            tempPainting.transform.GetChild(3).gameObject.SetActive(false);
+
         }
 
     }
@@ -65,6 +68,8 @@ public class PaintSpace5 : MonoBehaviour
             tempPainting.gameObject.tag = "Painting";
 
             playerIn = false;
+            tempPainting.transform.GetChild(3).gameObject.SetActive(true);
+
         }
     }
 
