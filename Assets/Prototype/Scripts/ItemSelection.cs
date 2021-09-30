@@ -33,4 +33,28 @@ public class ItemSelection : MonoBehaviour
 
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (selection != null)
+            {
+                if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == true)
+                {
+                    selection.GetComponent<PickUpCasco>().PickUpUIGraphics.SetActive(true);
+                    selection.GetComponent<PickUpCasco>().PickUpGraphics.SetActive(false);
+
+                    selection.gameObject.SetActive(false);
+                    Debug.Log("Hai raccolto il casco");
+
+                }
+                else if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == false)
+                {
+                    Debug.Log("E' un casco da astronauta");
+                }
+
+            }
+        }
+    }
 }

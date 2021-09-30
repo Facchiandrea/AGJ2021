@@ -27,14 +27,19 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if (NPCInteractor.selection != null)
         {
-            if (NPCInteractor.selection.name == "NPC TEST" && this.gameObject.name == "OGGETTO TEST")
+            if (NPCInteractor.selection.name == "RagazzoCheVuoleIlCasco" && this.gameObject.name == "CascoUI")
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                NPCInteractor.cascoPortato = true;
+                Debug.Log("Casco consegnato!");
+
             }
             else
             {
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;
             }
+
+            //if else degli altri npc
         }
         else
         {

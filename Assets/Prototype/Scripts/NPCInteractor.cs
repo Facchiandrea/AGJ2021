@@ -8,6 +8,8 @@ public class NPCInteractor : MonoBehaviour
     private Transform _selectionItem;
     public Transform selection;
 
+    public PickUpCasco pickUpCascoScript;
+    public bool cascoPortato = false;
 
     private void FixedUpdate()
     {
@@ -29,6 +31,23 @@ public class NPCInteractor : MonoBehaviour
                 selection = cubeHit.transform;
                 selection.GetChild(0).gameObject.SetActive(true);
                 _selectionItem = selection;
+            }
+
+        }
+    }
+
+    private void Update()
+    {
+        if (selection != null)
+        {
+            if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false)
+            {
+                Debug.Log("Mi serve un casco");
+                pickUpCascoScript.canPickUp = true;
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == true)
+            {
+                Debug.Log("Grazie per il casco!");
             }
 
         }

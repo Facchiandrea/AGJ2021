@@ -461,7 +461,7 @@ Transform:
   - {fileID: 1861641693}
   - {fileID: 1562715277}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &19256527
 Rigidbody2D:
@@ -2009,7 +2009,7 @@ Transform:
   - {fileID: 127792617}
   - {fileID: 736718779}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212761633
 GameObject:
@@ -4092,7 +4092,7 @@ Transform:
   - {fileID: 54051894}
   - {fileID: 315690377}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &395092886
 Rigidbody2D:
@@ -4566,7 +4566,7 @@ RectTransform:
   - {fileID: 1248600980}
   - {fileID: 93013083}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5452,7 +5452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 569589452}
   m_Layer: 0
-  m_Name: PickUps
+  m_Name: GraphicsPickUps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6189,7 +6189,7 @@ GameObject:
   - component: {fileID: 618381176}
   - component: {fileID: 618381175}
   m_Layer: 10
-  m_Name: NPC TEST
+  m_Name: RagazzoCheVuoleIlCasco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6202,13 +6202,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618381172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.66, y: -0.39, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.633827, y: 2.2440047, z: 201.27292}
   m_LocalScale: {x: -0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 383139205}
-  m_Father: {fileID: 1127930332}
-  m_RootOrder: 9
+  m_Father: {fileID: 965135072}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &618381174
 SpriteRenderer:
@@ -7524,7 +7524,7 @@ Transform:
   - {fileID: 79585576}
   - {fileID: 1309927055}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &752733302
 BoxCollider2D:
@@ -7666,7 +7666,7 @@ Transform:
   - {fileID: 1161221266}
   - {fileID: 465128577}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &754238441
 BoxCollider2D:
@@ -7940,7 +7940,7 @@ Transform:
   - {fileID: 1760964754}
   - {fileID: 1247390909}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &769119589
 BoxCollider2D:
@@ -8547,7 +8547,7 @@ Transform:
   - {fileID: 334979973}
   - {fileID: 1520876661}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &816224811
 Rigidbody2D:
@@ -10058,7 +10058,7 @@ Transform:
   - {fileID: 1529526837}
   - {fileID: 1363251748}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &883084058
 Rigidbody2D:
@@ -10686,7 +10686,7 @@ Transform:
   - {fileID: 1419247195}
   - {fileID: 592532456}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &930926924
 GameObject:
@@ -11175,6 +11175,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &965135071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 965135072}
+  m_Layer: 0
+  m_Name: NPCs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &965135072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965135071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.293827, y: -2.6340046, z: -196.27292}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 618381173}
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978150139
 GameObject:
   m_ObjectHideFlags: 0
@@ -12426,9 +12457,8 @@ Transform:
   - {fileID: 750177861}
   - {fileID: 644657365}
   - {fileID: 685865998}
-  - {fileID: 618381173}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1127930333
 Rigidbody2D:
@@ -13602,7 +13632,7 @@ Transform:
   - {fileID: 1977585617}
   - {fileID: 430098037}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1260152059
 Rigidbody2D:
@@ -14158,7 +14188,7 @@ Transform:
   - {fileID: 579160594}
   - {fileID: 624846718}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1342384122
 Rigidbody2D:
@@ -14918,7 +14948,7 @@ Transform:
   - {fileID: 1937301709}
   - {fileID: 284195492}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1378578116
 Rigidbody2D:
@@ -18030,6 +18060,7 @@ GameObject:
   - component: {fileID: 1617725359}
   - component: {fileID: 1617725360}
   - component: {fileID: 1617725361}
+  - component: {fileID: 1617725362}
   m_Layer: 9
   m_Name: Casco
   m_TagString: Item
@@ -18089,6 +18120,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1617725362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617725358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfde17defbb6376409c8fe43f31c2d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickUpGraphics: {fileID: 1866030436}
+  PickUpUIGraphics: {fileID: 2096708482}
+  canPickUp: 0
 --- !u!1 &1629966581
 GameObject:
   m_ObjectHideFlags: 0
@@ -18580,7 +18626,7 @@ Transform:
   - {fileID: 40246054}
   - {fileID: 1612742008}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741195029
 GameObject:
@@ -19288,6 +19334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewModeSwap: {fileID: 1849002814}
   selection: {fileID: 0}
+  pickUpCascoScript: {fileID: 1617725362}
+  cascoPortato: 0
 --- !u!4 &1767356936
 Transform:
   m_ObjectHideFlags: 0
@@ -19925,7 +19973,7 @@ GameObject:
   - component: {fileID: 1866030437}
   - component: {fileID: 1866030438}
   m_Layer: 0
-  m_Name: PickUpCasco
+  m_Name: GraphicsCasco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21055,7 +21103,7 @@ Transform:
   - {fileID: 1364587288}
   - {fileID: 2133362742}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1947771896
 Rigidbody2D:
@@ -22174,12 +22222,12 @@ GameObject:
   - component: {fileID: 2096708487}
   - component: {fileID: 2096708488}
   m_Layer: 5
-  m_Name: OGGETTO TEST
+  m_Name: CascoUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2096708483
 RectTransform:
   m_ObjectHideFlags: 0
