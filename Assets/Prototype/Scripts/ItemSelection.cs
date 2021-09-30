@@ -7,6 +7,7 @@ public class ItemSelection : MonoBehaviour
     public ViewModeSwap viewModeSwap;
     private Transform _selectionItem;
     public Transform selection;
+    public MorbidDetector MorbidDetector;
 
 
     private void FixedUpdate()
@@ -40,6 +41,7 @@ public class ItemSelection : MonoBehaviour
         {
             if (selection != null)
             {
+                //---------------------CASCO--------------------------
                 if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == true)
                 {
                     selection.GetComponent<PickUpCasco>().PickUpUIGraphics.SetActive(true);
@@ -53,6 +55,54 @@ public class ItemSelection : MonoBehaviour
                 {
                     Debug.Log("E' un casco da astronauta");
                 }
+
+                //-------------------------ROBA MORBIDA-----------------------------------
+
+                if (selection.name == "Fiori")
+                {
+                    Debug.Log("Sembra morbido");
+                    MorbidDetector.interactedWithFlowers = true;
+                }
+                if (selection.name == "Materassi")
+                {
+                    Debug.Log("Sembra morbido");
+                    MorbidDetector.interactedWithMattress = true;
+                }
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 1-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 2-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 3-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 4-----------------------------------
+
+                if (selection.name == "Fosso" && MorbidDetector.morbidBelow == false)
+                {
+                    Debug.Log("Non posso scendere");
+                }
+                else if (selection.name == "Fosso" && MorbidDetector.morbidBelow == true)
+                {
+                    Debug.Log("La roba morbida attutirà la caduta");
+                }
+
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 5-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 6-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 7-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 8-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 9-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 10-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 11-----------------------------------
+
+                //-------------------------ALTRI OGGETTI DEL DIPINTO 12-----------------------------------
+
 
             }
         }
