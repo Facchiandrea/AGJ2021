@@ -24,7 +24,7 @@ public class MorbidDetector : MonoBehaviour
         if (collision.name == "Fiori" || collision.name == "Materassi")
         {
             barrieraFosso.SetActive(true);
-            morbidBelow = false; //testare cosa succede se swappo le due cose mordbide
+            morbidBelow = false; //testare cosa succede se swappo le due cose mordbide porccoddio non va
         }
 
     }
