@@ -12,6 +12,8 @@ public class PonteLevatoio : MonoBehaviour
     private Quaternion notFlippedPosition;
     private Quaternion flippedPosition;
     public PlayerMovement playerMovement;
+    public GameObject barrieraFosso;
+    public GameObject fosso;
 
     private void Start()
     {
@@ -21,7 +23,7 @@ public class PonteLevatoio : MonoBehaviour
     }
     private void Update()
     {
-        if (NPCInteractorScript.scolapastaPortato == true && ponteAbbassato == false)
+        if (NPCInteractorScript.scolapastaPortato == true && ponteAbbassato == false && siStaAbbassando == false)
         {
             StartCoroutine(BridgeMovingCoroutine());
         }
@@ -39,10 +41,12 @@ public class PonteLevatoio : MonoBehaviour
             progress += Time.deltaTime;
             if (transform.rotation.eulerAngles.z >= 90)
             {
+                fosso.SetActive(false);
+                barrieraFosso.GetComponent<BoxCollider2D>().enabled = false;
                 transform.rotation = flippedPosition;
                 siStaAbbassando = false;
                 ponteAbbassato = true;
-                playerMovement.movementBlock = true;
+                playerMovement.movementBlock = false;
 
             }
 
