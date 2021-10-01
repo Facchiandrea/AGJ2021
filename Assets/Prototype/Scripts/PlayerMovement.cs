@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed = 2f;
     float horizontalMovement = 0f;
     public ViewModeSwap viewModeSwap;
+    public bool movementBlock = false;
 
 
     private void Awake()
@@ -18,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (viewModeSwap.fullView == false)
+        if (viewModeSwap.fullView == false && movementBlock == false)
         {
             horizontalMovement = Input.GetAxisRaw("Horizontal");
             if (horizontalMovement > 0f)
