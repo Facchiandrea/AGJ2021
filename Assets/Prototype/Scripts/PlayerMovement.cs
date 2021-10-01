@@ -24,17 +24,22 @@ public class PlayerMovement : MonoBehaviour
             horizontalMovement = Input.GetAxisRaw("Horizontal");
             if (horizontalMovement > 0f)
             {
+                rb.constraints = ~RigidbodyConstraints2D.FreezePosition;
+
                 rb.velocity = new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
                 spriteRenderer.flipX = false;
             }
             else if (horizontalMovement < 0f)
             {
+                rb.constraints = ~RigidbodyConstraints2D.FreezePosition;
+
                 rb.velocity = new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
                 spriteRenderer.flipX = true;
             }
             else
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
             }
 
         }
