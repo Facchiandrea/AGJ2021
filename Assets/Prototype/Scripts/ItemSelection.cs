@@ -42,7 +42,7 @@ public class ItemSelection : MonoBehaviour
             if (selection != null)
             {
                 //---------------------CASCO--------------------------
-                if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == true)
+                if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == true && selection.GetComponent<PickUpCasco>().playerInRange == true)
                 {
                     selection.GetComponent<PickUpCasco>().PickUpUIGraphics.SetActive(true);
                     selection.GetComponent<PickUpCasco>().PickUpGraphics.SetActive(false);
@@ -51,9 +51,53 @@ public class ItemSelection : MonoBehaviour
                     Debug.Log("Hai raccolto il casco");
 
                 }
+                else if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == true && selection.GetComponent<PickUpCasco>().playerInRange == false)
+                {
+                    Debug.Log("Questo casco potrebbe servirmi, ma non posso prenderlo da qui");
+                }
+
                 else if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == false)
                 {
                     Debug.Log("E' un casco da astronauta");
+                }
+                //---------------------SCOLAPASTA--------------------------
+                if (selection.name == "Scolapasta" && selection.GetComponent<PickUpScolapasta>().canPickUp == true && selection.GetComponent<PickUpScolapasta>().playerInRange == true)
+                {
+                    selection.GetComponent<PickUpScolapasta>().PickUpUIGraphics.SetActive(true);
+                    selection.GetComponent<PickUpScolapasta>().PickUpGraphics.SetActive(false);
+
+                    selection.gameObject.SetActive(false);
+                    Debug.Log("Hai raccolto lo scolapasta");
+
+                }
+                else if (selection.name == "Scolapasta" && selection.GetComponent<PickUpScolapasta>().canPickUp == true && selection.GetComponent<PickUpScolapasta>().playerInRange == false)
+                {
+                    Debug.Log("Questo scolapasta potrebbe servirmi, ma non posso prenderlo da qui");
+                }
+
+                else if (selection.name == "Scolapasta" && selection.GetComponent<PickUpScolapasta>().canPickUp == false)
+                {
+                    Debug.Log("E' uno scolapasta");
+                }
+                //---------------------UOVO--------------------------
+                if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == true && selection.GetComponent<PickUpUovo>().playerInRange == true)
+                {
+                    selection.GetComponent<PickUpUovo>().PickUpUIGraphics.SetActive(true);
+                    selection.GetComponent<PickUpUovo>().PickUpGraphics.SetActive(false);
+
+                    selection.gameObject.SetActive(false);
+                    Debug.Log("Hai raccolto l'uovo");
+
+                }
+                if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == true && selection.GetComponent<PickUpUovo>().playerInRange == false)
+                {
+                    Debug.Log("Questo uovo potrebbe servirmi, ma non posso prenderlo da qui");
+
+                }
+
+                else if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == false)
+                {
+                    Debug.Log("E' un' uovo");
                 }
 
                 //-------------------------ROBA MORBIDA-----------------------------------

@@ -27,6 +27,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if (NPCInteractor.selection != null)
         {
+            //---------------CASCO--------------------
             if (NPCInteractor.selection.name == "RagazzoCheVuoleIlCasco" && this.gameObject.name == "CascoUI")
             {
                 this.gameObject.SetActive(false);
@@ -38,6 +39,35 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;
             }
+
+            //---------------SCOLAPASTA--------------------
+
+            if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name == "ScolapastaUI")
+            {
+                this.gameObject.SetActive(false);
+                NPCInteractor.scolapastaPortato = true;
+                Debug.Log("Scolapasta consegnato!");
+
+            }
+            else
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
+
+            //---------------UOVO--------------------
+
+            if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name == "UovoUI")
+            {
+                this.gameObject.SetActive(false);
+                NPCInteractor.uovoPortato = true;
+                Debug.Log("Uovo consegnato!");
+
+            }
+            else
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
+
 
             //if else degli altri npc
         }

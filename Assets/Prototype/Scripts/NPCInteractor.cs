@@ -11,6 +11,11 @@ public class NPCInteractor : MonoBehaviour
     public PickUpCasco pickUpCascoScript;
     public bool cascoPortato = false;
 
+    public PickUpScolapasta pickUpScolapastaScript;
+    public PickUpUovo pickUpUovoScript;
+    public bool scolapastaPortato = false;
+    public bool uovoPortato = false;
+
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -40,6 +45,7 @@ public class NPCInteractor : MonoBehaviour
     {
         if (selection != null)
         {
+            //-----------------RAGAZZO----------------
             if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false)
             {
                 Debug.Log("Mi serve un casco");
@@ -48,6 +54,22 @@ public class NPCInteractor : MonoBehaviour
             else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == true)
             {
                 Debug.Log("Grazie per il casco!");
+            }
+            //-----------------BAMBINO----------------
+            if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false)
+            {
+                Debug.Log("Mi serve uno scolapasta");
+                pickUpScolapastaScript.canPickUp = true;
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false)
+            {
+                Debug.Log("Ora voglio un uovo");
+                pickUpUovoScript.canPickUp = true;
+
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && uovoPortato == true && uovoPortato == true)
+            {
+                Debug.Log("Grazie per tutto!");
             }
 
         }
