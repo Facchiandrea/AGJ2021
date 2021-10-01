@@ -79,7 +79,25 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 NPCInteractor.ViaggioInAutobus();
             }
+            else
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
 
+            //---------------MONGOLFIERA--------------------
+            if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == true)
+            {
+                Debug.Log("Wiiiiii");
+            }
+            else if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == false)
+            {
+                Debug.Log("Devo avvicinarmi per poter salire");
+            }
+
+            else
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
 
             //if else degli altri npc
         }

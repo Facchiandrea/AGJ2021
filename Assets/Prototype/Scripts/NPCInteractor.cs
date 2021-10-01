@@ -23,6 +23,11 @@ public class NPCInteractor : MonoBehaviour
     public Transform posizioneStazione2;
     public bool stazione1 = true;
 
+    public PickUpFiammiferi pickUpFiammiferi;
+    public bool fiammiferiInInventario = false;
+
+    public Mongolfiera mongolfieraScript;
+
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -87,6 +92,20 @@ public class NPCInteractor : MonoBehaviour
             else if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == false)
             {
                 Debug.Log("Non ho il biglietto per utilizzarlo");
+            }
+            //-----------------Mongolfiera----------------
+            if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == false)
+            {
+                Debug.Log("Mi serve qualcosa per attivare il bruciatore");
+                pickUpFiammiferi.canPickUp = true;
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == false)
+            {
+                Debug.Log("Devo avvicinarmi per poter salire");
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == true)
+            {
+                Debug.Log("Wiiiiii");
             }
 
 

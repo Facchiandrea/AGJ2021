@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpFiammiferi : MonoBehaviour
+public class Mongolfiera : MonoBehaviour
 {
     public DistanceCheck distanceCheck;
-
-    //public GameObject PickUpGraphics;
-    public GameObject PickUpUIGraphics;
     public bool playerInRange;
-    public bool guardatoNelCestino;
-    public bool canPickUp = false; //questa bool va a true quando fai l'interazione relativa ad esso
 
     private void Update()
     {
@@ -25,5 +20,4 @@ public class PickUpFiammiferi : MonoBehaviour
 
         }
     }
-
 }

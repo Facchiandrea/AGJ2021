@@ -8,6 +8,7 @@ public class ItemSelection : MonoBehaviour
     private Transform _selectionItem;
     public Transform selection;
     public MorbidDetector MorbidDetector;
+    public NPCInteractor NPCInteractor;
 
 
     private void FixedUpdate()
@@ -89,7 +90,7 @@ public class ItemSelection : MonoBehaviour
                     Debug.Log("Hai raccolto l'uovo");
 
                 }
-                if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == true && selection.GetComponent<PickUpUovo>().playerInRange == false)
+                else if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == true && selection.GetComponent<PickUpUovo>().playerInRange == false)
                 {
                     Debug.Log("Questo uovo potrebbe servirmi, ma non posso prenderlo da qui");
 
@@ -112,6 +113,43 @@ public class ItemSelection : MonoBehaviour
                     Debug.Log("Sembra morbido");
                     MorbidDetector.interactedWithMattress = true;
                 }
+
+                //-------------------------CESTINO/FIAMMIFERI-----------------------------------
+
+                if (selection.name == "Cestino" && NPCInteractor.fiammiferiInInventario == true)
+                {
+                    Debug.Log("Non credo ci sia altro che posso usare li dentro");
+                }
+                else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == true && selection.GetComponent<PickUpFiammiferi>().playerInRange == true && selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino == true)
+                {
+                    Debug.Log("Hai raccolto i fiammiferi");
+                    NPCInteractor.fiammiferiInInventario = true;
+                    selection.GetComponent<PickUpFiammiferi>().PickUpUIGraphics.SetActive(true);
+                }
+                else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == true && selection.GetComponent<PickUpFiammiferi>().playerInRange == true && selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino == false)
+                {
+                    Debug.Log("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e...dei fiammiferi! Potrei farne buon uso");
+                    NPCInteractor.fiammiferiInInventario = true;
+                    selection.GetComponent<PickUpFiammiferi>().PickUpUIGraphics.SetActive(true);
+                    selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino = true;
+                }
+
+                else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == true && selection.GetComponent<PickUpFiammiferi>().playerInRange == false && selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino == true)
+                {
+                    Debug.Log("Nel cestino c'era qualcosa che potrebbe servirmi, ma sono troppo lontana");
+                }
+                else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == false && selection.GetComponent<PickUpFiammiferi>().playerInRange == false || selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == true && selection.GetComponent<PickUpFiammiferi>().playerInRange == false && selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino == false)
+                {
+                    Debug.Log("E' un cestino da picnic. Se mi avvicino potrei sbirciare dentro");
+                }
+
+                else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == false && selection.GetComponent<PickUpFiammiferi>().playerInRange == true)
+                {
+                    Debug.Log("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e dei fiammiferi");
+                    selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino = true;
+                }
+
+
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 1-----------------------------------
 
