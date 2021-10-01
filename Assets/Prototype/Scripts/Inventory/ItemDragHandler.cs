@@ -7,6 +7,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public NPCInteractor NPCInteractor;
     Vector2 startPos;
+    public GameObject bigliettoUI;
+    public GameObject forcinaUI;
 
     private void Start()
     {
@@ -33,6 +35,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 this.gameObject.SetActive(false);
                 NPCInteractor.cascoPortato = true;
                 Debug.Log("Casco consegnato!");
+                forcinaUI.SetActive(true);
+
 
             }
             else
@@ -61,7 +65,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 this.gameObject.SetActive(false);
                 NPCInteractor.uovoPortato = true;
                 Debug.Log("Uovo consegnato!");
-
+                bigliettoUI.SetActive(true);
             }
             else
             {
