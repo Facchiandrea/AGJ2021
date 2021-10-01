@@ -19,7 +19,7 @@ public class ViewModeSwap : MonoBehaviour
     public GameObject fullViewCam;
     private int lastCamCounter;
 
-
+    public SpacesBetweenPaintings spacesBetweenPaintings;
     public Swapper swapper;
 
     [HideInInspector]
@@ -39,7 +39,7 @@ public class ViewModeSwap : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false)
+        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false)
         {
             EnterFullView();
             transitionToFull = true;
@@ -47,7 +47,7 @@ public class ViewModeSwap : MonoBehaviour
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.V) && fullView == true && swapper.transition == false)
+        else if (Input.GetKeyDown(KeyCode.V) && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false)
         {
             ExitFullView();
             transitionToSingle = true;

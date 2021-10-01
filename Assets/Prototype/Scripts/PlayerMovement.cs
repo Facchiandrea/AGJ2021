@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (viewModeSwap.fullView == false && movementBlock == false)
+        if (viewModeSwap.fullView == false && movementBlock == false && viewModeSwap.transitionToFull == false && viewModeSwap.transitionToSingle == false)
         {
             horizontalMovement = Input.GetAxisRaw("Horizontal");
             if (horizontalMovement > 0f)
@@ -38,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-
+        if (viewModeSwap.fullView)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
     }
 }

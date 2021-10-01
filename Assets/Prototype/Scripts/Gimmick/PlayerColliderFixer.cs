@@ -8,11 +8,12 @@ public class PlayerColliderFixer : MonoBehaviour
     {
         if (collision.CompareTag("Activator"))
         {
-            collision.transform.root.GetChild(2).GetComponent<BoxCollider2D>().enabled = true;
-            foreach (PolygonCollider2D c in collision.transform.root.GetComponents<PolygonCollider2D>())
+            collision.transform.root.GetChild(2).gameObject.SetActive(true);
+            collision.transform.root.GetComponent<PolygonCollider2D>().enabled = false;
+            /*foreach (PolygonCollider2D c in collision.transform.root.GetComponents<PolygonCollider2D>())
             {
                 c.enabled = false;
-            }
+            }*/
 
         }
     }
@@ -20,12 +21,13 @@ public class PlayerColliderFixer : MonoBehaviour
     {
         if (collision.CompareTag("Activator"))
         {
-            foreach (PolygonCollider2D c in collision.transform.root.GetComponents<PolygonCollider2D>())
+            /*foreach (PolygonCollider2D c in collision.transform.root.GetComponents<PolygonCollider2D>())
             {
                 c.enabled = true;
-            }
+            }*/
+            collision.transform.root.GetComponent<PolygonCollider2D>().enabled = true;
 
-            collision.transform.root.GetChild(2).GetComponent<BoxCollider2D>().enabled = true;
+            collision.transform.root.GetChild(2).gameObject.SetActive(false);
         }
     }
 
