@@ -5,6 +5,8 @@ using UnityEngine;
 public class PromptItemManager : MonoBehaviour
 {
     public GameObject[] Items;
+    public GameObject[] NPC;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,6 +16,12 @@ public class PromptItemManager : MonoBehaviour
             {
                 item.tag = "Item";
             }
+
+            foreach (var npc in NPC)
+            {
+                npc.tag = "NPC";
+            }
+
         }
     }
 
@@ -25,6 +33,12 @@ public class PromptItemManager : MonoBehaviour
             {
                 item.tag = "InactiveItem";
             }
+            foreach (var npc in NPC)
+            {
+                npc.tag = "InactiveNPC";
+            }
+
+
         }
 
     }

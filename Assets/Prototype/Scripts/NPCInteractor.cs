@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPCInteractor : MonoBehaviour
 {
+    public FadeInOut fadeInOut;
     public ViewModeSwap viewModeSwap;
     private Transform _selectionItem;
     public Transform selection;
@@ -15,6 +16,12 @@ public class NPCInteractor : MonoBehaviour
     public PickUpUovo pickUpUovoScript;
     public bool scolapastaPortato = false;
     public bool uovoPortato = false;
+
+    public GameObject bigliettoUI;
+    public GameObject player;
+    public Transform posizioneStazione1;
+    public Transform posizioneStazione2;
+    public bool stazione1 = true;
 
     private void FixedUpdate()
     {
@@ -31,7 +38,7 @@ public class NPCInteractor : MonoBehaviour
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, 1000f, layerMask);
 
-            if (cubeHit)
+            if (cubeHit && cubeHit.transform.CompareTag("NPC"))
             {
                 selection = cubeHit.transform;
                 selection.GetChild(0).gameObject.SetActive(true);
@@ -43,7 +50,7 @@ public class NPCInteractor : MonoBehaviour
 
     private void Update()
     {
-        if (selection != null)
+        if (selection != null && fadeInOut.fadeTransition == false)
         {
             //-----------------RAGAZZO----------------
             if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false)
@@ -71,7 +78,53 @@ public class NPCInteractor : MonoBehaviour
             {
                 Debug.Log("Grazie per tutto!");
             }
+            //-----------------AUTOBUS----------------
+
+            if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true)
+            {
+                ViaggioInAutobus();
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == false)
+            {
+                Debug.Log("Non ho il biglietto per utilizzarlo");
+            }
+
 
         }
+    }
+
+    public void ViaggioInAutobus()
+    {
+        if (stazione1 == true)
+        {
+            bigliettoUI.SetActive(false);
+            Invoke("PlayerTP", 1f);
+            fadeInOut.FadeIn();
+            Debug.Log("VadoAStazione2");
+
+        }
+        else if (stazione1 == false)
+        {
+            bigliettoUI.SetActive(false);
+            Invoke("PlayerTP", 1f);
+            fadeInOut.FadeIn();
+            Debug.Log("VadoAStazione1");
+        }
+
+    }
+
+    public void PlayerTP()
+    {
+        if (stazione1 == true)
+        {
+            stazione1 = false;
+            player.transform.position = posizioneStazione2.position;
+        }
+        else if (stazione1 == false)
+        {
+            stazione1 = true;
+            player.transform.position = posizioneStazione1.position;
+        }
+
     }
 }

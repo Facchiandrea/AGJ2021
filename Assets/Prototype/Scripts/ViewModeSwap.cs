@@ -17,10 +17,12 @@ public class ViewModeSwap : MonoBehaviour
     public GameObject camera11;
     public GameObject camera12;
     public GameObject fullViewCam;
-    private int lastCamCounter;
+    public int lastCamCounter;
 
     public SpacesBetweenPaintings spacesBetweenPaintings;
+    public NPCInteractor NPCInteractor;
     public Swapper swapper;
+    public FadeInOut FadeInOut;
 
     [HideInInspector]
     public bool fullView;
@@ -28,7 +30,7 @@ public class ViewModeSwap : MonoBehaviour
 
     public bool transitionToSingle = false;
     public bool transitionToFull = false;
-    private float timerCameraTransition;
+    private float timerCameraTransition = 2;
     private float timer;
 
     private void Start()
@@ -39,7 +41,7 @@ public class ViewModeSwap : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false)
+        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false)
         {
             EnterFullView();
             transitionToFull = true;
@@ -47,7 +49,7 @@ public class ViewModeSwap : MonoBehaviour
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.V) && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false)
+        else if (Input.GetKeyDown(KeyCode.V) && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false)
         {
             ExitFullView();
             transitionToSingle = true;
@@ -58,9 +60,9 @@ public class ViewModeSwap : MonoBehaviour
         if (transitionToFull == true)
         {
             timer += Time.deltaTime;
-            if (timer >= 2)
+            if (timer >= timerCameraTransition)
             {
-                timer = 2;
+                timer = timerCameraTransition;
                 transitionToFull = false;
             }
         }
@@ -202,5 +204,79 @@ public class ViewModeSwap : MonoBehaviour
 
         fullViewCam.SetActive(false);
 
+    }
+
+    public void BusCameraTransition()
+    {
+        camera1.SetActive(false);
+        camera2.SetActive(false);
+        camera3.SetActive(false);
+        camera4.SetActive(false);
+        camera5.SetActive(false);
+        camera6.SetActive(false);
+        camera7.SetActive(false);
+        camera8.SetActive(false);
+        camera9.SetActive(false);
+        camera10.SetActive(false);
+        camera11.SetActive(false);
+        camera12.SetActive(false);
+        fullViewCam.SetActive(false);
+
+        if (NPCInteractor.stazione1 == false)
+        {
+            camera9.SetActive(true);
+        }
+        else
+        {
+            if (lastCamCounter == 1)
+            {
+                camera1.SetActive(true);
+            }
+            else if (lastCamCounter == 2)
+            {
+                camera2.SetActive(true);
+            }
+            else if (lastCamCounter == 3)
+            {
+                camera3.SetActive(true);
+            }
+            else if (lastCamCounter == 4)
+            {
+                camera4.SetActive(true);
+            }
+            else if (lastCamCounter == 5)
+            {
+                camera5.SetActive(true);
+            }
+            else if (lastCamCounter == 6)
+            {
+                camera6.SetActive(true);
+            }
+            else if (lastCamCounter == 7)
+            {
+                camera7.SetActive(true);
+            }
+            else if (lastCamCounter == 8)
+            {
+                camera8.SetActive(true);
+            }
+            else if (lastCamCounter == 9)
+            {
+                camera9.SetActive(true);
+            }
+            else if (lastCamCounter == 10)
+            {
+                camera10.SetActive(true);
+            }
+            else if (lastCamCounter == 11)
+            {
+                camera11.SetActive(true);
+            }
+            else if (lastCamCounter == 12)
+            {
+                camera12.SetActive(true);
+            }
+
+        }
     }
 }

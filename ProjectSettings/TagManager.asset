@@ -11,6 +11,8 @@ TagManager:
   - BlockedPainting
   - Barrier
   - InactiveItem
+  - InactiveNPC
+  - NPC
   layers:
   - Default
   - TransparentFX

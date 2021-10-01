@@ -9,6 +9,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     Vector2 startPos;
     public GameObject bigliettoUI;
     public GameObject forcinaUI;
+    public FadeInOut fadeInOut;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void CheckInterations()
     {
-        if (NPCInteractor.selection != null)
+        if (NPCInteractor.selection != null && fadeInOut.fadeTransition == false)
         {
             //---------------CASCO--------------------
             if (NPCInteractor.selection.name == "RagazzoCheVuoleIlCasco" && this.gameObject.name == "CascoUI")
@@ -70,6 +71,13 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             else
             {
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
+
+            //---------------AUTOBUS--------------------
+
+            if (NPCInteractor.selection.name == "Autobus" && this.gameObject.name == "BigliettoUI")
+            {
+                NPCInteractor.ViaggioInAutobus();
             }
 
 

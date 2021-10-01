@@ -18,6 +18,7 @@ public class PaintSpace5 : MonoBehaviour
     public GameObject camera12;
 
     public GameObject tempPainting;
+    public ViewModeSwap ViewModeSwap;
 
     public bool playerIn;
 
@@ -47,6 +48,7 @@ public class PaintSpace5 : MonoBehaviour
 
             playerIn = true;
             //tempPainting.transform.GetChild(3).gameObject.SetActive(false);
+            ViewModeSwap.lastCamCounter = 5;
 
         }
 

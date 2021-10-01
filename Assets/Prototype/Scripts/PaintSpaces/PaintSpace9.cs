@@ -18,6 +18,7 @@ public class PaintSpace9 : MonoBehaviour
     public GameObject camera12;
 
     public GameObject Painting9;
+    public ViewModeSwap ViewModeSwap;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,6 +37,7 @@ public class PaintSpace9 : MonoBehaviour
             camera10.SetActive(false);
             camera11.SetActive(false);
             camera12.SetActive(false);
+            ViewModeSwap.lastCamCounter = 9;
 
             //Painting9.transform.GetChild(3).gameObject.SetActive(false);
 
