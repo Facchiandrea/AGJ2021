@@ -23,7 +23,6 @@ public class PonteLevatoio : MonoBehaviour
     {
         if (NPCInteractorScript.scolapastaPortato == true && ponteAbbassato == false)
         {
-            playerMovement.movementBlock = true;
             StartCoroutine(BridgeMovingCoroutine());
         }
     }
@@ -33,6 +32,8 @@ public class PonteLevatoio : MonoBehaviour
         float progress = 0;
         while (progress < flipTime)
         {
+            playerMovement.movementBlock = true;
+
             siStaAbbassando = true;
             transform.rotation = Quaternion.Lerp(notFlippedPosition, flippedPosition, progress * flipSpeed);
             progress += Time.deltaTime;
