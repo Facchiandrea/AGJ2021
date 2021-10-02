@@ -25986,7 +25986,7 @@ MonoBehaviour:
   posizioneStazione2: {fileID: 1720263274}
   stazione1: 1
   pickUpFiammiferi: {fileID: 1619890889}
-  fiammiferiInInventario: 1
+  fiammiferiInInventario: 0
   mongolfieraScript: {fileID: 378824505}
 --- !u!4 &1767356936
 Transform:
