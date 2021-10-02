@@ -85,11 +85,12 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             }
 
             //---------------MONGOLFIERA--------------------
-            if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == true)
+            if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == true && NPCInteractor.mongolfieraScript.traveling == false)
             {
-                Debug.Log("Wiiiiii");
+                NPCInteractor.mongolfieraScript.ViaggioInMongolfiera();
             }
-            else if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == false)
+
+            else if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == false && NPCInteractor.mongolfieraScript.traveling == false)
             {
                 Debug.Log("Devo avvicinarmi per poter salire");
             }

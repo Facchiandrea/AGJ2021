@@ -94,18 +94,18 @@ public class NPCInteractor : MonoBehaviour
                 Debug.Log("Non ho il biglietto per utilizzarlo");
             }
             //-----------------Mongolfiera----------------
-            if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == false)
+            if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == false && mongolfieraScript.traveling == false)
             {
                 Debug.Log("Mi serve qualcosa per attivare il bruciatore");
                 pickUpFiammiferi.canPickUp = true;
             }
-            else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == false)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == false && mongolfieraScript.traveling == false)
             {
                 Debug.Log("Devo avvicinarmi per poter salire");
             }
-            else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == true)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == true && mongolfieraScript.traveling == false)
             {
-                Debug.Log("Wiiiiii");
+                mongolfieraScript.ViaggioInMongolfiera();
             }
 
 

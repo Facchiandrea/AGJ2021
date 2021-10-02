@@ -24,14 +24,14 @@ public class PlayerMovement : MonoBehaviour
             horizontalMovement = Input.GetAxisRaw("Horizontal");
             if (horizontalMovement > 0f)
             {
-                rb.constraints = ~RigidbodyConstraints2D.FreezePosition;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
                 rb.velocity = new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
                 spriteRenderer.flipX = false;
             }
             else if (horizontalMovement < 0f)
             {
-                rb.constraints = ~RigidbodyConstraints2D.FreezePosition;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
                 rb.velocity = new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
                 spriteRenderer.flipX = true;
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
-                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             }
 
         }
