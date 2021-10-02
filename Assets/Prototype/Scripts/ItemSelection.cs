@@ -170,6 +170,11 @@ public class ItemSelection : MonoBehaviour
                     Debug.Log("E' una conchiglia");
                 }
 
+                //---------------------PORTALE--------------------------
+                if (selection.name == "Portale")
+                {
+                    Debug.Log("Hai vinto!");
+                }
 
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 1-----------------------------------

@@ -6,6 +6,7 @@ public class Uomo : MonoBehaviour
 {
     public DistanceCheck distanceCheck;
     public bool playerInRange;
+    public GameObject portale;
     private void Update()
     {
         if (distanceCheck.playerIn)

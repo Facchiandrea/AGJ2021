@@ -35,7 +35,6 @@ public class NPCInteractor : MonoBehaviour
 
     public Uomo uomo;
     public Montacarichi montacarichi;
-    public bool montacarichiRiparato;
     public bool conchigliaPortata;
     public PickUpConchiglia pickUpConchiglia;
     private void FixedUpdate()
@@ -137,17 +136,17 @@ public class NPCInteractor : MonoBehaviour
                 Debug.Log("E'una bella collezione di gambe di legno");
             }
             //------------------MONTACARICHI-------------
-            if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichiRiparato == false)
+            if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.montacarichiRiparato == false)
             {
                 Debug.Log("La leva è rotta, devo sostituirla con qualcosa");
                 pickUpGamba.canPickUp = true;
             }
 
-            else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == false && montacarichiRiparato == true)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == true && montacarichi.montacarichiRiparato == true && montacarichi.traveling == false)
             {
-                // usa il montacarichi
+                montacarichi.SpostamentoInMontacarichi();
             }
-            else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == true && montacarichiRiparato == true)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == false && montacarichi.montacarichiRiparato == true)
             {
                 Debug.Log("Devo salire sul montacarichi prima");
             }

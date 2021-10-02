@@ -104,11 +104,14 @@ public class Mongolfiera : MonoBehaviour
         if (playerSullaLuna == false && lunaSopra)
         {
             StartCoroutine(SpostamentoVersoLuna());
+            this.gameObject.tag = "InactiveNPC";
 
         }
         else if (playerSullaLuna == true && terraSotto)
         {
             StartCoroutine(SpostamentoVersoTerra());
+            this.gameObject.tag = "InactiveNPC";
+
         }
         else if (playerSullaLuna == false && lunaSopra == false)
         {

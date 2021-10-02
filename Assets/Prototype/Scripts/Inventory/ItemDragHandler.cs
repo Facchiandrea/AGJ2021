@@ -117,6 +117,19 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;
             }
+            //----------------MONTACARICHI----------------
+
+            if (NPCInteractor.selection.name == "Montacarichi" && this.gameObject.name == "GambaUI")
+            {
+                this.gameObject.SetActive(false);
+                NPCInteractor.montacarichi.montacarichiRiparato = true;
+                Debug.Log("Montacarichi riparato!");
+                NPCInteractor.selection.GetChild(1).gameObject.SetActive(true);
+            }
+            else
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
 
             //----------------CONCHIGLIA----------------
 
@@ -125,6 +138,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 this.gameObject.SetActive(false);
                 NPCInteractor.conchigliaPortata = true;
                 Debug.Log("conchiglia consegnata!");
+                NPCInteractor.uomo.portale.SetActive(true);
             }
             else
             {
