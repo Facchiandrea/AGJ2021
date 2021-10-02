@@ -100,7 +100,37 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;
             }
 
-            //if else degli altri npc
+            //---------------ARMADIO--------------------
+            if (NPCInteractor.selection.name == "Armadio" && this.gameObject.name == "ForcinaUI" && NPCInteractor.armadioScript.playerInRange == true)
+            {
+                Debug.Log("Apriti sesamo!");
+                NPCInteractor.armadioAperto = true;
+                forcinaUI.SetActive(false);
+                NPCInteractor.selection.GetChild(1).gameObject.SetActive(false);
+
+            }
+            else if (NPCInteractor.selection.name == "Armadio" && this.gameObject.name == "ForcinaUI" && NPCInteractor.armadioScript.playerInRange == false)
+            {
+                Debug.Log("Devo avvicinarmi e scassinare quel lucchetto");
+            }
+            else
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
+
+            //----------------CONCHIGLIA----------------
+
+            if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name == "ConchigliaUI")
+            {
+                this.gameObject.SetActive(false);
+                NPCInteractor.conchigliaPortata = true;
+                Debug.Log("conchiglia consegnata!");
+            }
+            else
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
+
         }
         else
         {

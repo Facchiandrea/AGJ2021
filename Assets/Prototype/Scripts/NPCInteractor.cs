@@ -28,6 +28,16 @@ public class NPCInteractor : MonoBehaviour
 
     public Mongolfiera mongolfieraScript;
 
+    public Armadio armadioScript;
+    public bool armadioAperto;
+    public bool gambaPresa;
+    public PickUpGamba pickUpGamba;
+
+    public Uomo uomo;
+    public Montacarichi montacarichi;
+    public bool montacarichiRiparato;
+    public bool conchigliaPortata;
+    public PickUpConchiglia pickUpConchiglia;
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -106,6 +116,57 @@ public class NPCInteractor : MonoBehaviour
             else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == true && mongolfieraScript.traveling == false)
             {
                 mongolfieraScript.ViaggioInMongolfiera();
+            }
+
+            //-----------------Armadio----------------
+
+            if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == false)
+            {
+                Debug.Log("E' un armadio con un lucchetto");
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == true && gambaPresa == false && pickUpGamba.canPickUp == true)
+            {
+                Debug.Log("Questa gamba di legno fa al caso mio");
+                pickUpGamba.PickUpUIGraphics.SetActive(true);
+                pickUpGamba.PickUpGraphics.SetActive(false);
+                gambaPresa = true;
+
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && gambaPresa == true || Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && gambaPresa == false && pickUpGamba.canPickUp == false)
+            {
+                Debug.Log("E'una bella collezione di gambe di legno");
+            }
+            //------------------MONTACARICHI-------------
+            if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichiRiparato == false)
+            {
+                Debug.Log("La leva è rotta, devo sostituirla con qualcosa");
+                pickUpGamba.canPickUp = true;
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == false && montacarichiRiparato == true)
+            {
+                // usa il montacarichi
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == true && montacarichiRiparato == true)
+            {
+                Debug.Log("Devo salire sul montacarichi prima");
+            }
+
+            //------------------UOMO-------------------------
+
+            if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true)
+            {
+                Debug.Log("Mi serve una conchiglia");
+                pickUpConchiglia.canPickUp = true;
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == false)
+            {
+                Debug.Log("Eiiiiii!...credo che il vecchio sia mezzo sordo, dovrei avvicinarmi a lui per parlarci");
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && conchigliaPortata == true)
+            {
+                Debug.Log("E' ora di andare!");
             }
 
 

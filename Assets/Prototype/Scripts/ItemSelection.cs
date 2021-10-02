@@ -98,7 +98,7 @@ public class ItemSelection : MonoBehaviour
 
                 else if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == false)
                 {
-                    Debug.Log("E' un' uovo");
+                    Debug.Log("E' un uovo");
                 }
 
                 //-------------------------ROBA MORBIDA-----------------------------------
@@ -147,6 +147,27 @@ public class ItemSelection : MonoBehaviour
                 {
                     Debug.Log("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e dei fiammiferi");
                     selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino = true;
+                }
+
+                //---------------------CONCHIGLIA--------------------------
+                if (selection.name == "Conchiglia" && selection.GetComponent<PickUpConchiglia>().canPickUp == true && selection.GetComponent<PickUpConchiglia>().playerInRange == true)
+                {
+                    selection.GetComponent<PickUpConchiglia>().PickUpUIGraphics.SetActive(true);
+                    selection.GetComponent<PickUpConchiglia>().PickUpGraphics.SetActive(false);
+
+                    selection.gameObject.SetActive(false);
+                    Debug.Log("Hai raccolto la conchiglia");
+
+                }
+                else if (selection.name == "Conchiglia" && selection.GetComponent<PickUpConchiglia>().canPickUp == true && selection.GetComponent<PickUpConchiglia>().playerInRange == false)
+                {
+                    Debug.Log("Questa conchiglia potrebbe servirmi, ma non posso prenderla da qui");
+
+                }
+
+                else if (selection.name == "Conchiglia" && selection.GetComponent<PickUpConchiglia>().canPickUp == false)
+                {
+                    Debug.Log("E' una conchiglia");
                 }
 
 
