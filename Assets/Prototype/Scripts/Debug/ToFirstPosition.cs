@@ -7,6 +7,8 @@ public class ToFirstPosition : MonoBehaviour
     public ViewModeSwap viewModeSwap;
     private Vector3 startPos;
     public Transform lunaPos;
+    public Transform mongolfieraPos;
+
     void Start()
     {
         startPos = transform.position;
@@ -21,6 +23,10 @@ public class ToFirstPosition : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L) && viewModeSwap.fullView == false)
         {
             transform.position = lunaPos.position;
+        }
+        if (Input.GetKeyDown(KeyCode.M) && viewModeSwap.fullView == false)
+        {
+            transform.position = mongolfieraPos.position;
         }
 
     }

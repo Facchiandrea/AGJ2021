@@ -49,7 +49,6 @@ public class PaintSpace3 : MonoBehaviour
 
             playerIn = true;
             ViewModeSwap.lastCamCounter = 3;
-
             //tempPainting.transform.GetChild(3).gameObject.SetActive(false);
 
         }

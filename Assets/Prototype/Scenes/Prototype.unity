@@ -10228,6 +10228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewModeSwap: {fileID: 1849002814}
   lunaPos: {fileID: 214346791}
+  mongolfieraPos: {fileID: 1561082560}
 --- !u!50 &721297131
 Rigidbody2D:
   serializedVersion: 4

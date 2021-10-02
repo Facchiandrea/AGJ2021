@@ -49,7 +49,6 @@ public class PaintSpace7 : MonoBehaviour
 
             playerIn = true;
             ViewModeSwap.lastCamCounter = 7;
-
             //tempPainting.transform.GetChild(3).gameObject.SetActive(false);
 
         }

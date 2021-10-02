@@ -36,6 +36,16 @@ public class Mongolfiera : MonoBehaviour
             player.transform.position = new Vector3(transform.position.x, transform.position.y - 3, player.transform.position.z);
         }
 
+        if (playerSullaLuna && traveling == false)
+        {
+            transform.position = StazioneLuna.position;
+        }
+        else if (playerSullaLuna == false && traveling == false)
+        {
+            transform.position = StazioneTerra.position;
+        }
+
+
         if (lunaDetector.lunaTrovata == true)
         {
             lunaSopra = true;
@@ -75,6 +85,8 @@ public class Mongolfiera : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(true);
             playerMovement.movementBlock = true;
             Invoke("ControlloDestinazione", 1.5f);
+            traveling = true;
+
         }
         else
         {
@@ -82,12 +94,14 @@ public class Mongolfiera : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(true);
             playerMovement.movementBlock = true;
             Invoke("ControlloDestinazione", 1.5f);
+            traveling = true;
+
         }
     }
 
     public void ControlloDestinazione()
     {
-        if (playerSullaLuna == false && lunaSopra && traveling == false)
+        if (playerSullaLuna == false && lunaSopra)
         {
             StartCoroutine(SpostamentoVersoLuna());
 
@@ -129,7 +143,6 @@ public class Mongolfiera : MonoBehaviour
     public IEnumerator SpostamentoVersoTerra()
     {
         float progress = 0;
-        traveling = true;
 
         while (progress < travelTime && traveling == true)
         {
@@ -152,7 +165,6 @@ public class Mongolfiera : MonoBehaviour
     public IEnumerator SpostamentoVersoLuna()
     {
         float progress = 0;
-        traveling = true;
 
         while (progress < travelTime && traveling == true)
         {
