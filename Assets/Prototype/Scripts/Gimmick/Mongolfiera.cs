@@ -33,7 +33,7 @@ public class Mongolfiera : MonoBehaviour
     {
         if (traveling)
         {
-            player.transform.position = this.transform.position;
+            player.transform.position = new Vector3(transform.position.x, transform.position.y - 3, player.transform.position.z);
         }
 
         if (lunaDetector.lunaTrovata == true)
@@ -73,7 +73,6 @@ public class Mongolfiera : MonoBehaviour
         {
             player.GetComponentInChildren<SpriteRenderer>().enabled = false;
             transform.GetChild(1).gameObject.SetActive(true);
-
             playerMovement.movementBlock = true;
             Invoke("ControlloDestinazione", 1.5f);
         }
@@ -88,9 +87,10 @@ public class Mongolfiera : MonoBehaviour
 
     public void ControlloDestinazione()
     {
-        if (playerSullaLuna == false && lunaSopra)
+        if (playerSullaLuna == false && lunaSopra && traveling == false)
         {
             StartCoroutine(SpostamentoVersoLuna());
+
         }
         else if (playerSullaLuna == true && terraSotto)
         {
@@ -113,25 +113,40 @@ public class Mongolfiera : MonoBehaviour
     {
         if (playerSullaLuna)
         {
-            transform.GetChild(1).gameObject.SetActive(false);
-            player.transform.position = ArrivoPlayerFuori.position;
-            player.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            traveling = false;
+            Invoke("PosizionamentoPlayerLuna", 0.1f);
 
-            playerMovement.movementBlock = false;
+
         }
-        else
+        else if (playerSullaLuna == false)
         {
-            transform.GetChild(1).gameObject.SetActive(false);
-            player.transform.position = InizioPlayerFuori.position;
-            player.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            traveling = false;
+            Invoke("PosizionamentoPlayerTerra", 0.1f);
 
-            playerMovement.movementBlock = false;
         }
     }
 
     public IEnumerator SpostamentoVersoTerra()
     {
+        float progress = 0;
+        traveling = true;
+
+        while (progress < travelTime && traveling == true)
+        {
+            playerMovement.movementBlock = true;
+
+            transform.position = Vector2.Lerp(StazioneLuna.position, StazioneTerra.position, (progress / travelTime));
+            progress += Time.deltaTime;
+            yield return null;
+        }
+        new WaitForSeconds(travelTime);
+        transform.position = StazioneTerra.position;
+        playerSullaLuna = false;
+        this.gameObject.tag = "NPC";
+        ScendiDallaMongolfiera();
+
         yield return null;
+
     }
 
     public IEnumerator SpostamentoVersoLuna()
@@ -149,11 +164,27 @@ public class Mongolfiera : MonoBehaviour
         }
         new WaitForSeconds(travelTime);
         transform.position = StazioneLuna.position;
-        traveling = false;
         playerSullaLuna = true;
         this.gameObject.tag = "NPC";
         ScendiDallaMongolfiera();
 
         yield return null;
+    }
+
+    public void PosizionamentoPlayerLuna()
+    {
+        player.transform.position = ArrivoPlayerFuori.position;
+        transform.GetChild(1).gameObject.SetActive(false);
+        player.GetComponentInChildren<SpriteRenderer>().enabled = true;
+        playerMovement.movementBlock = false;
+
+    }
+    public void PosizionamentoPlayerTerra()
+    {
+        player.transform.position = InizioPlayerFuori.position;
+        transform.GetChild(1).gameObject.SetActive(false);
+        player.GetComponentInChildren<SpriteRenderer>().enabled = true;
+        playerMovement.movementBlock = false;
+
     }
 }

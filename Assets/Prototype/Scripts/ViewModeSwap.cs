@@ -23,6 +23,7 @@ public class ViewModeSwap : MonoBehaviour
     public NPCInteractor NPCInteractor;
     public Swapper swapper;
     public FadeInOut FadeInOut;
+    public Mongolfiera mongolfiera;
 
     [HideInInspector]
     public bool fullView;
@@ -41,7 +42,7 @@ public class ViewModeSwap : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false)
+        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
         {
             EnterFullView();
             transitionToFull = true;
@@ -49,7 +50,7 @@ public class ViewModeSwap : MonoBehaviour
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.V) && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false)
+        else if (Input.GetKeyDown(KeyCode.V) && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
         {
             ExitFullView();
             transitionToSingle = true;
