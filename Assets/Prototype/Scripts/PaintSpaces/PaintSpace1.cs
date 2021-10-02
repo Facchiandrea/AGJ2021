@@ -25,19 +25,6 @@ public class PaintSpace1 : MonoBehaviour
     {
         if (collision.CompareTag("Activator"))
         {
-            camera1.SetActive(true);
-            camera2.SetActive(false);
-            camera3.SetActive(false);
-            camera4.SetActive(false);
-            camera5.SetActive(false);
-            camera6.SetActive(false);
-            camera7.SetActive(false);
-            camera8.SetActive(false);
-            camera9.SetActive(false);
-            camera10.SetActive(false);
-            camera11.SetActive(false);
-            camera12.SetActive(false);
-
             ViewModeSwap.lastCamCounter = 1;
             //Painting1.transform.GetChild(3).gameObject.SetActive(false);
 

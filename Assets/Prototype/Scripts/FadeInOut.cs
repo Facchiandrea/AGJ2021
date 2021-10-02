@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class FadeInOut : MonoBehaviour
 {
-    public GameObject fadeInOBJ;
-    public GameObject fadeOutOBJ;
+    public GameObject fadeBlack;
     public PlayerMovement playerMovement;
     public NPCInteractor NPCInteractor;
     public ViewModeSwap viewModeSwap;
@@ -14,22 +13,21 @@ public class FadeInOut : MonoBehaviour
     {
         fadeTransition = true;
 
-        fadeInOBJ.SetActive(true);
+        fadeBlack.SetActive(true);
         playerMovement.movementBlock = true;
-        Invoke("FadeOut", 1f);
+        Invoke("Magheggi", 1f);
+        Invoke("EndTransition", 1f);
+
     }
 
-    public void FadeOut()
+    public void Magheggi()
     {
-        fadeInOBJ.SetActive(false);
-        fadeOutOBJ.SetActive(true);
-        Invoke("EndTransition", 1f);
-        Invoke("CameraFix", 0.05f);
+        viewModeSwap.BusCameraTransition();
         if (NPCInteractor.uovoPortato == true)
         {
             NPCInteractor.bigliettoUI.SetActive(true);
         }
-
+        //Invoke("CameraFix", 0.1f);
 
     }
 
@@ -38,7 +36,7 @@ public class FadeInOut : MonoBehaviour
         fadeTransition = false;
 
         playerMovement.movementBlock = false;
-        fadeOutOBJ.SetActive(false);
+        fadeBlack.SetActive(false);
 
     }
 

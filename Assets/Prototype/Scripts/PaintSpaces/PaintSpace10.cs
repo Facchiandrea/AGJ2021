@@ -33,19 +33,6 @@ public class PaintSpace10 : MonoBehaviour
     {
         if (collision.CompareTag("Activator"))
         {
-            camera1.SetActive(false);
-            camera2.SetActive(false);
-            camera3.SetActive(false);
-            camera4.SetActive(false);
-            camera5.SetActive(false);
-            camera6.SetActive(false);
-            camera7.SetActive(false);
-            camera8.SetActive(false);
-            camera9.SetActive(false);
-            camera10.SetActive(true);
-            camera11.SetActive(false);
-            camera12.SetActive(false);
-
             playerIn = true;
             ViewModeSwap.lastCamCounter = 10;
 

@@ -78,12 +78,226 @@ public class ViewModeSwap : MonoBehaviour
             }
         }
 
+        if (fullView == false)
+        {
+            if (lastCamCounter == 1)
+            {
+                camera1.SetActive(true);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+            }
+            else if (lastCamCounter == 2)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(true);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
 
+            }
+            else if (lastCamCounter == 3)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(true);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 4)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(true);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 5)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(true);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 6)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(true);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 7)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(true);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 8)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(true);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 9)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(true);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 10)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(true);
+                camera11.SetActive(false);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 11)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(true);
+                camera12.SetActive(false);
+                fullViewCam.SetActive(false);
+
+            }
+
+            else if (lastCamCounter == 12)
+            {
+                camera1.SetActive(false);
+                camera2.SetActive(false);
+                camera3.SetActive(false);
+                camera4.SetActive(false);
+                camera5.SetActive(false);
+                camera6.SetActive(false);
+                camera7.SetActive(false);
+                camera8.SetActive(false);
+                camera9.SetActive(false);
+                camera10.SetActive(false);
+                camera11.SetActive(false);
+                camera12.SetActive(true);
+                fullViewCam.SetActive(false);
+
+            }
+        }
     }
 
     public void EnterFullView()
     {
-        if (camera1.activeInHierarchy)
+        /*if (camera1.activeInHierarchy)
         {
             lastCamCounter = 1;
             camera1.SetActive(false);
@@ -142,11 +356,23 @@ public class ViewModeSwap : MonoBehaviour
         {
             lastCamCounter = 12;
             camera12.SetActive(false);
-        }
+        }*/
+        fullViewCam.SetActive(true);
+        camera1.SetActive(false);
+        camera2.SetActive(false);
+        camera3.SetActive(false);
+        camera4.SetActive(false);
+        camera5.SetActive(false);
+        camera6.SetActive(false);
+        camera7.SetActive(false);
+        camera8.SetActive(false);
+        camera9.SetActive(false);
+        camera10.SetActive(false);
+        camera11.SetActive(false);
+        camera12.SetActive(false);
 
         fullView = true;
 
-        fullViewCam.SetActive(true);
 
     }
 
