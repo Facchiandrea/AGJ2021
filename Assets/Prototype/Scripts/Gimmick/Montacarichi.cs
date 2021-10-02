@@ -8,17 +8,12 @@ public class Montacarichi : MonoBehaviour
     public bool playerInRange;
     public bool montacarichiRiparato;
     public PlayerMovement playerMovement;
-    public bool montacarichiATerra;
-    public float travelTime = 5f;
+    public bool montacarichiATerra = true;
+    public float travelTime = 2f;
     public bool traveling;
-    private Vector3 startPos;
-    private Vector3 endPos;
+    public Transform startPos;
+    public Transform endPos;
 
-    private void Start()
-    {
-        startPos = transform.position;
-        endPos = new Vector3(startPos.x, startPos.y + 2.35f, startPos.z);
-    }
     private void Update()
     {
         if (distanceCheck.playerIn)
@@ -52,16 +47,18 @@ public class Montacarichi : MonoBehaviour
 
     public IEnumerator MontacarichiSale()
     {
+        Debug.Log("sne");
+
         float progress = 0;
 
         while (progress < travelTime && traveling == true)
         {
-            transform.position = Vector2.Lerp(startPos, endPos, (progress / travelTime));
+            transform.position = Vector2.Lerp(startPos.position, endPos.position, (progress / travelTime));
             progress += Time.deltaTime;
             yield return null;
         }
         new WaitForSeconds(travelTime);
-        transform.position = endPos;
+        transform.position = endPos.position;
         montacarichiATerra = false;
         traveling = false;
         this.gameObject.tag = "NPC";
@@ -72,16 +69,17 @@ public class Montacarichi : MonoBehaviour
 
     public IEnumerator MontacarichiScende()
     {
+        Debug.Log("sas");
         float progress = 0;
 
         while (progress < travelTime && traveling == true)
         {
-            transform.position = Vector2.Lerp(endPos, startPos, (progress / travelTime));
+            transform.position = Vector2.Lerp(endPos.position, startPos.position, (progress / travelTime));
             progress += Time.deltaTime;
             yield return null;
         }
         new WaitForSeconds(travelTime);
-        transform.position = startPos;
+        transform.position = startPos.position;
         montacarichiATerra = true;
         traveling = false;
         this.gameObject.tag = "NPC";
