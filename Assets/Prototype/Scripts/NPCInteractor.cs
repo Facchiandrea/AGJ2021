@@ -32,6 +32,7 @@ public class NPCInteractor : MonoBehaviour
     public bool armadioAperto;
     public bool gambaPresa;
     public PickUpGamba pickUpGamba;
+    public GameObject gambaLeva;
 
     public Uomo uomo;
     public Montacarichi montacarichi;

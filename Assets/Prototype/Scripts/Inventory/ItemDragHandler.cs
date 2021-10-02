@@ -124,7 +124,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 this.gameObject.SetActive(false);
                 NPCInteractor.montacarichi.montacarichiRiparato = true;
                 Debug.Log("Montacarichi riparato!");
-                NPCInteractor.selection.GetChild(1).gameObject.SetActive(true);
+                NPCInteractor.gambaLeva.SetActive(true);
             }
             else
             {
