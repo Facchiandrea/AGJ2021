@@ -11163,9 +11163,18 @@ MonoBehaviour:
   viewModeSwap: {fileID: 1849002814}
   lunaPos: {fileID: 214346791}
   mongolfieraPos: {fileID: 1561082560}
+  dialogueManager: {fileID: 1840462404}
   dialogue:
-    name: 
-    sentences: []
+    name: Artemisia
+    sentences:
+    - 'Sasasasasa
+
+      sasasasas
+
+      asasasas'
+    - 'zazazaz
+
+      zaaz'
 --- !u!50 &721297131
 Rigidbody2D:
   serializedVersion: 4
@@ -29237,13 +29246,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1840462403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a59e6de034a4b74690164b589204a18, type: 3}
+  m_Script: {fileID: 11500000, guid: b1caf08c579289f478b9a3feee4b65e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 287110956}
   dialogueText: {fileID: 559267817}
-  dialogueBlackPanel: {fileID: 409365260}
   animator: {fileID: 1092800782}
+  blackPanel: {fileID: 409365260}
 --- !u!4 &1840462405
 Transform:
   m_ObjectHideFlags: 0

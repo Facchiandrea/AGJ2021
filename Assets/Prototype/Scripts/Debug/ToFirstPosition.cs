@@ -8,6 +8,9 @@ public class ToFirstPosition : MonoBehaviour
     private Vector3 startPos;
     public Transform lunaPos;
     public Transform mongolfieraPos;
+    public DialogueManager dialogueManager;
+    public Dialogue dialogue;
+
 
     void Start()
     {
@@ -28,6 +31,11 @@ public class ToFirstPosition : MonoBehaviour
         {
             transform.position = mongolfieraPos.position;
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            dialogueManager.StartDialogue(dialogue);
+        }
+
 
     }
 }
