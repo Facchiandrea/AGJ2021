@@ -9,6 +9,8 @@ public class ItemSelection : MonoBehaviour
     public Transform selection;
     public MorbidDetector MorbidDetector;
     public NPCInteractor NPCInteractor;
+    public DialogueManager dialogueManager;
+
 
 
     private void FixedUpdate()
@@ -87,18 +89,37 @@ public class ItemSelection : MonoBehaviour
                     selection.GetComponent<PickUpUovo>().PickUpGraphics.SetActive(false);
 
                     selection.gameObject.SetActive(false);
+                    //dialogueManager.StartDialogue(dialogue);
                     Debug.Log("Hai raccolto l'uovo");
 
                 }
                 else if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == true && selection.GetComponent<PickUpUovo>().playerInRange == false)
                 {
-                    Debug.Log("Questo uovo potrebbe servirmi, ma non posso prenderlo da qui");
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Questo uovo potrebbe servirmi, ma non posso prenderlo da qui");
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
 
                 }
 
                 else if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == false)
                 {
-                    Debug.Log("E' un uovo");
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("E' un uovo");
+                        dialogueManager.dialogue.sentences.Add("Mi piacciono le uova");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
 
                 //-------------------------ROBA MORBIDA-----------------------------------

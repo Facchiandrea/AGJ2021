@@ -12,8 +12,9 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public GameObject blackPanel;
     public bool inDialogue = false;
-
-    private Queue<string> sentences;
+    [HideInInspector]
+    public Queue<string> sentences;
+    public Dialogue dialogue;
 
     void Awake()
     {
@@ -38,7 +39,7 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("isOpen", true);
         nameText.text = dialogue.name;
 
-        sentences.Clear();
+        //sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {

@@ -11163,18 +11163,6 @@ MonoBehaviour:
   viewModeSwap: {fileID: 1849002814}
   lunaPos: {fileID: 214346791}
   mongolfieraPos: {fileID: 1561082560}
-  dialogueManager: {fileID: 1840462404}
-  dialogue:
-    name: Artemisia
-    sentences:
-    - 'Sasasasasa
-
-      sasasasas
-
-      asasasas'
-    - 'zazazaz
-
-      zaaz'
 --- !u!50 &721297131
 Rigidbody2D:
   serializedVersion: 4
@@ -17529,7 +17517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -15.000061}
+  m_AnchoredPosition: {x: 0, y: -15}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &1092800782
@@ -27475,6 +27463,7 @@ MonoBehaviour:
   selection: {fileID: 0}
   MorbidDetector: {fileID: 347304959}
   NPCInteractor: {fileID: 1767356935}
+  dialogueManager: {fileID: 1840462404}
 --- !u!1 &1718441381
 GameObject:
   m_ObjectHideFlags: 0
@@ -29253,6 +29242,10 @@ MonoBehaviour:
   dialogueText: {fileID: 559267817}
   animator: {fileID: 1092800782}
   blackPanel: {fileID: 409365260}
+  inDialogue: 0
+  dialogue:
+    name: Artemisia
+    sentences: []
 --- !u!4 &1840462405
 Transform:
   m_ObjectHideFlags: 0
