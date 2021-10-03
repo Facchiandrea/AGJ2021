@@ -51,17 +51,47 @@ public class ItemSelection : MonoBehaviour
                     selection.GetComponent<PickUpCasco>().PickUpGraphics.SetActive(false);
 
                     selection.gameObject.SetActive(false);
-                    Debug.Log("Hai raccolto il casco");
 
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Questo casco è proprio quello che mi serve");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    }
                 }
                 else if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == true && selection.GetComponent<PickUpCasco>().playerInRange == false)
                 {
-                    Debug.Log("Questo casco potrebbe servirmi, ma non posso prenderlo da qui");
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Questo casco potrebbe servirmi, ma non posso prenderlo da qui");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    }
                 }
 
                 else if (selection.name == "Casco" && selection.GetComponent<PickUpCasco>().canPickUp == false)
                 {
-                    Debug.Log("E' un casco da astronauta");
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("E' un casco da astronauta");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    }
                 }
                 //---------------------SCOLAPASTA--------------------------
                 if (selection.name == "Scolapasta" && selection.GetComponent<PickUpScolapasta>().canPickUp == true && selection.GetComponent<PickUpScolapasta>().playerInRange == true)
@@ -70,17 +100,44 @@ public class ItemSelection : MonoBehaviour
                     selection.GetComponent<PickUpScolapasta>().PickUpGraphics.SetActive(false);
 
                     selection.gameObject.SetActive(false);
-                    Debug.Log("Hai raccolto lo scolapasta");
 
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Ho raccolto lo scolapasta");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
                 else if (selection.name == "Scolapasta" && selection.GetComponent<PickUpScolapasta>().canPickUp == true && selection.GetComponent<PickUpScolapasta>().playerInRange == false)
                 {
-                    Debug.Log("Questo scolapasta potrebbe servirmi, ma non posso prenderlo da qui");
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Questo scolapasta potrebbe servirmi, ma non posso prenderlo da qui");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
 
                 else if (selection.name == "Scolapasta" && selection.GetComponent<PickUpScolapasta>().canPickUp == false)
                 {
-                    Debug.Log("E' uno scolapasta");
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("E' uno scolapasta");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
                 //---------------------UOVO--------------------------
                 if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == true && selection.GetComponent<PickUpUovo>().playerInRange == true)
@@ -89,9 +146,16 @@ public class ItemSelection : MonoBehaviour
                     selection.GetComponent<PickUpUovo>().PickUpGraphics.SetActive(false);
 
                     selection.gameObject.SetActive(false);
-                    //dialogueManager.StartDialogue(dialogue);
-                    Debug.Log("Hai raccolto l'uovo");
+                    if (dialogueManager.inDialogue == false)
+                    {
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
 
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Ho raccolto l'uovo");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
                 else if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == true && selection.GetComponent<PickUpUovo>().playerInRange == false)
                 {
@@ -126,12 +190,32 @@ public class ItemSelection : MonoBehaviour
 
                 if (selection.name == "Fiori")
                 {
-                    Debug.Log("Sembra morbido");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Questo tappeto di fiori sembra veramente soffice");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                     MorbidDetector.interactedWithFlowers = true;
                 }
                 if (selection.name == "Materassi")
                 {
-                    Debug.Log("Sembra morbido");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Quei materassi sembrano morbidi, peccato siano zozzi da fare schifo");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                     MorbidDetector.interactedWithMattress = true;
                 }
 
@@ -139,17 +223,47 @@ public class ItemSelection : MonoBehaviour
 
                 if (selection.name == "Cestino" && NPCInteractor.fiammiferiInInventario == true)
                 {
-                    Debug.Log("Non credo ci sia altro che posso usare li dentro");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Non credo ci sia altro che posso usare, li dentro");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
                 else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == true && selection.GetComponent<PickUpFiammiferi>().playerInRange == true && selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino == true)
                 {
-                    Debug.Log("Hai raccolto i fiammiferi");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Ho raccolto i fiammiferi");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                     NPCInteractor.fiammiferiInInventario = true;
                     selection.GetComponent<PickUpFiammiferi>().PickUpUIGraphics.SetActive(true);
                 }
                 else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == true && selection.GetComponent<PickUpFiammiferi>().playerInRange == true && selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino == false)
                 {
-                    Debug.Log("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e...dei fiammiferi! Potrei farne buon uso");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e...dei fiammiferi! Potrei farne buon uso");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                     NPCInteractor.fiammiferiInInventario = true;
                     selection.GetComponent<PickUpFiammiferi>().PickUpUIGraphics.SetActive(true);
                     selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino = true;
@@ -157,16 +271,46 @@ public class ItemSelection : MonoBehaviour
 
                 else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == true && selection.GetComponent<PickUpFiammiferi>().playerInRange == false && selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino == true)
                 {
-                    Debug.Log("Nel cestino c'era qualcosa che potrebbe servirmi, ma sono troppo lontana");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Nel cestino c'era qualcosa che potrebbe servirmi, ma sono troppo lontana");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
                 else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == false && selection.GetComponent<PickUpFiammiferi>().playerInRange == false || selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == true && selection.GetComponent<PickUpFiammiferi>().playerInRange == false && selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino == false)
                 {
-                    Debug.Log("E' un cestino da picnic. Se mi avvicino potrei sbirciare dentro");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Se mi avvicino potrei sbirciare dentro");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
 
                 else if (selection.name == "Cestino" && selection.GetComponent<PickUpFiammiferi>().canPickUp == false && selection.GetComponent<PickUpFiammiferi>().playerInRange == true)
                 {
-                    Debug.Log("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e dei fiammiferi");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e dei fiammiferi");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                     selection.GetComponent<PickUpFiammiferi>().guardatoNelCestino = true;
                 }
 
@@ -177,24 +321,63 @@ public class ItemSelection : MonoBehaviour
                     selection.GetComponent<PickUpConchiglia>().PickUpGraphics.SetActive(false);
 
                     selection.gameObject.SetActive(false);
-                    Debug.Log("Hai raccolto la conchiglia");
+                    if (dialogueManager.inDialogue == false)
+                    {
 
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Conchiglia presa!");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
                 else if (selection.name == "Conchiglia" && selection.GetComponent<PickUpConchiglia>().canPickUp == true && selection.GetComponent<PickUpConchiglia>().playerInRange == false)
                 {
-                    Debug.Log("Questa conchiglia potrebbe servirmi, ma non posso prenderla da qui");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Quella conchiglia fa al caso mio, ma è lontana");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
 
                 }
 
                 else if (selection.name == "Conchiglia" && selection.GetComponent<PickUpConchiglia>().canPickUp == false)
                 {
-                    Debug.Log("E' una conchiglia");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("E' una bella conchiglia. Ora voglio pasta con le vongole");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
 
                 //---------------------PORTALE--------------------------
                 if (selection.name == "Portale")
                 {
-                    Debug.Log("Hai vinto!");
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+
+                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.sentences.Add("Tempo di tornare nel mondo reale!");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
 
 
@@ -208,11 +391,23 @@ public class ItemSelection : MonoBehaviour
 
                 if (selection.name == "Fosso" && MorbidDetector.morbidBelow == false)
                 {
-                    Debug.Log("Non posso scendere");
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+
+                    dialogueManager.dialogue.sentences.Add("");
+                    dialogueManager.dialogue.sentences.Add("Se scendessi ora mi farei male");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
                 }
                 else if (selection.name == "Fosso" && MorbidDetector.morbidBelow == true)
                 {
-                    Debug.Log("La roba morbida attutirà la caduta");
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+
+                    dialogueManager.dialogue.sentences.Add("");
+                    dialogueManager.dialogue.sentences.Add("La roba morbida attutirà la caduta, potrei anche scendere ora");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
                 }
 
 
