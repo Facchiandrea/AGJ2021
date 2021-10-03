@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Animator animator;
     public GameObject blackPanel;
+    public bool inDialogue = false;
 
     private Queue<string> sentences;
 
@@ -22,9 +23,17 @@ public class DialogueManager : MonoBehaviour
             instance = this;
     }
 
+    private void Update()
+    {
+        if (inDialogue && Input.GetMouseButtonDown(0))
+        {
+            DisplayNextSentence();
+        }
+    }
     public void StartDialogue(Dialogue dialogue)
     {
         Time.timeScale = 0;
+        inDialogue = true;
         blackPanel.SetActive(true);
         animator.SetBool("isOpen", true);
         nameText.text = dialogue.name;
@@ -64,6 +73,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        inDialogue = false;
         blackPanel.SetActive(false);
         animator.SetBool("isOpen", false);
         Time.timeScale = 1;
