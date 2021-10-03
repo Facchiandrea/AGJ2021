@@ -9,6 +9,9 @@ public class NPCInteractor : MonoBehaviour
     private Transform _selectionItem;
     public Transform selection;
 
+    public bool tutorialFinito;
+
+
     public PickUpCasco pickUpCascoScript;
     public bool cascoPortato = false;
 
@@ -67,6 +70,17 @@ public class NPCInteractor : MonoBehaviour
     {
         if (selection != null && fadeInOut.fadeTransition == false)
         {
+            //-----------------TUTORIAL----------------
+            if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == false)
+            {
+                Debug.Log("Tutorial");
+                tutorialFinito = true;
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true)
+            {
+                Debug.Log("Tutorial 2");
+            }
+
             //-----------------RAGAZZO----------------
             if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false)
             {
