@@ -383,7 +383,7 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Conchiglia presa!");
+                        dialogueManager.dialogue.sentences.Add("Sì, questa va benissimo, spero che piacerà a quel vecchietto");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -419,7 +419,7 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("E' una bella conchiglia. Ora voglio pasta con le vongole");
+                        dialogueManager.dialogue.sentences.Add("Adoro le conchiglie, questa è quella che mi è venuta meglio");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -500,8 +500,165 @@ public class ItemSelection : MonoBehaviour
 
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 5-----------------------------------
+                if (selection.name == "Cappello")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' un cappello di paglia. Diventerò il re dei pirati");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Tovaglia")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Una volta facevo sempre dei pic nic con i miei genitori, adesso odio uscire di casa");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Farfalla")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("HEY, LISTEN!");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 6-----------------------------------
+
+                if (selection.name == "Conchiglia gigante" && selection.GetComponent<PickUpConchiglia>().canPickUp == false)
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Uno dei miei primi quadri, mi stavo ancora esercitando con le proporzioni");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                else if (selection.name == "Conchiglia gigante" && selection.GetComponent<PickUpConchiglia>().canPickUp == true)
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Direi che questa non posso portarla al vecchio");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
+
+                if (selection.name == "Pallone")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' un pallone");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Ombrellone")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Non ho tempo per fermarmi a riposare, voglio uscire da questi quadri");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Delfini")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Se mi reincarnerò voglio essere un delfino, oppure un orso. Nessuno rompe le palle agli orsi.");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Veliero")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Quella nave sullo sfondo mi ha ispirato a fare un altro quadro. Da bambina sognavo di fare il pirata e navigare ovunque, poi qualcosa è cambiato.");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 7-----------------------------------
                 if (selection.name == "Pianeta")
