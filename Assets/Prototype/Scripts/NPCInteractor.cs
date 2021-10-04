@@ -41,6 +41,9 @@ public class NPCInteractor : MonoBehaviour
     public Montacarichi montacarichi;
     public bool conchigliaPortata;
     public PickUpConchiglia pickUpConchiglia;
+
+    public DialogueManager dialogueManager;
+
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -75,6 +78,27 @@ public class NPCInteractor : MonoBehaviour
             {
                 Debug.Log("Tutorial");
                 tutorialFinito = true;
+
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("???");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Tut Orial");
+
+                    dialogueManager.dialogue.sentences.Add("Ciao, il mio nome è Tut, ma puoi chiamarmi Orial");
+                    dialogueManager.dialogue.sentences.Add("...Seriamente?");
+                    dialogueManager.dialogue.sentences.Add("Sne");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
+
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true)
             {

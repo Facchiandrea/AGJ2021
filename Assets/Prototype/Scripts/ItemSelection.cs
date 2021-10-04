@@ -56,8 +56,11 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Questo casco è proprio quello che mi serve");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -70,8 +73,11 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Questo casco potrebbe servirmi, ma non posso prenderlo da qui");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -85,8 +91,11 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("E' un casco da astronauta");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -105,8 +114,11 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Ho raccolto lo scolapasta");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -118,8 +130,11 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Questo scolapasta potrebbe servirmi, ma non posso prenderlo da qui");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -132,8 +147,11 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("E' uno scolapasta");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -150,8 +168,11 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Ho raccolto l'uovo");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -163,8 +184,11 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Questo uovo potrebbe servirmi, ma non posso prenderlo da qui");
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -177,8 +201,12 @@ public class ItemSelection : MonoBehaviour
                     {
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("E' un uovo");
                         dialogueManager.dialogue.sentences.Add("Mi piacciono le uova");
 
@@ -195,8 +223,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Questo tappeto di fiori sembra veramente soffice");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -210,8 +241,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Quei materassi sembrano morbidi, peccato siano zozzi da fare schifo");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -228,8 +262,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Non credo ci sia altro che posso usare, li dentro");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -242,8 +279,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Ho raccolto i fiammiferi");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -258,8 +298,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e...dei fiammiferi! Potrei farne buon uso");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -276,8 +319,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Nel cestino c'era qualcosa che potrebbe servirmi, ma sono troppo lontana");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -290,8 +336,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Se mi avvicino potrei sbirciare dentro");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -305,8 +354,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e dei fiammiferi");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -326,8 +378,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Conchiglia presa!");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -340,8 +395,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Quella conchiglia fa al caso mio, ma è lontana");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -356,8 +414,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("E' una bella conchiglia. Ora voglio pasta con le vongole");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -372,8 +433,11 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.sentences.Add("");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
                         dialogueManager.dialogue.sentences.Add("Tempo di tornare nel mondo reale!");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);

@@ -11,15 +11,19 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Animator animator;
     public GameObject blackPanel;
+    public GameObject portrait;
     public bool inDialogue = false;
     [HideInInspector]
     public Queue<string> sentences;
+    [HideInInspector]
+    public Queue<string> names;
+
     public Dialogue dialogue;
 
     void Awake()
     {
         sentences = new Queue<string>();
-
+        names = new Queue<string>();
         if (instance == null)
             instance = this;
     }
@@ -37,16 +41,18 @@ public class DialogueManager : MonoBehaviour
         inDialogue = true;
         blackPanel.SetActive(true);
         animator.SetBool("isOpen", true);
-        nameText.text = dialogue.name;
 
-        //sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
+        foreach (string name in dialogue.names)
+        {
+            names.Enqueue(name);
+        }
 
-        DisplayNextSentence();
+
     }
 
     public void DisplayNextSentence()
@@ -58,19 +64,41 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+        string name = names.Dequeue();
+
         //StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeName(name));
+
     }
 
     IEnumerator TypeSentence(string sentence)
     {
-        dialogueText.text = "";
+        /*dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
-        }
+        }*/
+        dialogueText.text = sentence;
+
+        yield return null;
+
     }
+    IEnumerator TypeName(string name)
+    {
+        /*nameText.text = "";
+        foreach (char letter in name.ToCharArray())
+        {
+            nameText.text += letter;
+            yield return null;
+        }*/
+
+        nameText.text = name;
+
+        yield return null;
+    }
+
 
     void EndDialogue()
     {
