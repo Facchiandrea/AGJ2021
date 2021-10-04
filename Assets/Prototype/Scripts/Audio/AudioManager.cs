@@ -69,37 +69,23 @@ public class AudioManager : MonoBehaviour
     /// <summary>
     /// Stops all sounds in game
     /// </summary>
-    public void FadeOutAllSounds(string name)
+    ///     /// <param name="name"></param>
+    public void FadeOutAllSounds()
     {
         foreach (Sound s in sounds)
         {
-            Sound ciao = Array.Find(sounds, sound => sound.name == name);
-            float originalVolume = s.volume;
-            ciao.volume = 0;
-            ciao.source.Play();
-            StartCoroutine(StartFadeIn(s, s.fadeInTime, originalVolume));
+            StartCoroutine(StartFadeOut(s, s.fadeOutTime, 0));
         }
     }
 
     /// <summary>
-    /// Coroutine for fade in a Sound
+    /// Fade out a sound
     /// </summary>
-    /// <param name="clip">Clip to fade</param>
-    /// <param name="duration">Duration of the fade</param>
-    /// <param name="targetVolume">Volume to reach</param>
-    /// <returns></returns>
-    public static IEnumerator StartFadeIn(Sound clip, float duration, float targetVolume)
+    /// <param name="name">Name of the Clip</param>
+    public void FadeOut(string name)
     {
-        float currentTime = 0;
-        float start = clip.volume;
-
-        while (currentTime < duration)
-        {
-            currentTime += Time.deltaTime;
-            clip.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
-            yield return null;
-        }
-        yield break;
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        StartCoroutine(StartFadeOut(s, s.fadeOutTime, 0));
     }
 
     /// <summary>
@@ -128,6 +114,8 @@ public class AudioManager : MonoBehaviour
         yield break;
     }
 
+
+
     /// <summary>
     /// Fade in a sound
     /// </summary>
@@ -142,14 +130,26 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fade out a sound
+    /// Coroutine for fade in a Sound
     /// </summary>
-    /// <param name="name">Name of the Clip</param>
-    public void FadeOut(string name)
+    /// <param name="clip">Clip to fade</param>
+    /// <param name="duration">Duration of the fade</param>
+    /// <param name="targetVolume">Volume to reach</param>
+    /// <returns></returns>
+    public static IEnumerator StartFadeIn(Sound clip, float duration, float targetVolume)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        StartCoroutine(StartFadeOut(s, s.fadeOutTime, 0));
+        float currentTime = 0;
+        float start = clip.volume;
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            clip.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            yield return null;
+        }
+        yield break;
     }
+
 
 
     /// <summary>
