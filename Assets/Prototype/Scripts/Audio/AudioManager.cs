@@ -6,7 +6,6 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
-
     /// <summary>
     /// Start the selected song
     /// </summary>
@@ -67,6 +66,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Stops all sounds in game
+    /// </summary>
+    public void FadeOutAllSounds(string name)
+    {
+        foreach (Sound s in sounds)
+        {
+            Sound ciao = Array.Find(sounds, sound => sound.name == name);
+            float originalVolume = s.volume;
+            ciao.volume = 0;
+            ciao.source.Play();
+            StartCoroutine(StartFadeIn(s, s.fadeInTime, originalVolume));
+        }
+    }
 
     /// <summary>
     /// Coroutine for fade in a Sound
