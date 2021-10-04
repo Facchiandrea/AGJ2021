@@ -50,6 +50,7 @@ public class SliderManager : MonoBehaviour
 
         sfx = PlayerPrefs.GetFloat("SfxVolume", 1f);
         sfxSlider.value = sfx;
+
     }
 
     void Update()

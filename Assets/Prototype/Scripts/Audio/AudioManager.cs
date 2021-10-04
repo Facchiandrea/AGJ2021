@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
+    private Sound currentMusic;
     /// <summary>
     /// Start the selected song
     /// </summary>
@@ -15,9 +16,15 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s.type == Type.Music)
+        {
             s.source.volume = PlayerPrefs.GetFloat("MusicVolume") * PlayerPrefs.GetFloat("MasterVolume") * s.volume;
+            //currentMusic = s;
+        }
         else
+        {
             s.source.volume = PlayerPrefs.GetFloat("SfxVolume") * PlayerPrefs.GetFloat("MasterVolume") * s.volume;
+            //currentMusic = s;
+        }
         s.source.Play();
     }
 
@@ -74,7 +81,8 @@ public class AudioManager : MonoBehaviour
     {
         foreach (Sound s in sounds)
         {
-            StartCoroutine(StartFadeOut(s, s.fadeOutTime, 0));
+            if (s != currentMusic)
+                StartCoroutine(StartFadeOut(s, s.fadeOutTime, 0));
         }
     }
 
@@ -126,6 +134,7 @@ public class AudioManager : MonoBehaviour
         float originalVolume = s.volume;
         s.volume = 0;
         s.source.Play();
+        currentMusic = s;
         StartCoroutine(StartFadeIn(s, s.fadeInTime, originalVolume));
     }
 

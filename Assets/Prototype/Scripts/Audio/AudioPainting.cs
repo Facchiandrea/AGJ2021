@@ -9,10 +9,8 @@ public class AudioPainting : MonoBehaviour
     {
         if (collision.CompareTag("Activator") && AudioManager.instance != null)
         {
-            AudioManager.instance.FadeOut("MenuMusic");
-            Debug.Log("fadeout");
-            //AudioManager.instance.FadeOutAllSounds();
-            //AudioManager.instance.FadeIn(ambientMusicName);
+            AudioManager.instance.FadeIn(ambientMusicName);
+            AudioManager.instance.FadeOutAllSounds();
         }
     }
 }
