@@ -10,6 +10,7 @@ public class ItemSelection : MonoBehaviour
     public MorbidDetector MorbidDetector;
     public NPCInteractor NPCInteractor;
     public DialogueManager dialogueManager;
+    public PickUpConchiglia pickUpConchiglia;
 
 
 
@@ -562,7 +563,7 @@ public class ItemSelection : MonoBehaviour
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 6-----------------------------------
 
-                if (selection.name == "Conchiglia gigante" && selection.GetComponent<PickUpConchiglia>().canPickUp == false)
+                if (selection.name == "Conchiglia gigante" && pickUpConchiglia.canPickUp == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -579,7 +580,7 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
                 }
-                else if (selection.name == "Conchiglia gigante" && selection.GetComponent<PickUpConchiglia>().canPickUp == true)
+                else if (selection.name == "Conchiglia gigante" && pickUpConchiglia.canPickUp == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
