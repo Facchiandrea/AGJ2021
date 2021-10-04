@@ -763,8 +763,112 @@ public class ItemSelection : MonoBehaviour
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 10-----------------------------------
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 11-----------------------------------
+                if (selection.name == "Marmitta")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Vrum vrum trattoroni");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Carrello")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("La coop sei tu");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Lavatrice")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' la mia vecchia lavatrice, si era rotta. Ora è nel paradiso delle lavatrici rotte");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 12-----------------------------------
+                if (selection.name == "Cervo")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E'un cervo");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Bacche")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Mi piacciono i lamponi");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
+                if (selection.name == "Funghi")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Mi piacciono i funghi");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
 
 
             }
