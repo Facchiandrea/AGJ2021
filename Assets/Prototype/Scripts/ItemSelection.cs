@@ -473,29 +473,37 @@ public class ItemSelection : MonoBehaviour
 
                 if (selection.name == "Fosso" && MorbidDetector.morbidBelow == false)
                 {
-                    dialogueManager.dialogue.sentences.Clear();
-                    dialogueManager.sentences.Clear();
-                    dialogueManager.dialogue.names.Clear();
-                    dialogueManager.names.Clear();
+                    if (dialogueManager.inDialogue == false)
+                    {
 
-                    dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.sentences.Add("Se scendessi ora mi farei male");
+                        dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        dialogueManager.dialogue.sentences.Add("Se scendessi ora mi farei male");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
                 else if (selection.name == "Fosso" && MorbidDetector.morbidBelow == true)
                 {
-                    dialogueManager.dialogue.sentences.Clear();
-                    dialogueManager.sentences.Clear();
-                    dialogueManager.dialogue.names.Clear();
-                    dialogueManager.names.Clear();
+                    if (dialogueManager.inDialogue == false)
+                    {
 
-                    dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.sentences.Add("La roba morbida attutirà la caduta, potrei anche scendere ora");
+                        dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        dialogueManager.dialogue.sentences.Add("La roba morbida attutirà la caduta, potrei anche scendere ora");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
                 }
 
 
