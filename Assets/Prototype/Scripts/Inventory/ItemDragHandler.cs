@@ -10,6 +10,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     public GameObject bigliettoUI;
     public GameObject forcinaUI;
     public FadeInOut fadeInOut;
+    public DialogueManager dialogueManager;
 
     private void Start()
     {
@@ -35,8 +36,20 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.cascoPortato = true;
-                Debug.Log("Casco consegnato!");
                 forcinaUI.SetActive(true);
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Ecco il casco!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+                }
 
 
             }

@@ -1865,6 +1865,7 @@ MonoBehaviour:
   bigliettoUI: {fileID: 507935568}
   forcinaUI: {fileID: 221391292}
   fadeInOut: {fileID: 563878106}
+  dialogueManager: {fileID: 1840462404}
 --- !u!225 &106155290
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3174,6 +3175,7 @@ MonoBehaviour:
   bigliettoUI: {fileID: 507935568}
   forcinaUI: {fileID: 221391292}
   fadeInOut: {fileID: 563878106}
+  dialogueManager: {fileID: 1840462404}
 --- !u!225 &221391294
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5591,6 +5593,7 @@ MonoBehaviour:
   bigliettoUI: {fileID: 507935568}
   forcinaUI: {fileID: 221391292}
   fadeInOut: {fileID: 563878106}
+  dialogueManager: {fileID: 1840462404}
 --- !u!225 &367767886
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7666,6 +7669,7 @@ MonoBehaviour:
   bigliettoUI: {fileID: 507935568}
   forcinaUI: {fileID: 221391292}
   fadeInOut: {fileID: 563878106}
+  dialogueManager: {fileID: 1840462404}
 --- !u!225 &507935571
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14366,6 +14370,7 @@ MonoBehaviour:
   bigliettoUI: {fileID: 507935568}
   forcinaUI: {fileID: 221391292}
   fadeInOut: {fileID: 563878106}
+  dialogueManager: {fileID: 1840462404}
 --- !u!225 &871889401
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18519,6 +18524,7 @@ MonoBehaviour:
   bigliettoUI: {fileID: 507935568}
   forcinaUI: {fileID: 221391292}
   fadeInOut: {fileID: 563878106}
+  dialogueManager: {fileID: 1840462404}
 --- !u!225 &1133777248
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -31886,6 +31892,7 @@ MonoBehaviour:
   bigliettoUI: {fileID: 507935568}
   forcinaUI: {fileID: 221391292}
   fadeInOut: {fileID: 563878106}
+  dialogueManager: {fileID: 1840462404}
 --- !u!225 &1981894266
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -33180,6 +33187,7 @@ MonoBehaviour:
   bigliettoUI: {fileID: 507935568}
   forcinaUI: {fileID: 221391292}
   fadeInOut: {fileID: 563878106}
+  dialogueManager: {fileID: 1840462404}
 --- !u!1 &2098242725
 GameObject:
   m_ObjectHideFlags: 0
