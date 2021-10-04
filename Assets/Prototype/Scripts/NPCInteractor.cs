@@ -76,7 +76,6 @@ public class NPCInteractor : MonoBehaviour
             //-----------------TUTORIAL----------------
             if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == false)
             {
-                Debug.Log("Tutorial");
                 tutorialFinito = true;
 
                 if (dialogueManager.inDialogue == false)

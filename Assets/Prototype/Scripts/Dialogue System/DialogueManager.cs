@@ -12,13 +12,16 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public GameObject blackPanel;
     public GameObject portrait;
+    public GameObject dialogueParent;
     public bool inDialogue = false;
     [HideInInspector]
     public Queue<string> sentences;
     [HideInInspector]
     public Queue<string> names;
-
     public Dialogue dialogue;
+
+    public GameObject artemisiaPortrait;
+    public GameObject tutorialPortrait;
 
     void Awake()
     {
@@ -95,6 +98,35 @@ public class DialogueManager : MonoBehaviour
         }*/
 
         nameText.text = name;
+        if (nameText.text == "Artemisia")
+        {
+            artemisiaPortrait.SetActive(true);
+            tutorialPortrait.SetActive(false);
+
+            dialogueParent.transform.localScale = new Vector3(1, 1, 1);
+            nameText.transform.localScale = new Vector3(1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (nameText.text == "???")
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(true);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
+        else if (nameText.text == "Tut Orial")
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(true);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
 
         yield return null;
     }
