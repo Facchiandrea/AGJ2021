@@ -450,6 +450,24 @@ public class ItemSelection : MonoBehaviour
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 2-----------------------------------
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 3-----------------------------------
+                if (selection.name == "Spaventapasseri")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' uno spaventapasseri");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 4-----------------------------------
 
@@ -457,8 +475,11 @@ public class ItemSelection : MonoBehaviour
                 {
                     dialogueManager.dialogue.sentences.Clear();
                     dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.sentences.Add("");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
                     dialogueManager.dialogue.sentences.Add("Se scendessi ora mi farei male");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -467,8 +488,11 @@ public class ItemSelection : MonoBehaviour
                 {
                     dialogueManager.dialogue.sentences.Clear();
                     dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.sentences.Add("");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
                     dialogueManager.dialogue.sentences.Add("La roba morbida attutirà la caduta, potrei anche scendere ora");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -480,6 +504,91 @@ public class ItemSelection : MonoBehaviour
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 6-----------------------------------
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 7-----------------------------------
+                if (selection.name == "Pianeta")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' un pianeta");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Sonda")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' una sonda lunare");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Satellite")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' un satellite");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Bandiera")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' la bandiera americana");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Stella")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' una stella");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 8-----------------------------------
 

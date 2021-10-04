@@ -28,6 +28,8 @@ public class Mongolfiera : MonoBehaviour
     public float travelTime = 5f;
     public bool traveling = false;
 
+    public DialogueManager dialogueManager;
+
 
     private void Update()
     {
@@ -115,12 +117,41 @@ public class Mongolfiera : MonoBehaviour
         }
         else if (playerSullaLuna == false && lunaSopra == false)
         {
-            Debug.Log("Non ho una destinazione");
+            if (dialogueManager.inDialogue == false)
+            {
+                dialogueManager.dialogue.sentences.Clear();
+                dialogueManager.sentences.Clear();
+                dialogueManager.dialogue.names.Clear();
+                dialogueManager.names.Clear();
+
+                dialogueManager.dialogue.names.Add("Artemisia");
+
+                dialogueManager.dialogue.sentences.Add("Mmm...forse dovrei prima avere una destinazione");
+
+                dialogueManager.StartDialogue(dialogueManager.dialogue);
+                dialogueManager.DisplayNextSentence();
+
+            }
+
             Invoke("ScendiDallaMongolfiera", 0.5f);
         }
         else if (playerSullaLuna == true && terraSotto == false)
         {
-            Debug.Log("Dovrei impostare la rotta per dove sono partito");
+            if (dialogueManager.inDialogue == false)
+            {
+                dialogueManager.dialogue.sentences.Clear();
+                dialogueManager.sentences.Clear();
+                dialogueManager.dialogue.names.Clear();
+                dialogueManager.names.Clear();
+
+                dialogueManager.dialogue.names.Add("Artemisia");
+
+                dialogueManager.dialogue.sentences.Add("Mmm...forse dovrei prima impostare la rotta per il luogo da cui sono partita");
+
+                dialogueManager.StartDialogue(dialogueManager.dialogue);
+                dialogueManager.DisplayNextSentence();
+
+            }
             Invoke("ScendiDallaMongolfiera", 0.5f);
         }
 

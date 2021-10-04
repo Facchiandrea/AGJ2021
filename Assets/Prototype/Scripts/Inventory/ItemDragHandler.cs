@@ -53,6 +53,21 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
 
             }
+            else if (NPCInteractor.selection.name == "RagazzoCheVuoleIlCasco" && this.gameObject.name != "CascoUI")
+            {
+                dialogueManager.dialogue.sentences.Clear();
+                dialogueManager.sentences.Clear();
+                dialogueManager.dialogue.names.Clear();
+                dialogueManager.names.Clear();
+
+                dialogueManager.dialogue.names.Add("Ragazzo");
+                dialogueManager.dialogue.sentences.Add("Non questo!");
+
+                dialogueManager.StartDialogue(dialogueManager.dialogue);
+                dialogueManager.DisplayNextSentence();
+
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+            }
             else
             {
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;
@@ -64,7 +79,19 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.scolapastaPortato = true;
-                Debug.Log("Scolapasta consegnato!");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Ecco lo scolapasta!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+                }
 
             }
             else
@@ -78,7 +105,19 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.uovoPortato = true;
-                Debug.Log("Uovo consegnato!");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Ecco un uovo, è di pterodattilo!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+                }
                 bigliettoUI.SetActive(true);
             }
             else
@@ -101,13 +140,64 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == true && NPCInteractor.mongolfieraScript.traveling == false)
             {
                 NPCInteractor.mongolfieraScript.ViaggioInMongolfiera();
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Si parte!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+
+                }
+
             }
 
             else if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == false && NPCInteractor.mongolfieraScript.traveling == false)
             {
-                Debug.Log("Devo avvicinarmi per poter salire");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Devo avvicinarmi per poter salire");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+
+                }
+
             }
 
+            else if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name != "FiammiferiUI")
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = startPos;
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Come dovrei accenderlo con questo?");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+
+                }
+
+            }
             else
             {
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;
@@ -116,7 +206,19 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             //---------------ARMADIO--------------------
             if (NPCInteractor.selection.name == "Armadio" && this.gameObject.name == "ForcinaUI" && NPCInteractor.armadioScript.playerInRange == true)
             {
-                Debug.Log("Apriti sesamo!");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Apriti sesamo!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+                }
                 NPCInteractor.armadioAperto = true;
                 forcinaUI.SetActive(false);
                 NPCInteractor.selection.GetChild(1).gameObject.SetActive(false);
@@ -124,7 +226,19 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             }
             else if (NPCInteractor.selection.name == "Armadio" && this.gameObject.name == "ForcinaUI" && NPCInteractor.armadioScript.playerInRange == false)
             {
-                Debug.Log("Devo avvicinarmi e scassinare quel lucchetto");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Devo avvicinarmi e scassinare quel lucchetto");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+                }
             }
             else
             {
@@ -136,7 +250,19 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.montacarichi.montacarichiRiparato = true;
-                Debug.Log("Montacarichi riparato!");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Calza a pennello");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+                }
                 NPCInteractor.gambaLeva.SetActive(true);
             }
             else
@@ -150,7 +276,19 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.conchigliaPortata = true;
-                Debug.Log("conchiglia consegnata!");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Ecco la tua conchiglia!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+                }
                 NPCInteractor.uomo.portale.SetActive(true);
             }
             else

@@ -22,6 +22,10 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject artemisiaPortrait;
     public GameObject tutorialPortrait;
+    public GameObject ragazzoPortrait;
+    public GameObject bambinoPortrait;
+    public GameObject uomoPortrait;
+    public GameObject pecoraPortrait;
 
     void Awake()
     {
@@ -102,6 +106,10 @@ public class DialogueManager : MonoBehaviour
         {
             artemisiaPortrait.SetActive(true);
             tutorialPortrait.SetActive(false);
+            bambinoPortrait.SetActive(false);
+            uomoPortrait.SetActive(false);
+            ragazzoPortrait.SetActive(false);
+            pecoraPortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(1, 1, 1);
             nameText.transform.localScale = new Vector3(1, 1, 1);
@@ -111,6 +119,10 @@ public class DialogueManager : MonoBehaviour
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(true);
+            bambinoPortrait.SetActive(false);
+            uomoPortrait.SetActive(false);
+            ragazzoPortrait.SetActive(false);
+            pecoraPortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -121,6 +133,67 @@ public class DialogueManager : MonoBehaviour
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(true);
+            bambinoPortrait.SetActive(false);
+            uomoPortrait.SetActive(false);
+            ragazzoPortrait.SetActive(false);
+            pecoraPortrait.SetActive(false);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
+        else if (nameText.text == "Ragazzo")
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(false);
+            bambinoPortrait.SetActive(false);
+            uomoPortrait.SetActive(false);
+            ragazzoPortrait.SetActive(true);
+            pecoraPortrait.SetActive(false);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
+        else if (nameText.text == "Rebeeecca" || nameText.text == "Beeeatrice" || nameText.text == "Beeeth" || nameText.text == "Baaarbara")
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(false);
+            bambinoPortrait.SetActive(false);
+            uomoPortrait.SetActive(false);
+            ragazzoPortrait.SetActive(false);
+            pecoraPortrait.SetActive(true);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
+
+        else if (nameText.text == "Bambino")
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(false);
+            bambinoPortrait.SetActive(true);
+            uomoPortrait.SetActive(false);
+            ragazzoPortrait.SetActive(false);
+            pecoraPortrait.SetActive(false);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
+        else if (nameText.text == "Uomo")
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(false);
+            bambinoPortrait.SetActive(false);
+            uomoPortrait.SetActive(true);
+            ragazzoPortrait.SetActive(false);
+            pecoraPortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);

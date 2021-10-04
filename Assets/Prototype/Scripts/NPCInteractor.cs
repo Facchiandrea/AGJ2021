@@ -91,7 +91,7 @@ public class NPCInteractor : MonoBehaviour
 
                     dialogueManager.dialogue.sentences.Add("Ciao, il mio nome è Tut, ma puoi chiamarmi Orial");
                     dialogueManager.dialogue.sentences.Add("...Seriamente?");
-                    dialogueManager.dialogue.sentences.Add("Sne");
+                    dialogueManager.dialogue.sentences.Add("Tutorial testo");
 
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -101,34 +101,131 @@ public class NPCInteractor : MonoBehaviour
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true)
             {
-                Debug.Log("Tutorial 2");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Tut Orial");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Tut Orial");
+
+                    dialogueManager.dialogue.sentences.Add("Sei ancora qua?");
+                    dialogueManager.dialogue.sentences.Add("Si");
+                    dialogueManager.dialogue.sentences.Add("Ciao");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
 
             //-----------------RAGAZZO----------------
             if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false)
             {
-                Debug.Log("Mi serve un casco");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+
+                    dialogueManager.dialogue.sentences.Add("Voglio un cappello");
+                    dialogueManager.dialogue.sentences.Add("Ok");
+                    dialogueManager.dialogue.sentences.Add("Qualcosa di unico però");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
                 pickUpCascoScript.canPickUp = true;
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == true)
             {
-                Debug.Log("Grazie per il casco!");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+
+                    dialogueManager.dialogue.sentences.Add("Non vedo niente");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
             //-----------------BAMBINO----------------
             if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false)
             {
-                Debug.Log("Mi serve uno scolapasta");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+
+                    dialogueManager.dialogue.sentences.Add("Voglio un copricapo degno di un re");
+                    dialogueManager.dialogue.sentences.Add("Ok");
+                    dialogueManager.dialogue.sentences.Add("SONO IL RE, AONNA CARA POPO FIERO CON LA CARTA GIALLA DELLO ZIO PEPPE");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
                 pickUpScolapastaScript.canPickUp = true;
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false)
             {
-                Debug.Log("Ora voglio un uovo");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+
+                    dialogueManager.dialogue.sentences.Add("Ora voglio un'aquila gigante o qualcosa che vola con gli artigli");
+                    dialogueManager.dialogue.sentences.Add("Ok");
+                    dialogueManager.dialogue.sentences.Add("VOGLIO UNO PTERODATTILO");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
                 pickUpUovoScript.canPickUp = true;
 
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && uovoPortato == true && uovoPortato == true)
             {
-                Debug.Log("Grazie per tutto!");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.sentences.Add("GRAZIE PER TUTTO ORA SONO FELICIO");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
             //-----------------AUTOBUS----------------
 
@@ -138,32 +235,107 @@ public class NPCInteractor : MonoBehaviour
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == false)
             {
-                Debug.Log("Non ho il biglietto per utilizzarlo");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Non ho il biglietto per usarlo");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
             //-----------------Mongolfiera----------------
             if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == false && mongolfieraScript.traveling == false)
             {
-                Debug.Log("Mi serve qualcosa per attivare il bruciatore");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Mi serve qualcosa per attivare il bruciatore");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                }
+
                 pickUpFiammiferi.canPickUp = true;
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == false && mongolfieraScript.traveling == false)
             {
-                Debug.Log("Devo avvicinarmi per poter salire");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Devo avvicinarmi per poter salire!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                }
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == true && mongolfieraScript.traveling == false)
             {
                 mongolfieraScript.ViaggioInMongolfiera();
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Si parte!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                }
+
             }
 
             //-----------------Armadio----------------
 
             if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == false)
             {
-                Debug.Log("E' un armadio con un lucchetto");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("E' un armadio con un lucchetto");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == true && gambaPresa == false && pickUpGamba.canPickUp == true)
             {
-                Debug.Log("Questa gamba di legno fa al caso mio");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Questa gamba di legno fa al caso mio");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
                 pickUpGamba.PickUpUIGraphics.SetActive(true);
                 pickUpGamba.PickUpGraphics.SetActive(false);
                 gambaPresa = true;
@@ -171,12 +343,36 @@ public class NPCInteractor : MonoBehaviour
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && gambaPresa == true || Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && gambaPresa == false && pickUpGamba.canPickUp == false)
             {
-                Debug.Log("E'una bella collezione di gambe di legno");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("E' una bella collezione di gambe di legno");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
             //------------------MONTACARICHI-------------
             if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.montacarichiRiparato == false)
             {
-                Debug.Log("La leva è rotta, devo sostituirla con qualcosa");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("La leva è rotta, devo sostituirla con qualcosa");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
                 pickUpGamba.canPickUp = true;
             }
 
@@ -186,25 +382,155 @@ public class NPCInteractor : MonoBehaviour
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == false && montacarichi.montacarichiRiparato == true)
             {
-                Debug.Log("Devo salire sul montacarichi prima");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Devo salire sul montacarichi, prima");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
 
             //------------------UOMO-------------------------
 
             if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true)
             {
-                Debug.Log("Mi serve una conchiglia");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Uomo");
+
+                    dialogueManager.dialogue.sentences.Add("Voglio una conchiglia");
+                    dialogueManager.dialogue.sentences.Add("Ok");
+                    dialogueManager.dialogue.sentences.Add("Ciao");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
                 pickUpConchiglia.canPickUp = true;
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == false)
             {
-                Debug.Log("Eiiiiii!...credo che il vecchio sia mezzo sordo, dovrei avvicinarmi a lui per parlarci");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Credo che quel tipo sia sordo, dovrei prima avvicinarmi");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
 
             else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && conchigliaPortata == true)
             {
-                Debug.Log("E' ora di andare!");
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("E' ora di svegliarsi!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
             }
+
+            //------------------PECORE-------------------------
+            if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 3")
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Rebeeecca");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Rebeeecca");
+
+                    dialogueManager.dialogue.sentences.Add("Dio non esiste e noi siamo solo degli inutili involucri pluricellulari");
+                    dialogueManager.dialogue.sentences.Add("...what?!");
+                    dialogueManager.dialogue.sentences.Add("ehm...Beeeee!");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
+            }
+            if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 1")
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Beeeatrice");
+
+                    dialogueManager.dialogue.sentences.Add("Baaaaaa");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
+            }
+            if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 2")
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Baaarbara");
+
+                    dialogueManager.dialogue.sentences.Add("Beeee");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
+            }
+
+            if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 4")
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Beeeth");
+
+                    dialogueManager.dialogue.sentences.Add("Baaaaaa");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
+            }
+
 
 
         }
