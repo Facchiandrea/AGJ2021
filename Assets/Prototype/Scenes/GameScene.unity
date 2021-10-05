@@ -1070,9 +1070,11 @@ PolygonCollider2D:
       - {x: -10.101081, y: 0.8879591}
       - {x: -10.089944, y: -2.6586313}
       - {x: -2.6364517, y: -2.6037712}
-      - {x: -2.1126022, y: -0.8767903}
-      - {x: -1.6353645, y: -0.11586809}
-      - {x: -2.644577, y: 0.12581635}
+      - {x: -2.4100723, y: -2.0443864}
+      - {x: -2.420967, y: -1.212019}
+      - {x: -2.156208, y: -0.8767903}
+      - {x: -2.1361694, y: 0.44078255}
+      - {x: -2.5152893, y: 0.168921}
       - {x: -3.489953, y: 0.16940904}
 --- !u!1 &51887765
 GameObject:
@@ -15946,6 +15948,7 @@ Transform:
   - {fileID: 1520876661}
   - {fileID: 590052439}
   - {fileID: 1149995591}
+  - {fileID: 903657860}
   - {fileID: 1530591156}
   m_Father: {fileID: 0}
   m_RootOrder: 24
@@ -18324,13 +18327,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903657859}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -80.066, y: -0.431, z: 0}
-  m_LocalScale: {x: 15.457846, y: 0.07610682, z: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0.99884844, w: -0.047978025}
+  m_LocalPosition: {x: 0.155, y: -1.905, z: 0}
+  m_LocalScale: {x: 0.46, y: 0.02647494, z: 1}
   m_Children: []
-  m_Father: {fileID: 1149995591}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_Father: {fileID: 816224810}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 185.5}
 --- !u!60 &903657861
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -18356,14 +18359,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 3.9695566, y: 32.678658}
-      - {x: 3.3512356, y: 4.943001}
-      - {x: -5.037284, y: 5}
-      - {x: -5.0625887, y: -4.84906}
-      - {x: 4.9671636, y: -0.6071892}
-      - {x: 8.935708, y: 22.73055}
-      - {x: 8.195976, y: 22.127466}
-      - {x: 6.259352, y: 23.686127}
+    - - {x: -5, y: 5}
+      - {x: -5, y: -5}
+      - {x: 5, y: -5}
+      - {x: 5, y: 5}
 --- !u!212 &903657862
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21970,7 +21969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -14.999939}
+  m_AnchoredPosition: {x: 0, y: -14.999878}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &1092800782
@@ -23598,7 +23597,6 @@ Transform:
   m_LocalScale: {x: 0.028633641, y: 0.34786558, z: 1}
   m_Children:
   - {fileID: 547994547}
-  - {fileID: 903657860}
   m_Father: {fileID: 816224810}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23620,6 +23618,7 @@ MonoBehaviour:
   barrieraFosso: {fileID: 761477513}
   fosso: {fileID: 51887765}
   portaFinta: {fileID: 1530591155}
+  ponteAbbassatoOBJ: {fileID: 903657859}
 --- !u!1 &1153376614
 GameObject:
   m_ObjectHideFlags: 0
@@ -32072,7 +32071,7 @@ Transform:
   m_Children:
   - {fileID: 1621189740}
   m_Father: {fileID: 816224810}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1530591157
 Rigidbody2D:
