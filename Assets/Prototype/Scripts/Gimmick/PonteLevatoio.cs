@@ -6,30 +6,35 @@ public class PonteLevatoio : MonoBehaviour
 {
     public NPCInteractor NPCInteractorScript;
     public bool ponteAbbassato;
-    private float flipTime = 10f;
-    private float flipSpeed = 1f;
-    public bool siStaAbbassando;
-    private Quaternion notFlippedPosition;
-    private Quaternion flippedPosition;
+    //private float flipTime = 10f;
+    //private float flipSpeed = 1f;
+    //public bool siStaAbbassando;
+    //private Quaternion notFlippedPosition;
+    //private Quaternion flippedPosition;
     public PlayerMovement playerMovement;
     public GameObject barrieraFosso;
     public GameObject fosso;
 
     private void Start()
     {
-        notFlippedPosition = Quaternion.Euler(0, 0, 0);
-        flippedPosition = Quaternion.Euler(0, 0, 90);
+        //notFlippedPosition = Quaternion.Euler(0, 0, 0);
+        //flippedPosition = Quaternion.Euler(0, 0, 90);
 
     }
     private void Update()
     {
-        if (NPCInteractorScript.scolapastaPortato == true && ponteAbbassato == false && siStaAbbassando == false)
+        if (NPCInteractorScript.scolapastaPortato == true && ponteAbbassato == false)// && siStaAbbassando == false)
         {
-            StartCoroutine(BridgeMovingCoroutine());
+            //StartCoroutine(BridgeMovingCoroutine());
+            ponteAbbassato = true;
+            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(true);
+            fosso.SetActive(false);
+            barrieraFosso.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
-    public IEnumerator BridgeMovingCoroutine()
+    /*public IEnumerator BridgeMovingCoroutine()
     {
         float progress = 0;
         while (progress < flipTime)
@@ -54,5 +59,5 @@ public class PonteLevatoio : MonoBehaviour
 
         }
 
-    }
+    }*/
 }
