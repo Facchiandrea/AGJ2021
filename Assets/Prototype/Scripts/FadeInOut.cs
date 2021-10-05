@@ -15,6 +15,8 @@ public class FadeInOut : MonoBehaviour
 
         fadeBlack.SetActive(true);
         playerMovement.movementBlock = true;
+        playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
+
         Invoke("Magheggi", 1f);
         Invoke("EndTransition", 2f);
 

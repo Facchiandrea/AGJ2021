@@ -31,6 +31,8 @@ public class Montacarichi : MonoBehaviour
     public void SpostamentoInMontacarichi()
     {
         playerMovement.movementBlock = true;
+        playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
+
         if (montacarichiATerra == true)
         {
             traveling = true;

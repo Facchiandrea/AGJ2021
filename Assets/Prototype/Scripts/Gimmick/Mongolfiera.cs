@@ -86,6 +86,8 @@ public class Mongolfiera : MonoBehaviour
             player.GetComponentInChildren<SpriteRenderer>().enabled = false;
             transform.GetChild(1).gameObject.SetActive(true);
             playerMovement.movementBlock = true;
+            playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
+
             Invoke("ControlloDestinazione", 1.5f);
             traveling = true;
 
@@ -95,6 +97,8 @@ public class Mongolfiera : MonoBehaviour
             player.GetComponentInChildren<SpriteRenderer>().enabled = false;
             transform.GetChild(1).gameObject.SetActive(true);
             playerMovement.movementBlock = true;
+            playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
+
             Invoke("ControlloDestinazione", 1.5f);
             traveling = true;
 
@@ -181,6 +185,7 @@ public class Mongolfiera : MonoBehaviour
         while (progress < travelTime && traveling == true)
         {
             playerMovement.movementBlock = true;
+            playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
 
             transform.position = Vector2.Lerp(StazioneLuna.position, StazioneTerra.position, (progress / travelTime));
             progress += Time.deltaTime;
@@ -203,6 +208,7 @@ public class Mongolfiera : MonoBehaviour
         while (progress < travelTime && traveling == true)
         {
             playerMovement.movementBlock = true;
+            playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
 
             transform.position = Vector2.Lerp(StazioneTerra.position, StazioneLuna.position, (progress / travelTime));
             progress += Time.deltaTime;
