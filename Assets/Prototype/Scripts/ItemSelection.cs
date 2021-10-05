@@ -11,9 +11,7 @@ public class ItemSelection : MonoBehaviour
     public NPCInteractor NPCInteractor;
     public DialogueManager dialogueManager;
     public PickUpConchiglia pickUpConchiglia;
-
-
-
+    public Scala scalaManager;
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -472,6 +470,13 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
+                }
+
+                //---------------------SCALA--------------------------
+
+                if (selection.name == "Scala")
+                {
+                    scalaManager.Spostamento();
                 }
 
 

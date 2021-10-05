@@ -24,6 +24,7 @@ public class ViewModeSwap : MonoBehaviour
     public Swapper swapper;
     public FadeInOut FadeInOut;
     public Mongolfiera mongolfiera;
+    public DialogueManager dialogueManager;
 
     [HideInInspector]
     public bool fullView;
@@ -42,7 +43,7 @@ public class ViewModeSwap : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
+        if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
         {
             EnterFullView();
             transitionToFull = true;

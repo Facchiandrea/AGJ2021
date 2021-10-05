@@ -16,7 +16,7 @@ public class FadeInOut : MonoBehaviour
         fadeBlack.SetActive(true);
         playerMovement.movementBlock = true;
         Invoke("Magheggi", 1f);
-        Invoke("EndTransition", 1f);
+        Invoke("EndTransition", 2f);
 
     }
 
@@ -40,8 +40,4 @@ public class FadeInOut : MonoBehaviour
 
     }
 
-    public void CameraFix()
-    {
-        viewModeSwap.BusCameraTransition();
-    }
 }

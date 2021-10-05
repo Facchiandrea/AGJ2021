@@ -1996,15 +1996,6 @@ MonoBehaviour:
     fadeInTime: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: Indossare_cappello_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
-    loop: 0
-    type: 1
-    priority: 128
-    volume: 1
-    fadeInTime: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
   - name: Abbassare_ponte_sfx
     clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
     loop: 0
