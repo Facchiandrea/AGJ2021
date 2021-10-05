@@ -14,6 +14,7 @@ public class PonteLevatoio : MonoBehaviour
     public PlayerMovement playerMovement;
     public GameObject barrieraFosso;
     public GameObject fosso;
+    public GameObject portaFinta;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class PonteLevatoio : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(true);
             fosso.SetActive(false);
             barrieraFosso.GetComponent<BoxCollider2D>().enabled = false;
+            portaFinta.SetActive(true);
         }
     }
 

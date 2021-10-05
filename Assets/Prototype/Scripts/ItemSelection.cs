@@ -507,6 +507,32 @@ public class ItemSelection : MonoBehaviour
                     }
                 }
 
+                if (selection.name == "PortaFinta")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Bambino");
+
+                        dialogueManager.dialogue.sentences.Add("Vediamo cosa si cela nel castello...");
+                        dialogueManager.dialogue.sentences.Add("...");
+                        dialogueManager.dialogue.sentences.Add("......");
+                        dialogueManager.dialogue.sentences.Add("Ma è finta??");
+                        dialogueManager.dialogue.sentences.Add("EH! VOLEVI! GUARDA CHE FACCIA, NON SE L'ASPETTAVA!");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 5-----------------------------------
                 if (selection.name == "Cappello")
