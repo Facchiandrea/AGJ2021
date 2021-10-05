@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public GameObject creditScreen;
     public bool inAudioOptions;
     public bool inCredits;
+    public GameObject fadeIn;
 
     private void Start()
     {
@@ -45,8 +46,18 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        AudioManager.instance.FadeOutAllSounds();
+        Invoke("LoadNextScene", 2f);
+        fadeIn.SetActive(true);
+
     }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(1);
+
+    }
+
 
     public void Quitting()
     {

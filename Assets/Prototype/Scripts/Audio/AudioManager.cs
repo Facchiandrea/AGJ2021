@@ -134,7 +134,11 @@ public class AudioManager : MonoBehaviour
         float originalVolume = s.volume;
         s.volume = 0;
         s.source.Play();
-        currentMusic = s;
+        if (s.name != "MenuMusic")
+        {
+            currentMusic = s;
+        }
+
         StartCoroutine(StartFadeIn(s, s.fadeInTime, originalVolume));
     }
 
