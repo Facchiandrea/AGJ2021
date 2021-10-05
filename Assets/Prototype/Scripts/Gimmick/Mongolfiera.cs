@@ -33,10 +33,10 @@ public class Mongolfiera : MonoBehaviour
 
     private void Update()
     {
-        if (traveling)
+        /*if (traveling)
         {
             player.transform.position = new Vector3(transform.position.x, transform.position.y - 3, player.transform.position.z);
-        }
+        }*/
 
         if (playerSullaLuna && traveling == false)
         {
@@ -81,6 +81,8 @@ public class Mongolfiera : MonoBehaviour
 
     public void ViaggioInMongolfiera()
     {
+        player.GetComponent<Rigidbody2D>().gravityScale = 0;
+
         if (playerSullaLuna == false)
         {
             player.GetComponentInChildren<SpriteRenderer>().enabled = false;
@@ -181,12 +183,9 @@ public class Mongolfiera : MonoBehaviour
     public IEnumerator SpostamentoVersoTerra()
     {
         float progress = 0;
-
         while (progress < travelTime && traveling == true)
         {
-            playerMovement.movementBlock = true;
-            playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
-
+            player.transform.position = Vector2.Lerp(StazioneLuna.position, StazioneTerra.position, (progress / travelTime));
             transform.position = Vector2.Lerp(StazioneLuna.position, StazioneTerra.position, (progress / travelTime));
             progress += Time.deltaTime;
             yield return null;
@@ -207,9 +206,7 @@ public class Mongolfiera : MonoBehaviour
 
         while (progress < travelTime && traveling == true)
         {
-            playerMovement.movementBlock = true;
-            playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
-
+            player.transform.position = Vector2.Lerp(StazioneTerra.position, StazioneLuna.position, (progress / travelTime));
             transform.position = Vector2.Lerp(StazioneTerra.position, StazioneLuna.position, (progress / travelTime));
             progress += Time.deltaTime;
             yield return null;
@@ -225,6 +222,8 @@ public class Mongolfiera : MonoBehaviour
 
     public void PosizionamentoPlayerLuna()
     {
+        player.GetComponent<Rigidbody2D>().gravityScale = 1.5f;
+
         player.transform.position = ArrivoPlayerFuori.position;
         transform.GetChild(1).gameObject.SetActive(false);
         player.GetComponentInChildren<SpriteRenderer>().enabled = true;
@@ -233,6 +232,8 @@ public class Mongolfiera : MonoBehaviour
     }
     public void PosizionamentoPlayerTerra()
     {
+        player.GetComponent<Rigidbody2D>().gravityScale = 1.5f;
+
         player.transform.position = InizioPlayerFuori.position;
         transform.GetChild(1).gameObject.SetActive(false);
         player.GetComponentInChildren<SpriteRenderer>().enabled = true;
