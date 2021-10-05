@@ -8,7 +8,7 @@ public class StartingDialogue : MonoBehaviour
     public bool dialogoFatto = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Activator"))
+        if (collision.CompareTag("Activator") && dialogoFatto == false)
         {
             dialogoFatto = true;
             if (dialogueManager.inDialogue == false)
