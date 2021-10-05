@@ -118,7 +118,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
 
             }
-            else if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name != "ScolapastaUI")
+            else if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name != "ScolapastaUI" && NPCInteractor.scolapastaPortato == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -177,7 +177,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
                 bigliettoUI.SetActive(true);
             }
-            else if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name != "UovoUI")
+            else if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name != "UovoUI" && NPCInteractor.scolapastaPortato == true)
             {
                 if (dialogueManager.inDialogue == false)
                 {
