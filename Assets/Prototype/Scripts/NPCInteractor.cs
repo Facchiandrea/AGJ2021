@@ -44,6 +44,12 @@ public class NPCInteractor : MonoBehaviour
 
     public DialogueManager dialogueManager;
 
+    private int tutorialCounter = 0;
+    private int bambinoCounter1 = 0;
+    private int bambinoCounter2 = 0;
+    private int ragazzoCounter = 0;
+    private int uomoCounter = 0;
+
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -99,7 +105,7 @@ public class NPCInteractor : MonoBehaviour
                 }
 
             }
-            else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true && tutorialCounter == 0)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -119,11 +125,85 @@ public class NPCInteractor : MonoBehaviour
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
+                    tutorialCounter = 1;
                 }
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true && tutorialCounter == 1)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Tut Orial");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Tut Orial");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Prova secondo dialogo");
+                    dialogueManager.dialogue.sentences.Add("Prova prova");
+                    dialogueManager.dialogue.sentences.Add("Grazie Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Di nulla");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    tutorialCounter = 0;
+                }
+
             }
 
             //-----------------RAGAZZO----------------
-            if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false)
+            if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 0)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+
+                    dialogueManager.dialogue.sentences.Add("Finalmente sei arrivata! Mmmmm ti ricordavo più magra...\nHey, ma tu non sei la mia ragazza!");
+                    dialogueManager.dialogue.sentences.Add("Mi sa di no");
+                    dialogueManager.dialogue.sentences.Add("Bhe meno male, perchè per la mia VERA ragazza non ho ancora trovato un regalo di compleanno.");
+                    dialogueManager.dialogue.sentences.Add("Pensavo di regalarle questa forcina 2000 TURBO placcata d’oro e sistema di ventilazione per quando fa caldo.");
+                    dialogueManager.dialogue.sentences.Add("Ma non sono sicuro le possa piacere. Aiutami a trovare un cappello! Uno figo!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    ragazzoCounter = 1;
+                }
+                pickUpCascoScript.canPickUp = true;
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 1)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Un cappello! Sì, un cappello figo. Magari qualcosa di esotico o stravagante o…");
+                    dialogueManager.dialogue.sentences.Add("Ho capito ho capito, un cappello per la tua inesistente ragazza");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    ragazzoCounter = 2;
+                }
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 2)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -136,16 +216,37 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Ragazzo");
 
-                    dialogueManager.dialogue.sentences.Add("Voglio un cappello");
-                    dialogueManager.dialogue.sentences.Add("Ok");
-                    dialogueManager.dialogue.sentences.Add("Qualcosa di unico però");
+                    dialogueManager.dialogue.sentences.Add("Ah, non vedo l’ora di vedere la mia ragazza. Ha dei colori stupendi e delle pennellate bellissime");
+                    dialogueManager.dialogue.sentences.Add("Io non mi ricordo di questa ragazza");
+                    dialogueManager.dialogue.sentences.Add("Beh tu non la conosci");
 
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
+                    ragazzoCounter = 3;
                 }
-                pickUpCascoScript.canPickUp = true;
             }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 3)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Questa forcina è una vera figata");
+                    dialogueManager.dialogue.sentences.Add("Ma quand’è che te l'ho disegnata?!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    ragazzoCounter = 1;
+                }
+            }
+
             else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == true)
             {
                 if (dialogueManager.inDialogue == false)
@@ -157,14 +258,14 @@ public class NPCInteractor : MonoBehaviour
 
                     dialogueManager.dialogue.names.Add("Ragazzo");
 
-                    dialogueManager.dialogue.sentences.Add("Non vedo niente");
+                    dialogueManager.dialogue.sentences.Add("Guardatemi sono un astronauta! Non è che si veda proprio bene da questo casco… C'È NESSUNO???");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
                 }
             }
             //-----------------BAMBINO----------------
-            if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false)
+            if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 0)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -176,18 +277,91 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.names.Add("Bambino");
                     dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.dialogue.sentences.Add("Voglio un copricapo degno di un re");
-                    dialogueManager.dialogue.sentences.Add("Ok");
-                    dialogueManager.dialogue.sentences.Add("SONO IL RE, AONNA CARA POPO FIERO CON LA CARTA GIALLA DELLO ZIO PEPPE");
+                    dialogueManager.dialogue.sentences.Add("HEEEY SIGNOOOORAAAAAA!!!");
+                    dialogueManager.dialogue.sentences.Add("ehm...ciao.");
+                    dialogueManager.dialogue.sentences.Add("Tu sei quella che mi ha disegnato?");
+                    dialogueManager.dialogue.sentences.Add("Temo di sì");
+                    dialogueManager.dialogue.sentences.Add("Ecco..volevo chiederti... PERCHé NON SONO IL RE?! VOGLIO ESSERE RE! Mi serve una corona adatta alla mia altezza!");
+                    dialogueManager.dialogue.sentences.Add("Se mi aiuterai… ti darò bel un regalo");
+                    dialogueManager.dialogue.sentences.Add("Perchè dovrei aiutarti? Già mi sono pentita di averti creato.");
+                    dialogueManager.dialogue.sentences.Add("PER FAVOOORE?");
+                    dialogueManager.dialogue.sentences.Add("Uff... va bene");
 
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
-
+                    bambinoCounter1 = 1;
                 }
                 pickUpScolapastaScript.canPickUp = true;
             }
-            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 1)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("PERCHé MI HAI DISEGNATO PRINCIPE? IO VOGLIO ESSERE IL RE!");
+                    dialogueManager.dialogue.sentences.Add("Certo certo, ma quando esco ti cancello");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    bambinoCounter1 = 2;
+                }
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 2)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("La prossima volta puoi disegnarmi in un Luna Park?");
+                    dialogueManager.dialogue.sentences.Add("La prossima volta ti muro la finestra.");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    bambinoCounter1 = 3;
+                }
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 3)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Quando sarò re ti rivolgerai a me come “sua altezza”!");
+                    dialogueManager.dialogue.sentences.Add("Davvero? Ma se sei alto come uno sgabello");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    bambinoCounter1 = 1;
+                }
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 0)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -206,11 +380,80 @@ public class NPCInteractor : MonoBehaviour
 
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    bambinoCounter2 = 1;
 
                 }
                 pickUpUovoScript.canPickUp = true;
 
             }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 1)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+
+                    dialogueManager.dialogue.sentences.Add("Deve avere delle grandi ali! E degli artigli affilatissimi! è magari che sia giovane così che possa crescere insieme a me!");
+                    dialogueManager.dialogue.sentences.Add("Ma tu non puoi crescere.");
+                    dialogueManager.dialogue.sentences.Add("Se divento vecchio e noioso come te non lo voglio di sicuro!");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    bambinoCounter2 = 2;
+                }
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 2)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+
+                    dialogueManager.dialogue.sentences.Add("Com’è l’interno del castello?");
+                    dialogueManager.dialogue.sentences.Add("Ci sono 207 cucine, 453 stanze da letto, 115 bagni e 348 sale da pranzo");
+                    dialogueManager.dialogue.sentences.Add("Come hai fatto a contarle tutte?");
+                    dialogueManager.dialogue.sentences.Add("Ho molto tempo libero.");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    bambinoCounter2 = 3;
+                }
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 3)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Non ti senti mai solo?");
+                    dialogueManager.dialogue.sentences.Add("E’ anche per questo che voglio un animale domestico! Tu non ti senti mai sola?");
+                    dialogueManager.dialogue.sentences.Add("A volte, ma ho paura ad uscire e disegnare mi aiuta a non pensarci");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    bambinoCounter2 = 1;
+                }
+            }
+
             else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && uovoPortato == true && uovoPortato == true)
             {
                 if (dialogueManager.inDialogue == false)
@@ -399,7 +642,42 @@ public class NPCInteractor : MonoBehaviour
 
             //------------------UOMO-------------------------
 
-            if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true)
+            if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 0)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Uomo");
+
+                    dialogueManager.dialogue.sentences.Add("Oh oh… buongiorno principessa");
+                    dialogueManager.dialogue.sentences.Add("No guarda, se cerchi qualcuno con sangue reale  si trova 2 quadri più sopra, io sono solo una pittrice.");
+                    dialogueManager.dialogue.sentences.Add("Una pittrice? Ah ma che bel lavoro, li sapresti disegnare dei quadri così belli?");
+                    dialogueManager.dialogue.sentences.Add("Beh questi quadri li ho fatti io");
+                    dialogueManager.dialogue.sentences.Add("OH OH… davvero? Ma allora sarai andata in giro per il mondo!");
+                    dialogueManager.dialogue.sentences.Add("Beh no, ho preso ispirazione da Pinterest");
+                    dialogueManager.dialogue.sentences.Add("What?! Ma dovresti uscire di casa, dovresti vederlo il mondo.");
+                    dialogueManager.dialogue.sentences.Add("Io ormai sono vecchio, stanco e beh... non posso fisicamente uscire da questo quadro.");
+                    dialogueManager.dialogue.sentences.Add("Ma tu, tu hai questa possibilità. Fai un favore questo vecchio, vorrei vedere il mare. Portami qualcosa che mi ricorderà del mare");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    uomoCounter = 1;
+                }
+                pickUpConchiglia.canPickUp = true;
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 1)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -412,15 +690,60 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Uomo");
 
-                    dialogueManager.dialogue.sentences.Add("Voglio una conchiglia");
-                    dialogueManager.dialogue.sentences.Add("Ok");
-                    dialogueManager.dialogue.sentences.Add("Ciao");
+                    dialogueManager.dialogue.sentences.Add("Oh, signorina ci conosciamo?");
+                    dialogueManager.dialogue.sentences.Add("Ma ci siamo parlati solo poco fa");
+                    dialogueManager.dialogue.sentences.Add("Oh si certo certo, che sbadato. Allora hai trovato qualcosa che mi ricorderà del mare?");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
+                    uomoCounter = 2;
                 }
-                pickUpConchiglia.canPickUp = true;
             }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 2)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Sai vecchietto, mi ricordi mio nonno");
+                    dialogueManager.dialogue.sentences.Add("Oh, tuo nonno doveva essere un uomo affascinante e facoltoso e virile, ma anche umile e onesto e…");
+                    dialogueManager.dialogue.sentences.Add("Si. Mi ricordi decisamente mio nonno.");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    uomoCounter = 3;
+                }
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 3)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Uomo");
+
+                    dialogueManager.dialogue.sentences.Add("Saas");
+                    dialogueManager.dialogue.sentences.Add("Soos");
+                    dialogueManager.dialogue.sentences.Add("Sne");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    uomoCounter = 1;
+                }
+            }
+
             else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == false)
             {
                 if (dialogueManager.inDialogue == false)
@@ -431,14 +754,14 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Credo che quel tipo sia sordo, dovrei prima avvicinarmi");
+                    dialogueManager.dialogue.sentences.Add("Ehiiiiiii\n...Credo che quel tipo sia sordo, dovrei prima avvicinarmi");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
                 }
             }
 
-            else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && conchigliaPortata == true)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == true)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -448,7 +771,7 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("E' ora di svegliarsi!");
+                    dialogueManager.dialogue.sentences.Add("Tempo di svegliarsi! Addio vecchio!");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
