@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         AudioManager.instance.FadeIn("MenuMusic");
+        AudioManager.instance.FadeOutAllSounds();
     }
     private void Update()
     {
@@ -46,6 +47,7 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
+        AudioManager.instance.currentMusic = null;
         AudioManager.instance.FadeOutAllSounds();
         Invoke("LoadNextScene", 2f);
         fadeIn.SetActive(true);

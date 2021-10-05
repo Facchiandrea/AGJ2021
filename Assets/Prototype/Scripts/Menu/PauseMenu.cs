@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsMenu;
     public bool inPause;
     public bool inMenuOption;
+    public GameObject fadePanel;
+    public DialogueManager dialogueManager;
 
     private void Update()
     {
@@ -42,14 +44,27 @@ public class PauseMenu : MonoBehaviour
 
     public void Continue()
     {
-        Time.timeScale = 1;
+        if (dialogueManager.inDialogue == false)
+        {
+            Time.timeScale = 1;
+        }
         inPause = false;
         optionsMenu.SetActive(false);
         pauseMenu.SetActive(false);
     }
     public void ReturnToMenu()
     {
+        StartCoroutine(ChangeSceneCoroutine());
+        AudioManager.instance.StopAllSounds();
+        fadePanel.SetActive(true);
+    }
+
+    public IEnumerator ChangeSceneCoroutine()
+    {
+        yield return new WaitForSecondsRealtime(2);
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
+        yield return null;
     }
 
 }

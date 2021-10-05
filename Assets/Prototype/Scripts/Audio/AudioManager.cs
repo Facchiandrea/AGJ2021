@@ -6,7 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
-    private Sound currentMusic;
+    [HideInInspector]
+    public Sound currentMusic;
     /// <summary>
     /// Start the selected song
     /// </summary>
@@ -82,7 +83,7 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
             if (s != currentMusic)
-                StartCoroutine(StartFadeOut(s, s.fadeOutTime, 0));
+                StartCoroutine(StartFadeOut(s, 0));
         }
     }
 
@@ -93,7 +94,7 @@ public class AudioManager : MonoBehaviour
     public void FadeOut(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        StartCoroutine(StartFadeOut(s, s.fadeOutTime, 0));
+        StartCoroutine(StartFadeOut(s, 0));
     }
 
     /// <summary>
@@ -103,11 +104,12 @@ public class AudioManager : MonoBehaviour
     /// <param name="duration">Duration of the fade</param>
     /// <param name="targetVolume">Volume to reach</param>
     /// <returns></returns>
-    public static IEnumerator StartFadeOut(Sound clip, float duration, float targetVolume)
+    public static IEnumerator StartFadeOut(Sound clip, float targetVolume)
     {
         float currentTime = 0;
         float start = clip.volume;
         float originalVolume = clip.volume;
+        float duration = clip.fadeOutTime;
 
         while (currentTime < duration)
         {
@@ -134,10 +136,12 @@ public class AudioManager : MonoBehaviour
         float originalVolume = s.volume;
         s.volume = 0;
         s.source.Play();
-        if (s.name != "MenuMusic")
+        currentMusic = s;
+
+        /*if (s.name != "MenuMusic")
         {
             currentMusic = s;
-        }
+        }*/
 
         StartCoroutine(StartFadeIn(s, s.fadeInTime, originalVolume));
     }

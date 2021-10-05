@@ -1881,7 +1881,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: SpiaggiaAM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: f008f491f48f3fe4ea098ad1798c8b7f, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -2023,6 +2023,16 @@ MonoBehaviour:
     volume: 1
     fadeInTime: 0
     fadeOutTime: 0
+    source: {fileID: 0}
+  currentMusic:
+    name: 
+    clip: {fileID: 0}
+    loop: 0
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 1
+    fadeOutTime: 1
     source: {fileID: 0}
 --- !u!4 &836323305
 Transform:
@@ -2986,7 +2996,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 11abd6e39eb16814b98a6523af57d91c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
