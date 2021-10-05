@@ -94,10 +94,14 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.names.Add("???");
                     dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Tut Orial");
+                    dialogueManager.dialogue.names.Add("Tut Orial");
+                    dialogueManager.dialogue.names.Add("Tut Orial");
 
                     dialogueManager.dialogue.sentences.Add("Ciao, il mio nome è Tut, ma puoi chiamarmi Orial");
                     dialogueManager.dialogue.sentences.Add("...Seriamente?");
-                    dialogueManager.dialogue.sentences.Add("Tutorial testo");
+                    dialogueManager.dialogue.sentences.Add("Premi V per allargare la visuale e clicca su un quadro per selezionarlo.");
+                    dialogueManager.dialogue.sentences.Add("Seleziona 2 quadri per scambiarli di posto. Non puoi andare in quadri non collegati tra loro.");
+                    dialogueManager.dialogue.sentences.Add("ma non puoi scambiare i quadri se c'è un personaggio all'interno, rischierebbe di cadere fuori!");
 
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
