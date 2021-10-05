@@ -17,7 +17,7 @@ public class ToFirstPosition : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && viewModeSwap.fullView == false)
+        if (Input.GetKeyDown(KeyCode.R) && viewModeSwap.fullView == false)
         {
             transform.position = startPos;
         }
