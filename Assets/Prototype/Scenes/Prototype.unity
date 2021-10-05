@@ -5971,7 +5971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: LunaAM
 --- !u!1 &334506843
 GameObject:
   m_ObjectHideFlags: 0
@@ -8412,7 +8412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: BoscoAM
 --- !u!1 &430983337
 GameObject:
   m_ObjectHideFlags: 0
@@ -8795,7 +8795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: RuraleAM
 --- !u!1 &466607689
 GameObject:
   m_ObjectHideFlags: 0
@@ -12153,7 +12153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: NaveAM
 --- !u!1 &629762403
 GameObject:
   m_ObjectHideFlags: 0
@@ -13085,7 +13085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: ScoglieraAM
 --- !u!1 &693161116
 GameObject:
   m_ObjectHideFlags: 0
@@ -24722,7 +24722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: TempleAM
 --- !u!1 &1248600979
 GameObject:
   m_ObjectHideFlags: 0
@@ -27691,7 +27691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: DiscaricaAM
 --- !u!1 &1364587287
 GameObject:
   m_ObjectHideFlags: 0
@@ -31090,7 +31090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: CastelloAM
 --- !u!1 &1524709164
 GameObject:
   m_ObjectHideFlags: 0
@@ -32117,7 +32117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: "Citt\xE0AM"
 --- !u!1 &1581675349
 GameObject:
   m_ObjectHideFlags: 3
@@ -42568,7 +42568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88849ebc924b0549826883376111aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientMusicName: CollinaAM
+  ambientMusicName: MongolfieraAM
 --- !u!1 &2143390989
 GameObject:
   m_ObjectHideFlags: 0

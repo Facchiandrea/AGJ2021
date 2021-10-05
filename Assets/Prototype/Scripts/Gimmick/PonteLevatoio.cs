@@ -33,6 +33,11 @@ public class PonteLevatoio : MonoBehaviour
             fosso.SetActive(false);
             barrieraFosso.GetComponent<BoxCollider2D>().enabled = false;
             portaFinta.SetActive(true);
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play("Abbassare_ponte_sfx");
+            }
+
         }
     }
 

@@ -53,6 +53,11 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Prendere_oggetto_sfx");
+                    }
+
                 }
 
 
@@ -164,6 +169,11 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Prendere_oggetto_sfx");
+                    }
+
                 }
                 bigliettoUI.SetActive(true);
             }
@@ -196,6 +206,11 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             if (NPCInteractor.selection.name == "Autobus" && this.gameObject.name == "BigliettoUI")
             {
                 NPCInteractor.ViaggioInAutobus();
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.Play("Prendere_autobus_sfx");
+                }
+
             }
             else
             {
@@ -219,7 +234,10 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
-
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Fuoco_mongolfiera_sfx");
+                    }
                 }
 
             }
@@ -284,6 +302,11 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Aprire_armadio_sfx");
+                    }
+
                 }
                 NPCInteractor.armadioAperto = true;
                 forcinaUI.SetActive(false);

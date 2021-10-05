@@ -475,6 +475,11 @@ public class NPCInteractor : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true)
             {
                 ViaggioInAutobus();
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.Play("Prendere_autobus_sfx");
+                }
+
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == false)
             {
@@ -542,6 +547,11 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.sentences.Add("Si parte!");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Fuoco_mongolfiera_sfx");
+                    }
+
                 }
 
             }
@@ -795,6 +805,10 @@ public class NPCInteractor : MonoBehaviour
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Beeee_strano_sfx");
+                    }
                 }
             }
             if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 1")
@@ -811,6 +825,10 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.sentences.Add("Baaaaaa");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Beeee_sfx");
+                    }
 
                 }
             }
@@ -828,8 +846,13 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.sentences.Add("Beeee");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Beeee_sfx");
+                    }
 
                 }
+
             }
 
             if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 4")
@@ -846,6 +869,10 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.sentences.Add("Baaaaaa");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Beeee_sfx");
+                    }
 
                 }
             }

@@ -65,6 +65,10 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("Questo casco è proprio quello che mi serve");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        if (AudioManager.instance != null)
+                        {
+                            AudioManager.instance.Play("Prendere_oggetto_sfx");
+                        }
 
                     }
                 }
@@ -123,6 +127,11 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("Ho raccolto lo scolapasta");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        if (AudioManager.instance != null)
+                        {
+                            AudioManager.instance.Play("Prendere_oggetto_sfx");
+                        }
+
                     }
                 }
                 else if (selection.name == "Scolapasta" && selection.GetComponent<PickUpScolapasta>().canPickUp == true && selection.GetComponent<PickUpScolapasta>().playerInRange == false)
@@ -177,6 +186,11 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("Ho raccolto l'uovo");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        if (AudioManager.instance != null)
+                        {
+                            AudioManager.instance.Play("Prendere_oggetto_sfx");
+                        }
+
                     }
                 }
                 else if (selection.name == "Uovo" && selection.GetComponent<PickUpUovo>().canPickUp == true && selection.GetComponent<PickUpUovo>().playerInRange == false)
@@ -288,6 +302,11 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("Ho raccolto i fiammiferi");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        if (AudioManager.instance != null)
+                        {
+                            AudioManager.instance.Play("Prendere_oggetto_sfx");
+                        }
+
                     }
                     NPCInteractor.fiammiferiInInventario = true;
                     selection.GetComponent<PickUpFiammiferi>().PickUpUIGraphics.SetActive(true);
@@ -307,6 +326,11 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e...dei fiammiferi! Potrei farne buon uso");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        if (AudioManager.instance != null)
+                        {
+                            AudioManager.instance.Play("Prendere_oggetto_sfx");
+                        }
+
                     }
                     NPCInteractor.fiammiferiInInventario = true;
                     selection.GetComponent<PickUpFiammiferi>().PickUpUIGraphics.SetActive(true);
@@ -387,6 +411,11 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("Sì, questa va benissimo, spero che piacerà a quel vecchietto");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        if (AudioManager.instance != null)
+                        {
+                            AudioManager.instance.Play("Prendere_oggetto_sfx");
+                        }
+
                     }
                 }
                 else if (selection.name == "Conchiglia" && selection.GetComponent<PickUpConchiglia>().canPickUp == true && selection.GetComponent<PickUpConchiglia>().playerInRange == false)

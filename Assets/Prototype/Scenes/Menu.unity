@@ -1825,6 +1825,51 @@ MonoBehaviour:
     fadeInTime: 2
     fadeOutTime: 2
     source: {fileID: 0}
+  - name: GameBGM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: ScoglieraAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: RuraleAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: MongolfieraAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: CastelloAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
   - name: CollinaAM
     clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
     loop: 1
@@ -1833,6 +1878,159 @@ MonoBehaviour:
     volume: 1
     fadeInTime: 2
     fadeOutTime: 2
+    source: {fileID: 0}
+  - name: SpiaggiaAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: LunaAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: NaveAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: "Citt\xE0AM"
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: TempleAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: DiscaricaAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: BoscoAM
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 1
+    type: 0
+    priority: 128
+    volume: 1
+    fadeInTime: 2
+    fadeOutTime: 2
+    source: {fileID: 0}
+  - name: Beeee_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Beeee_strano_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Fuoco_mongolfiera_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Aprire_armadio_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Prendere_oggetto_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Spostare_quadro_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Indossare_cappello_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Abbassare_ponte_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Prendere_autobus_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Scale_sfx
+    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
     source: {fileID: 0}
 --- !u!4 &836323305
 Transform:

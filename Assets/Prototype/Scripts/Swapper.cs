@@ -147,7 +147,10 @@ public class Swapper : MonoBehaviour
         Invoke("Swap", 1f);
         Invoke("EndSwap", 2f);
 
-
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Spostare_quadro_sfx");
+        }
     }
     public void Swap()
     {
