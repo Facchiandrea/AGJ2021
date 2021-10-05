@@ -731,12 +731,8 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Uomo");
-                    dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Uomo");
 
-                    dialogueManager.dialogue.sentences.Add("Saas");
-                    dialogueManager.dialogue.sentences.Add("Soos");
-                    dialogueManager.dialogue.sentences.Add("Sne");
+                    dialogueManager.dialogue.sentences.Add("Amo questa foresta, la foschia le da un senso mistico, però vorrei abbronzarmi almeno una volta nella vita");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
