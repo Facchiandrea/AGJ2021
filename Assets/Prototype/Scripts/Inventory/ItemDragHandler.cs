@@ -397,7 +397,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
             //----------------CONCHIGLIA----------------
 
-            if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name == "ConchigliaUI")
+            if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name == "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true)
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.conchigliaPortata = true;
@@ -416,7 +416,26 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
                 NPCInteractor.uomo.portale.SetActive(true);
             }
-            else if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name != "ConchigliaUI")
+            else if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name == "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false || NPCInteractor.selection.name == "Uomo" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false)
+            {
+                this.gameObject.SetActive(false);
+                NPCInteractor.conchigliaPortata = true;
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Meglio avvicinarsi, prima");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+                }
+            }
+
+            else if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true)
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.conchigliaPortata = true;
@@ -433,7 +452,6 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
                 }
-                NPCInteractor.uomo.portale.SetActive(true);
             }
 
             else
