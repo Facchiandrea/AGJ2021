@@ -297,7 +297,7 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Ho raccolto i fiammiferi");
+                        dialogueManager.dialogue.sentences.Add("Qui c'erano dei fiammiferi quando ho controllato. Bingo!");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         if (AudioManager.instance != null)

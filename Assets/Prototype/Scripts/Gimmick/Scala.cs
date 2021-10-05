@@ -50,14 +50,11 @@ public class Scala : MonoBehaviour
         {
             player.transform.position = pos2.position;
             playerAllaScogliera = false;
-            Debug.Log("aaa");
         }
         else if (playerAllaScogliera == false)
         {
             player.transform.position = pos1.position;
             playerAllaScogliera = true;
-            Debug.Log("bbb");
-
         }
 
     }
