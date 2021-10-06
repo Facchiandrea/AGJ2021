@@ -32,7 +32,7 @@ public class ViewModeSwap : MonoBehaviour
 
     public bool transitionToSingle = false;
     public bool transitionToFull = false;
-    private float timerCameraTransition = 2;
+    private float timerCameraTransition = 1.2f;
     private float timer;
 
     private void Start()

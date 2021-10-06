@@ -12,6 +12,7 @@ public class ItemSelection : MonoBehaviour
     public DialogueManager dialogueManager;
     public PickUpConchiglia pickUpConchiglia;
     public Scala scalaManager;
+    public PickUpCasco pickUpCasco;
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -484,6 +485,86 @@ public class ItemSelection : MonoBehaviour
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 2-----------------------------------
 
+                if (selection.name == "LunaBus")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Luna piena, speriamo di non incontrare lupi mannari. Dovrei depilarmi");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "StazioneBus")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Almeno questa volta non devo aspettarlo");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Città")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' la città di Nyu Orc");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
+                if (selection.name == "CiuffoErba")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.sentences.Add("Mi sembra di vedere qualcosa li...");
+                        dialogueManager.dialogue.sentences.Add("...");
+                        dialogueManager.dialogue.sentences.Add("Non posso crederci.\nLo ho trovato davvero.");
+                        dialogueManager.dialogue.sentences.Add("E' proprio lui.");
+                        dialogueManager.dialogue.sentences.Add("Sto cazzo.");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
+
+
+
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 3-----------------------------------
                 if (selection.name == "Spaventapasseri")
                 {
@@ -552,24 +633,65 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Vediamo cosa si cela nel castello...");
+                        dialogueManager.dialogue.sentences.Add("Chissà se quella porta mi può condurre all'interno del castello...");
+                        dialogueManager.dialogue.sentences.Add("E'INUTILE, NON CI PUOI ARRIVARE NEANCHE VOLENDO");
+                        dialogueManager.dialogue.sentences.Add("E se ci arrivassi?");
+                        dialogueManager.dialogue.sentences.Add("E' COMUNQUE INUTILE, PERCHE' LA PORTA E' FINTA");
+                        dialogueManager.dialogue.sentences.Add("...ho già perso troppo tempo con questa idiozia, meglio concentrarsi su altro");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Gatto")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("E' un gatto bellissimooo <3");
+                        dialogueManager.dialogue.sentences.Add("...no Artemisia, devi imparare a contenerti, non puoi diventare scema ogni volta che vedi un gatto");
                         dialogueManager.dialogue.sentences.Add("...");
-                        dialogueManager.dialogue.sentences.Add("......");
-                        dialogueManager.dialogue.sentences.Add("Ma è finta??");
-                        dialogueManager.dialogue.sentences.Add("EH! VOLEVI! GUARDA CHE FACCIA, NON SE L'ASPETTAVA!");
+                        dialogueManager.dialogue.sentences.Add("OMMIODDIO UN MICIO CHE DORME CHE TENERO CHE BELLO CIAO MICIO MICIO PSS PSS VIENI A CASA CON ME");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+                if (selection.name == "Ornitottero")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Avevo appena finito Assassin's Creed 2 quando ho pensato di dipingere la macchina volante di Leonardo in questo quadro");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
                 }
 
 
+
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 5-----------------------------------
-                if (selection.name == "Cappello")
+                if (selection.name == "Cappello" && pickUpCasco.canPickUp == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -586,6 +708,24 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
                 }
+                else if (selection.name == "Cappello" && pickUpCasco.canPickUp == true)
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("Nah, non è abbastanza esotico");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
                 if (selection.name == "Tovaglia")
                 {
                     if (dialogueManager.inDialogue == false)
