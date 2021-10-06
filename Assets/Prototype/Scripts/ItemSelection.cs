@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ItemSelection : MonoBehaviour
 {
     public ViewModeSwap viewModeSwap;
@@ -15,6 +15,9 @@ public class ItemSelection : MonoBehaviour
     public PickUpCasco pickUpCasco;
     public LockManager lockManager;
     public bool portaleAperto;
+
+    public GameObject whiteScreen;
+    public GameObject scrittaFinale;
 
     private void FixedUpdate()
     {
@@ -41,6 +44,22 @@ public class ItemSelection : MonoBehaviour
         }
     }
 
+    private void EndSequence()
+    {
+        whiteScreen.SetActive(true);
+        scrittaFinale.SetActive(true);
+        StartCoroutine(ToMenuCoroutine());
+    }
+
+
+    public IEnumerator ToMenuCoroutine()
+    {
+        lockManager.lockPuzzleActive = true;
+        yield return new WaitForSeconds(15f);
+        lockManager.lockPuzzleActive = false;
+        SceneManager.LoadScene(0);
+        yield return null;
+    }
     private void Update()
     {
         if (lockManager.lockPuzzleActive == false)
@@ -478,9 +497,10 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.dialogue.names.Add("Artemisia");
 
                             dialogueManager.dialogue.sentences.Add("Tempo di tornare nel mondo reale!");
-                            //sequenza finale
+
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
+                        EndSequence();
                     }
 
                     //---------------------SCALA--------------------------
@@ -984,6 +1004,58 @@ public class ItemSelection : MonoBehaviour
                     }
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 8-----------------------------------
+
+                    if (selection.name == "Fontana")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("Dicono che buttare una moneta nella fontana porti fortuna, ma sono povera.");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "Marmittaaaa")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("Vrum vrum trattoroni");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "Marmittaaa")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("Vrum vrum trattoroni");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 9-----------------------------------
 

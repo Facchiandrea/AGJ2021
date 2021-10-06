@@ -9,7 +9,7 @@ public class PlayerNiBBa : MonoBehaviour
     {
         if (collision.CompareTag("Activator"))
         {
-            collision.transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.254902f, 0.3215686f, 0.5019608f);
+            collision.transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.2142399f, 0.2883942f, 0.6415094f);
         }
     }
 
