@@ -667,8 +667,47 @@ public class NPCInteractor : MonoBehaviour
             }
 
             //-----------------Armadio----------------
+            if (selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == true)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
 
-            if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == false)
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Apriti sesamo!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Aprire_armadio_sfx");
+                    }
+
+                }
+                armadioAperto = true;
+                forcinaUI.SetActive(false);
+                selection.GetChild(1).gameObject.SetActive(false);
+
+            }
+            else if (selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == false)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Devo avvicinarmi e scassinare quel lucchetto");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                }
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
