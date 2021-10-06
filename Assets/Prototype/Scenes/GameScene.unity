@@ -37709,7 +37709,6 @@ MonoBehaviour:
   pickUpUovoScript: {fileID: 401319882}
   scolapastaPortato: 0
   uovoPortato: 0
-  bigliettoUI: {fileID: 507935568}
   player: {fileID: 721297128}
   posizioneStazione1: {fileID: 2051869383}
   posizioneStazione2: {fileID: 1720263274}
@@ -37726,6 +37725,13 @@ MonoBehaviour:
   montacarichi: {fileID: 787181983}
   conchigliaPortata: 0
   pickUpConchiglia: {fileID: 24725568}
+  forcinaUI: {fileID: 221391292}
+  cascoUI: {fileID: 2096708482}
+  bigliettoUI: {fileID: 507935568}
+  scolapastaUI: {fileID: 367767884}
+  uovoUI: {fileID: 871889398}
+  gambaUI: {fileID: 1981894263}
+  conchigliaUI: {fileID: 1133777245}
   dialogueManager: {fileID: 1840462404}
 --- !u!4 &1767356936
 Transform:

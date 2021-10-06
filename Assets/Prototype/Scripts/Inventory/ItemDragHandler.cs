@@ -49,7 +49,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Ragazzo");
 
                     dialogueManager.dialogue.sentences.Add("Sì sì! questo è perfetto! Da sballo! mi dona vero ? Esalta i miei fantastici zigomi!Grazie!");
-                    dialogueManager.dialogue.sentences.Add("Ora puoi tenerti la forcina, tutto sommato non era così divertente.");
+                    dialogueManager.dialogue.sentences.Add("Ora puoi tenerti la forcina, tutto sommato non era così figa.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();

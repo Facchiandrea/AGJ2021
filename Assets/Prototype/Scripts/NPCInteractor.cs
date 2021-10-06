@@ -15,12 +15,12 @@ public class NPCInteractor : MonoBehaviour
     public PickUpCasco pickUpCascoScript;
     public bool cascoPortato = false;
 
+
     public PickUpScolapasta pickUpScolapastaScript;
     public PickUpUovo pickUpUovoScript;
     public bool scolapastaPortato = false;
     public bool uovoPortato = false;
 
-    public GameObject bigliettoUI;
     public GameObject player;
     public Transform posizioneStazione1;
     public Transform posizioneStazione2;
@@ -41,6 +41,16 @@ public class NPCInteractor : MonoBehaviour
     public Montacarichi montacarichi;
     public bool conchigliaPortata;
     public PickUpConchiglia pickUpConchiglia;
+
+
+    public GameObject forcinaUI;
+    public GameObject cascoUI;
+    public GameObject bigliettoUI;
+    public GameObject scolapastaUI;
+    public GameObject uovoUI;
+    public GameObject gambaUI;
+    public GameObject conchigliaUI;
+
 
     public DialogueManager dialogueManager;
 
@@ -159,7 +169,36 @@ public class NPCInteractor : MonoBehaviour
             }
 
             //-----------------RAGAZZO----------------
-            if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 0)
+
+            if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoUI.activeInHierarchy == true)
+            {
+                cascoUI.SetActive(false);
+                cascoPortato = true;
+                selection.GetChild(1).gameObject.SetActive(true);
+                forcinaUI.SetActive(true);
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+                    dialogueManager.dialogue.names.Add("Ragazzo");
+
+                    dialogueManager.dialogue.sentences.Add("Sì sì! questo è perfetto! Da sballo! mi dona vero ? Esalta i miei fantastici zigomi!Grazie!");
+                    dialogueManager.dialogue.sentences.Add("Ora puoi tenerti la forcina, tutto sommato non era così figa.");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Prendere_oggetto_sfx");
+                    }
+
+                }
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 0)
             {
                 if (dialogueManager.inDialogue == false)
                 {
