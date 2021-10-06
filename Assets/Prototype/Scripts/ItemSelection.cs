@@ -772,7 +772,7 @@ public class ItemSelection : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("HEY, LISTEN!");
+                        dialogueManager.dialogue.sentences.Add("E' un ombrello");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
