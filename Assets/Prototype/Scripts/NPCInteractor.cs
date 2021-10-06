@@ -693,7 +693,7 @@ public class NPCInteractor : MonoBehaviour
             }
 
             //-----------------Armadio----------------
-            if (selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == true)
+            if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == true)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -717,7 +717,7 @@ public class NPCInteractor : MonoBehaviour
                 selection.GetChild(1).gameObject.SetActive(false);
 
             }
-            else if (selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == false)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -769,6 +769,27 @@ public class NPCInteractor : MonoBehaviour
                 gambaPresa = true;
 
             }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == false && gambaPresa == false && pickUpGamba.canPickUp == true)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Mmm... potrei andare a prendere una di quelle gambe di legno nell'armadio");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
+                pickUpGamba.PickUpUIGraphics.SetActive(true);
+                pickUpGamba.PickUpGraphics.SetActive(false);
+                gambaPresa = true;
+
+            }
+
             else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && gambaPresa == true || Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && gambaPresa == false && pickUpGamba.canPickUp == false)
             {
                 if (dialogueManager.inDialogue == false)
@@ -845,7 +866,7 @@ public class NPCInteractor : MonoBehaviour
             }
 
             //------------------UOMO-------------------------
-            if (selection.name == "Uomo" && conchigliaUI.activeInHierarchy && uomo.playerInRange == true)
+            if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaUI.activeInHierarchy && uomo.playerInRange == true)
             {
                 conchigliaUI.SetActive(false);
                 conchigliaPortata = true;
@@ -863,7 +884,7 @@ public class NPCInteractor : MonoBehaviour
                 }
                 uomo.portale.SetActive(true);
             }
-            else if (selection.name == "Uomo" && conchigliaUI.activeInHierarchy && uomo.playerInRange == false)
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaUI.activeInHierarchy && uomo.playerInRange == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
