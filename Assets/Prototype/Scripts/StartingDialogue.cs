@@ -26,7 +26,7 @@ public class StartingDialogue : MonoBehaviour
                 dialogueManager.dialogue.sentences.Add("Hey ma dove mi trovo?\nDove ho già visto questo posto?");
                 dialogueManager.dialogue.sentences.Add("Mi sembra quel quadro che tengo sopra il gabinetto...");
                 dialogueManager.dialogue.sentences.Add("...hey aspetta,ma è proprio QUEL quadro!");
-                dialogueManager.dialogue.sentences.Add("Come faccio ad uscire?");
+                dialogueManager.dialogue.sentences.Add("Come faccio ad uscire? Forse quel tipo può aiutarmi.");
 
 
                 dialogueManager.StartDialogue(dialogueManager.dialogue);

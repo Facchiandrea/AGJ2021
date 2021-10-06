@@ -105,13 +105,21 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Tut Orial");
                     dialogueManager.dialogue.names.Add("Tut Orial");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Tut Orial");
+                    dialogueManager.dialogue.names.Add("Tut Orial");
+                    dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Tut Orial");
 
-                    dialogueManager.dialogue.sentences.Add("Ciao, il mio nome è Tut, ma puoi chiamarmi Orial");
-                    dialogueManager.dialogue.sentences.Add("...Seriamente?");
-                    dialogueManager.dialogue.sentences.Add("Premi V per allargare la visuale e clicca su un quadro per selezionarlo.");
-                    dialogueManager.dialogue.sentences.Add("Seleziona 2 quadri per scambiarli di posto. Non puoi andare in quadri non collegati tra loro.");
-                    dialogueManager.dialogue.sentences.Add("ma non puoi scambiare i quadri se c'è un personaggio all'interno, rischierebbe di cadere fuori!");
+                    dialogueManager.dialogue.sentences.Add("Hey, piacere di conoscerti. Non passa molta gente qui! Io sono Tut, ma tu puoi chiamarmi Orial e mi piace spiegare le cose alle persone.");
+                    dialogueManager.dialogue.sentences.Add("Tu sei un tipo strano");
+                    dialogueManager.dialogue.sentences.Add("Senti, vuoi uscire da questo posto? E allora fammi fare il mio lavoro.");
+                    dialogueManager.dialogue.sentences.Add("Come puoi vedere siamo dentro ad un quadro ma tu non appartieni a questo posto, tu ci hai disegnati tutti.Io non ho idea come tu possa scappare, magari qualcun altro ti potrà aiutare.");
+                    dialogueManager.dialogue.sentences.Add("Mi ricordo di loro, gli altri personaggi che ho disegnato, come faccio a raggiungerli?");
+                    dialogueManager.dialogue.sentences.Add("Per farlo dovrai spostare i vari quadri, prima premendo “V” e poi switchandone 2 per volta. ATTENTA PERÒ’ i quadri in cui si trovano delle persone NON possono essere spostati.");
+                    dialogueManager.dialogue.sentences.Add("Per fare in modo che tu possa passare da un quadro ad un altro dovrai fare in modo che la strada del quadro su cui ti muovi e quella del quadro in cui ti vuoi spostare siano allineate.");
+                    dialogueManager.dialogue.sentences.Add("E se per caso mi perdo e non so più dove andare?");
+                    dialogueManager.dialogue.sentences.Add("Se proprio non saprai come fare ti basterà smadonnare un pochino e poi aprire un file .txt nella cartella del gioco.");
 
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -130,18 +138,17 @@ public class NPCInteractor : MonoBehaviour
 
                     dialogueManager.dialogue.names.Add("Tut Orial");
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Tut Orial");
 
-                    dialogueManager.dialogue.sentences.Add("Sei ancora qua?");
-                    dialogueManager.dialogue.sentences.Add("Si");
-                    dialogueManager.dialogue.sentences.Add("Ciao");
-
+                    dialogueManager.dialogue.sentences.Add("Può essere che un oggetto che poi ti servirà non potrai raccoglierlo subito, devi prima sapere che ne hai bisogno");
+                    dialogueManager.dialogue.sentences.Add("In effetti questi pantaloni non hanno le tasche, non ho voglia di portarmi dietro roba inutile.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
                     tutorialCounter = 1;
                 }
+
             }
+
             else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true && tutorialCounter == 1)
             {
                 if (dialogueManager.inDialogue == false)
@@ -153,13 +160,32 @@ public class NPCInteractor : MonoBehaviour
 
                     dialogueManager.dialogue.names.Add("Tut Orial");
                     dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Ricordati che questo è un gioco punta e clicca, devi pensare lateralmente alla soluzione. ");
+                    dialogueManager.dialogue.sentences.Add("Sì, l’avevo intuito dalla barra dell'inventario che c’è sopra");
+
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                    tutorialCounter = 2;
+                }
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true && tutorialCounter == 2)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
                     dialogueManager.dialogue.names.Add("Tut Orial");
                     dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Tut Orial");
 
-                    dialogueManager.dialogue.sentences.Add("Prova secondo dialogo");
-                    dialogueManager.dialogue.sentences.Add("Prova prova");
-                    dialogueManager.dialogue.sentences.Add("Grazie Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Di nulla");
+                    dialogueManager.dialogue.sentences.Add("Che bella la vista da questa scogliera, ma ricordati che se proprio non sai come fare puoi consultare il file .txt nella cartella di gioco");
+                    dialogueManager.dialogue.sentences.Add("Ho capito, ma non mi servirà, almeno spero");
+                    dialogueManager.dialogue.sentences.Add("lo speriamo tutti");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
