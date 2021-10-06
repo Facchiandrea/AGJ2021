@@ -760,6 +760,23 @@ public class ItemSelection : MonoBehaviour
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
                 }
+                if (selection.name == "Ombrello")
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+
+                        dialogueManager.dialogue.sentences.Add("HEY, LISTEN!");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
 
                 //-------------------------ALTRI OGGETTI DEL DIPINTO 6-----------------------------------
 
