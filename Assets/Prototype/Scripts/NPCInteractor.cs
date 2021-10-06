@@ -308,7 +308,74 @@ public class NPCInteractor : MonoBehaviour
                 }
             }
             //-----------------BAMBINO----------------
-            if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 0)
+
+            if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaUI.activeInHierarchy)
+            {
+                scolapastaUI.SetActive(false);
+                scolapastaPortato = true;
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+
+                    dialogueManager.dialogue.sentences.Add("Uno scolapasta?");
+                    dialogueManager.dialogue.sentences.Add("Sì, è perfetto come corona.");
+                    dialogueManager.dialogue.sentences.Add("Lo odio");
+                    dialogueManager.dialogue.sentences.Add("Dai, non fare i capricci.Nel 1500 abitava un re potentissimo, che indossava proprio questa corona, aveva un sacco di sudditi e persino un'aquila GIGANTE come animale domestico");
+                    dialogueManager.dialogue.sentences.Add("WOW, doveva essere un vero figo, sai cosa? Mi piace la corona, ma voglio anche io l’aquila!");
+                    dialogueManager.dialogue.sentences.Add("Ma che… ?! ");
+                    dialogueManager.dialogue.sentences.Add("Con gli artigli!");
+                    dialogueManager.dialogue.sentences.Add("Uff");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                }
+
+            }
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && uovoUI.activeInHierarchy)
+            {
+                uovoUI.SetActive(false);
+                uovoPortato = true;
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+
+                    dialogueManager.dialogue.sentences.Add("WOW… che cos'è?");
+                    dialogueManager.dialogue.sentences.Add("Questo, mio stupido bambino, è un uovo di pterodattilo.");
+                    dialogueManager.dialogue.sentences.Add("DAVVERO? lo voglio! LO VOGLIO! Ma ce li avrà gli artigli?");
+                    dialogueManager.dialogue.sentences.Add("… Sì");
+                    dialogueManager.dialogue.sentences.Add("Dai dammelo, ecco, te lo scambio per questo biglietto dell'autobus, io non me ne faccio nulla, non mi piace viaggiare.");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Prendere_oggetto_sfx");
+                    }
+
+                }
+                bigliettoUI.SetActive(true);
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 0)
             {
                 if (dialogueManager.inDialogue == false)
                 {
