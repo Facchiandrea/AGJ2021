@@ -760,7 +760,26 @@ public class NPCInteractor : MonoBehaviour
                 }
             }
             //------------------MONTACARICHI-------------
-            if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.montacarichiRiparato == false)
+            if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && gambaUI.activeInHierarchy)
+            {
+                gambaUI.SetActive(false);
+                montacarichi.montacarichiRiparato = true;
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Calza a pennello");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                }
+                gambaLeva.SetActive(true);
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.montacarichiRiparato == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -800,8 +819,41 @@ public class NPCInteractor : MonoBehaviour
             }
 
             //------------------UOMO-------------------------
+            if (selection.name == "Uomo" && conchigliaUI.activeInHierarchy && uomo.playerInRange == true)
+            {
+                conchigliaUI.SetActive(false);
+                conchigliaPortata = true;
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
 
-            if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 0)
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.sentences.Add("oh… OH… OHHHH. Sì questo, lo sento, l’hai preso su una spiaggia vero? Grazie, grazie mille, se chiudo gli occhi posso quasi immaginarlo ");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                }
+                uomo.portale.SetActive(true);
+            }
+            else if (selection.name == "Uomo" && conchigliaUI.activeInHierarchy && uomo.playerInRange == false)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Meglio avvicinarsi, prima");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                }
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 0)
             {
                 if (dialogueManager.inDialogue == false)
                 {

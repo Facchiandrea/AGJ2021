@@ -418,8 +418,6 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             }
             else if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name == "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false || NPCInteractor.selection.name == "Uomo" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false)
             {
-                this.gameObject.SetActive(false);
-                NPCInteractor.conchigliaPortata = true;
                 if (dialogueManager.inDialogue == false)
                 {
                     dialogueManager.dialogue.sentences.Clear();
@@ -437,8 +435,6 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
             else if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true)
             {
-                this.gameObject.SetActive(false);
-                NPCInteractor.conchigliaPortata = true;
                 if (dialogueManager.inDialogue == false)
                 {
                     dialogueManager.dialogue.sentences.Clear();
