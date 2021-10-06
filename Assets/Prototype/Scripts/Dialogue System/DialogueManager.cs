@@ -27,6 +27,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject uomoPortrait;
     public GameObject pecoraPortrait;
 
+    public NPCInteractor NPCInteractor;
+
     void Awake()
     {
         sentences = new Queue<string>();
@@ -88,6 +90,12 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }*/
         dialogueText.text = sentence;
+        if (dialogueText.text == "Sembra qualcosa tipo...Abracadabra?" && NPCInteractor.compariPortale)
+        {
+            NPCInteractor.uomo.portale.SetActive(true);
+            NPCInteractor.compariPortale = false;
+        }
+
 
         yield return null;
 

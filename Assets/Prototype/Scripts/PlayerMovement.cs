@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMovement = 0f;
     public ViewModeSwap viewModeSwap;
     public bool movementBlock = false;
+    public LockManager lockManager;
 
 
     private void Awake()
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (viewModeSwap.fullView == false && movementBlock == false && viewModeSwap.transitionToFull == false && viewModeSwap.transitionToSingle == false)
+        if (viewModeSwap.fullView == false && movementBlock == false && viewModeSwap.transitionToFull == false && viewModeSwap.transitionToSingle == false && lockManager.lockPuzzleActive == false)
         {
             horizontalMovement = Input.GetAxisRaw("Horizontal");
             if (horizontalMovement > 0f)
