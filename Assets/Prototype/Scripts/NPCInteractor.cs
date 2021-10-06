@@ -693,7 +693,28 @@ public class NPCInteractor : MonoBehaviour
             }
 
             //-----------------Armadio----------------
-            if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == true)
+            if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == true && gambaPresa == false && pickUpGamba.canPickUp == true && dialogueManager.inDialogue == false)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("Questa gamba di legno fa al caso mio");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+
+                }
+                pickUpGamba.PickUpUIGraphics.SetActive(true);
+                pickUpGamba.PickUpGraphics.SetActive(false);
+                gambaPresa = true;
+
+            }
+
+            else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == true && dialogueManager.inDialogue == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -748,26 +769,6 @@ public class NPCInteractor : MonoBehaviour
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
 
                 }
-            }
-            else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == true && gambaPresa == false && pickUpGamba.canPickUp == true)
-            {
-                if (dialogueManager.inDialogue == false)
-                {
-                    dialogueManager.dialogue.sentences.Clear();
-                    dialogueManager.sentences.Clear();
-                    dialogueManager.dialogue.names.Clear();
-                    dialogueManager.names.Clear();
-
-                    dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Questa gamba di legno fa al caso mio");
-
-                    dialogueManager.StartDialogue(dialogueManager.dialogue);
-
-                }
-                pickUpGamba.PickUpUIGraphics.SetActive(true);
-                pickUpGamba.PickUpGraphics.SetActive(false);
-                gambaPresa = true;
-
             }
             else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == false && gambaPresa == false && pickUpGamba.canPickUp == true)
             {
