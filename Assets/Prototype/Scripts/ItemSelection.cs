@@ -711,6 +711,41 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
                     }
+                    if (selection.name == "Castello")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("Simple but elegant, the way I like it. But if I lived there alone, I would get lost right away.");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "PonteDistrutto")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("I liked the idea of ​​painting the castle as separate from everything and everyone, but I think the owners are happy with it.");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+
                     if (selection.name == "Gatto")
                     {
                         if (dialogueManager.inDialogue == false)
@@ -1039,6 +1074,8 @@ public class ItemSelection : MonoBehaviour
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 8-----------------------------------
 
+
+                    //-------------------------ALTRI OGGETTI DEL DIPINTO 9-----------------------------------
                     if (selection.name == "Fontana")
                     {
                         if (dialogueManager.inDialogue == false)
@@ -1051,12 +1088,12 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Dicono che buttare una moneta nella fontana porti fortuna, ma sono povera.");
+                            dialogueManager.dialogue.sentences.Add("Throwing a coin into the fountain brings good luck, but I'm poor.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
                     }
-                    if (selection.name == "Marmittaaaa")
+                    if (selection.name == "CassettaPosta")
                     {
                         if (dialogueManager.inDialogue == false)
                         {
@@ -1068,7 +1105,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Vrum vrum trattoroni");
+                            dialogueManager.dialogue.sentences.Add("Are these things still used?");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1090,8 +1127,6 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
                     }
-
-                    //-------------------------ALTRI OGGETTI DEL DIPINTO 9-----------------------------------
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 10-----------------------------------
 
@@ -1147,6 +1182,42 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
                     }
+                    if (selection.name == "Immondizia")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("A huge pile of trash. If I look closely, I'm sure I'll find my old right sock, lost way back in 2002.");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "Bestio")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("I wanted to represent a living version of pollution, but looking back, I don't think it's such an original idea. Someone even made a pokémon about it.");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+
+
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 12-----------------------------------
                     if (selection.name == "Cervo")
