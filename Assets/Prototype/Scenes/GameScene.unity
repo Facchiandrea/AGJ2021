@@ -7488,8 +7488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrieraFosso: {fileID: 761477513}
-  interactedWithFlowers: 0
-  interactedWithMattress: 0
+  interactedWithFlowers: 1
+  interactedWithMattress: 1
   morbidBelow: 0
 --- !u!1 &351395921
 GameObject:
