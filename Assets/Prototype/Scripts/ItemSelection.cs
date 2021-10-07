@@ -512,6 +512,40 @@ public class ItemSelection : MonoBehaviour
 
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 1-----------------------------------
+                    if (selection.name == "Nuvola")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("La forma di questa nuvola mi ricorda un gatto!");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "Faro")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("E' un faro");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 2-----------------------------------
 
