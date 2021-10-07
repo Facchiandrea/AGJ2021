@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }*/
         dialogueText.text = sentence;
-        if (dialogueText.text == "Sembra qualcosa tipo...Abracadabra?" && NPCInteractor.compariPortale)
+        if (dialogueText.text == "Sembra qualcosa tipo...Abracadabra?" && NPCInteractor.compariPortale) //CONTROLLARE
         {
             NPCInteractor.uomo.portale.SetActive(true);
             NPCInteractor.compariPortale = false;
@@ -151,7 +151,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.transform.localScale = new Vector3(-1, 1, 1);
 
         }
-        else if (nameText.text == "Ragazzo")
+        else if (nameText.text == "Ragazzo") //CONTROLLARE
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(false);
@@ -180,7 +180,7 @@ public class DialogueManager : MonoBehaviour
 
         }
 
-        else if (nameText.text == "Bambino")
+        else if (nameText.text == "Bambino") //CONTROLLARE
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(false);
@@ -194,7 +194,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.transform.localScale = new Vector3(-1, 1, 1);
 
         }
-        else if (nameText.text == "Uomo")
+        else if (nameText.text == "Uomo") //CONTROLLARE
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(false);

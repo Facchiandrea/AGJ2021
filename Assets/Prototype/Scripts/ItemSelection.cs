@@ -529,7 +529,7 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
                     }
-                    if (selection.name == "Faro")
+                    if (selection.name == "Casetta")
                     {
                         if (dialogueManager.inDialogue == false)
                         {
@@ -541,7 +541,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un faro");
+                            dialogueManager.dialogue.sentences.Add("Mi piacerebbe avere una casetta sul lago, forse quella appartiene a qualche pescatore");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }

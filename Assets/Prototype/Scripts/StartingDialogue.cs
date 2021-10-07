@@ -23,10 +23,10 @@ public class StartingDialogue : MonoBehaviour
                 dialogueManager.dialogue.names.Add("Artemisia");
                 dialogueManager.dialogue.names.Add("Artemisia");
 
-                dialogueManager.dialogue.sentences.Add("Hey ma dove mi trovo?\nDove ho già visto questo posto?");
-                dialogueManager.dialogue.sentences.Add("Mi sembra quel quadro che tengo sopra il gabinetto...");
-                dialogueManager.dialogue.sentences.Add("...hey aspetta,ma è proprio QUEL quadro!");
-                dialogueManager.dialogue.sentences.Add("Come faccio ad uscire? Forse quel tipo può aiutarmi.");
+                dialogueManager.dialogue.sentences.Add("Yawn ... what time is it? Five more minutes...\nWait, where am I?");
+                dialogueManager.dialogue.sentences.Add("I think I've seen this place before; it looks like the painting that I hung over the toilet.");
+                dialogueManager.dialogue.sentences.Add("...but it's really THAT painting!");
+                dialogueManager.dialogue.sentences.Add("Okay, I'm clearly in a dream. I have to find a way to wake up, but how? Maybe that guy can help me.");
 
 
                 dialogueManager.StartDialogue(dialogueManager.dialogue);

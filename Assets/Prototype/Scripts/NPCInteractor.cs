@@ -110,21 +110,38 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Tut Orial");
 
-                        dialogueManager.dialogue.sentences.Add("Hey, piacere di conoscerti. Non passa molta gente qui! Io sono Tut, ma tu puoi chiamarmi Orial e mi piace spiegare le cose alle persone.");
-                        dialogueManager.dialogue.sentences.Add("Tu sei un tipo strano");
-                        dialogueManager.dialogue.sentences.Add("Senti, vuoi uscire da questo posto? E allora fammi fare il mio lavoro.");
-                        dialogueManager.dialogue.sentences.Add("Come puoi vedere siamo dentro ad un quadro ma tu non appartieni a questo posto, tu ci hai disegnati tutti.Io non ho idea come tu possa scappare, magari qualcun altro ti potrà aiutare.");
-                        dialogueManager.dialogue.sentences.Add("Mi ricordo di loro, gli altri personaggi che ho disegnato, come faccio a raggiungerli?");
-                        dialogueManager.dialogue.sentences.Add("Per farlo dovrai spostare i vari quadri, prima premendo “V” e poi switchandone 2 per volta. ATTENTA PERÒ’ i quadri in cui si trovano delle persone NON possono essere spostati.");
-                        dialogueManager.dialogue.sentences.Add("Per fare in modo che tu possa passare da un quadro ad un altro dovrai fare in modo che la strada del quadro su cui ti muovi e quella del quadro in cui ti vuoi spostare siano allineate.");
-                        dialogueManager.dialogue.sentences.Add("E se per caso mi perdo e non so più dove andare?");
-                        dialogueManager.dialogue.sentences.Add("Se proprio non saprai come fare ti basterà smadonnare un pochino e poi aprire un file .txt nella cartella del gioco.");
+
+                        dialogueManager.dialogue.sentences.Add("Hey, nice to meet you. Not many people pass here! I am Tut, but you can call me Orial, and I like to explain things to people.");
+                        dialogueManager.dialogue.sentences.Add("You are a strange guy.");
+                        dialogueManager.dialogue.sentences.Add("Listen, do you want to get out of this place? Then let me do my job.");
+                        dialogueManager.dialogue.sentences.Add("As you can see, we are inside a painting, but you do not belong to this place. You are the one who designed us all.");
+                        dialogueManager.dialogue.sentences.Add("I have no idea how you can escape, but maybe someone else can help you. I know that a little boy lives in the painting with the castle, you could visit him.");
+                        dialogueManager.dialogue.sentences.Add("I remember. He is one of the characters I painted. But how do I get there?");
+                        dialogueManager.dialogue.sentences.Add("To move from one painting to another, you will have to make sure that the road in the painting you are in, and the road in the painting you want to go to, are aligned. If they have different heights, you will not be able to pass!");
+                        dialogueManager.dialogue.sentences.Add("Press SPACE to change the view, then click a painting to select it. By selecting a painting first and then a second one, you will swap them places!");
+                        dialogueManager.dialogue.sentences.Add("BEWARE, however, the paintings in the corners where there are people and the painting in which you are currently, CANNOT be moved.");
+                        dialogueManager.dialogue.sentences.Add("Ok, clear. If I forget, I'll ask again. Is there anything else I need to know?");
+                        dialogueManager.dialogue.sentences.Add("You have an inventory that you can open by clicking on the icon at the top center of the screen. There you can see what you have collected.");
+                        dialogueManager.dialogue.sentences.Add("But know that you can't pick up an item until you know you need it. When you realize you need an item you already found while exploring, come back for it!");
+                        dialogueManager.dialogue.sentences.Add("Actually, these pants don't have pockets. I don't want to carry useless stuff with me.");
+                        dialogueManager.dialogue.sentences.Add("And if by chance I get lost, and I don't know where to go?");
+                        dialogueManager.dialogue.sentences.Add("If you really don't know what to do, you can consult the .txt file in the game folder.");
+                        dialogueManager.dialogue.sentences.Add("I understand. I hope I won't need it.");
+                        dialogueManager.dialogue.sentences.Add("We all hope so.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -132,7 +149,7 @@ public class NPCInteractor : MonoBehaviour
                     }
 
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true && tutorialCounter == 0)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -141,60 +158,37 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
 
-                        dialogueManager.dialogue.sentences.Add("Può essere che un oggetto che poi ti servirà non potrai raccoglierlo subito, devi prima sapere che ne hai bisogno");
-                        dialogueManager.dialogue.sentences.Add("In effetti questi pantaloni non hanno le tasche, non ho voglia di portarmi dietro roba inutile.");
+                        dialogueManager.dialogue.sentences.Add("Uh, could you explain again?");
+                        dialogueManager.dialogue.sentences.Add("Sure, that's what I'm here for!");
+                        dialogueManager.dialogue.sentences.Add("To move from one painting to another, you will have to make sure that the road in the painting you are in, and the road in the painting you want to go to, are aligned. If they have different heights, you will not be able to pass!");
+                        dialogueManager.dialogue.sentences.Add("Press SPACE to change the view, then click a painting to select it. By selecting a painting first and then a second one, you will swap them places!");
+                        dialogueManager.dialogue.sentences.Add("BEWARE, however, the paintings in the corners where there are people and the painting in which you are currently, CANNOT be moved.");
+                        dialogueManager.dialogue.sentences.Add("Is there anything else?");
+                        dialogueManager.dialogue.sentences.Add("You have an inventory that you can open by clicking on the icon at the top center of the screen. There you can see what you have collected.");
+                        dialogueManager.dialogue.sentences.Add("But know that you can't pick up an item until you know you need it. When you realize you need an item you already found while exploring, come back for it!");
+                        dialogueManager.dialogue.sentences.Add("Right, I don't have pockets, and I don't want to carry useless stuff with me.");
+                        dialogueManager.dialogue.sentences.Add("And where is the txt file with the solution?");
+                        dialogueManager.dialogue.sentences.Add("In the game folder!");
+                        dialogueManager.dialogue.sentences.Add("I understand. If I need the explanation again, I'll be back!");
+                        dialogueManager.dialogue.sentences.Add("Let's hope not!");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
                         tutorialCounter = 1;
-                    }
-
-                }
-
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true && tutorialCounter == 1)
-                {
-                    if (dialogueManager.inDialogue == false)
-                    {
-                        dialogueManager.dialogue.sentences.Clear();
-                        dialogueManager.sentences.Clear();
-                        dialogueManager.dialogue.names.Clear();
-                        dialogueManager.names.Clear();
-
-                        dialogueManager.dialogue.names.Add("Tut Orial");
-                        dialogueManager.dialogue.names.Add("Artemisia");
-
-                        dialogueManager.dialogue.sentences.Add("Ricordati che questo è un gioco punta e clicca, devi pensare lateralmente alla soluzione. ");
-                        dialogueManager.dialogue.sentences.Add("Sì, l’avevo intuito dalla barra dell'inventario che c’è sopra");
-
-
-                        dialogueManager.StartDialogue(dialogueManager.dialogue);
-
-                        tutorialCounter = 2;
-                    }
-                }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true && tutorialCounter == 2)
-                {
-                    if (dialogueManager.inDialogue == false)
-                    {
-                        dialogueManager.dialogue.sentences.Clear();
-                        dialogueManager.sentences.Clear();
-                        dialogueManager.dialogue.names.Clear();
-                        dialogueManager.names.Clear();
-
-                        dialogueManager.dialogue.names.Add("Tut Orial");
-                        dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Tut Orial");
-
-                        dialogueManager.dialogue.sentences.Add("Che bella la vista da questa scogliera, ma ricordati che se proprio non sai come fare puoi consultare il file .txt nella cartella di gioco");
-                        dialogueManager.dialogue.sentences.Add("Ho capito, ma non mi servirà, almeno spero");
-                        dialogueManager.dialogue.sentences.Add("lo speriamo tutti");
-
-                        dialogueManager.StartDialogue(dialogueManager.dialogue);
-
-                        tutorialCounter = 0;
                     }
 
                 }
@@ -217,8 +211,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Ragazzo");
                         dialogueManager.dialogue.names.Add("Ragazzo");
 
-                        dialogueManager.dialogue.sentences.Add("Sì sì! questo è perfetto! Da sballo! mi dona vero ? Esalta i miei fantastici zigomi!Grazie!");
-                        dialogueManager.dialogue.sentences.Add("Ora puoi tenerti la forcina, tutto sommato non era così figa.");
+                        dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones.Thanks!");
+                        dialogueManager.dialogue.sentences.Add("Now you can keep the hairpin. All in all, it wasn't that cool...");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         if (AudioManager.instance != null)
@@ -242,13 +236,11 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Ragazzo");
                         dialogueManager.dialogue.names.Add("Ragazzo");
-                        dialogueManager.dialogue.names.Add("Ragazzo");
 
-                        dialogueManager.dialogue.sentences.Add("Finalmente sei arrivata! Mmmmm ti ricordavo più magra...\nHey, ma tu non sei la mia ragazza!");
-                        dialogueManager.dialogue.sentences.Add("Mi sa di no");
-                        dialogueManager.dialogue.sentences.Add("Bhe meno male, perchè per la mia VERA ragazza non ho ancora trovato un regalo di compleanno.");
-                        dialogueManager.dialogue.sentences.Add("Pensavo di regalarle questa forcina 2000 TURBO placcata d’oro e sistema di ventilazione per quando fa caldo.");
-                        dialogueManager.dialogue.sentences.Add("Ma non sono sicuro le possa piacere. Aiutami a trovare un cappello! Uno figo!");
+                        dialogueManager.dialogue.sentences.Add("You finally arrived!\nMmm, I reminded you thinner...but, wait, you are not my girlfriend!");
+                        dialogueManager.dialogue.sentences.Add("I guess not.");
+                        dialogueManager.dialogue.sentences.Add("Well, thank goodness, because I haven't found a birthday present for my REAL girlfriend yet.I was thinking of giving her this gold - plated hairpin, a Turbo model one with a ventilation system for when it's hot.");
+                        dialogueManager.dialogue.sentences.Add("But I'm not sure she'll like it. So help me find a hat! An exotic and extravagant one!");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         ragazzoCounter = 1;
@@ -267,8 +259,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Ragazzo");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Un cappello! Sì, un cappello figo. Magari qualcosa di esotico o stravagante o…");
-                        dialogueManager.dialogue.sentences.Add("Ho capito ho capito, un cappello per la tua inesistente ragazza");
+                        dialogueManager.dialogue.sentences.Add("A hat! Yes, a cool hat. Maybe something special...");
+                        dialogueManager.dialogue.sentences.Add("I understand, I understand, a hat for your non-existent girlfriend.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -290,9 +282,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Ragazzo");
 
-                        dialogueManager.dialogue.sentences.Add("Ah, non vedo l’ora di vedere la mia ragazza. Ha dei colori stupendi e delle pennellate bellissime");
-                        dialogueManager.dialogue.sentences.Add("Io non mi ricordo di questa ragazza");
-                        dialogueManager.dialogue.sentences.Add("Beh tu non la conosci");
+                        dialogueManager.dialogue.sentences.Add("Ah, I can't wait to see my girlfriend. She has beautiful colors and awesome brushstrokes");
+                        dialogueManager.dialogue.sentences.Add("I don't remember this girl.");
+                        dialogueManager.dialogue.sentences.Add("Well, you don't know her!");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -312,8 +304,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Ragazzo");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Questa forcina è una vera figata");
-                        dialogueManager.dialogue.sentences.Add("Ma quand’è che te l'ho disegnata?!");
+                        dialogueManager.dialogue.sentences.Add("This hairpin is really cool.");
+                        dialogueManager.dialogue.sentences.Add("But when did I draw it?!");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -332,7 +324,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Ragazzo");
 
-                        dialogueManager.dialogue.sentences.Add("Guardatemi sono un astronauta! Non è che si veda proprio bene da questo casco… C'È NESSUNO???");
+                        dialogueManager.dialogue.sentences.Add("Look at me! I'm an astronaut! I can't see very well with this space helmet... ANYBODY HERE??");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -360,14 +352,14 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Uno scolapasta?");
-                        dialogueManager.dialogue.sentences.Add("Sì, è perfetto come corona.");
-                        dialogueManager.dialogue.sentences.Add("Lo odio");
-                        dialogueManager.dialogue.sentences.Add("Dai, non fare i capricci.Nel 1500 abitava un re potentissimo, che indossava proprio questa corona, aveva un sacco di sudditi e persino un'aquila GIGANTE come animale domestico");
-                        dialogueManager.dialogue.sentences.Add("WOW, doveva essere un vero figo, sai cosa? Mi piace la corona, ma voglio anche io l’aquila!");
-                        dialogueManager.dialogue.sentences.Add("Ma che… ?! ");
-                        dialogueManager.dialogue.sentences.Add("Con gli artigli!");
-                        dialogueManager.dialogue.sentences.Add("Uff");
+                        dialogueManager.dialogue.sentences.Add("A colander?");
+                        dialogueManager.dialogue.sentences.Add("Yes, it is perfect as a crown.");
+                        dialogueManager.dialogue.sentences.Add("I hate him.");
+                        dialogueManager.dialogue.sentences.Add("Don't throw a tantrum. In the 1500s, there was a very powerful king who wore exactly this crown.");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -390,11 +382,11 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
 
-                        dialogueManager.dialogue.sentences.Add("WOW… che cos'è?");
-                        dialogueManager.dialogue.sentences.Add("Questo, mio stupido bambino, è un uovo di pterodattilo.");
-                        dialogueManager.dialogue.sentences.Add("DAVVERO? lo voglio! LO VOGLIO! Ma ce li avrà gli artigli?");
-                        dialogueManager.dialogue.sentences.Add("… Sì");
-                        dialogueManager.dialogue.sentences.Add("Dai dammelo, ecco, te lo scambio per questo biglietto dell'autobus, io non me ne faccio nulla, non mi piace viaggiare.");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         if (AudioManager.instance != null)
@@ -425,15 +417,14 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("HEEEY SIGNOOOORAAAAAA!!!");
-                        dialogueManager.dialogue.sentences.Add("ehm...ciao.");
-                        dialogueManager.dialogue.sentences.Add("Tu sei quella che mi ha disegnato?");
-                        dialogueManager.dialogue.sentences.Add("Temo di sì");
-                        dialogueManager.dialogue.sentences.Add("Ecco..volevo chiederti... PERCHé NON SONO IL RE?! VOGLIO ESSERE RE! Mi serve una corona adatta alla mia altezza!");
-                        dialogueManager.dialogue.sentences.Add("Se mi aiuterai… ti darò bel un regalo");
-                        dialogueManager.dialogue.sentences.Add("Perchè dovrei aiutarti? Già mi sono pentita di averti creato.");
-                        dialogueManager.dialogue.sentences.Add("PER FAVOOORE?");
-                        dialogueManager.dialogue.sentences.Add("Uff... va bene");
+                        dialogueManager.dialogue.sentences.Add("HEEEEEEY MISSSSSSS!!");
+                        dialogueManager.dialogue.sentences.Add("...Hi.");
+                        dialogueManager.dialogue.sentences.Add("Are you the one who drew me?");
+                        dialogueManager.dialogue.sentences.Add("I'm afraid so.");
+                        dialogueManager.dialogue.sentences.Add("Well...I wanted to ask you...\nWHY AM I NOT THE KING ?! I WANT TO BE THE KING!\nI need a crown that suits my rank! If you help me, I'll give you a nice gift!");
+                        dialogueManager.dialogue.sentences.Add("Why should I help you? I have already regretted having created you.");
+                        dialogueManager.dialogue.sentences.Add("PLEASE?");
+                        dialogueManager.dialogue.sentences.Add("Uff… okay");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -453,8 +444,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("PERCHé MI HAI DISEGNATO PRINCIPE? IO VOGLIO ESSERE IL RE!");
-                        dialogueManager.dialogue.sentences.Add("Certo certo, ma quando esco ti cancello");
+                        dialogueManager.dialogue.sentences.Add("WHY DID YOU DRAW ME AS A PRINCE? I WANT TO BE THE KING! AND I WANT THE CROWN!");
+                        dialogueManager.dialogue.sentences.Add("Sure, sure, but when I go out, I will erase you.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -473,8 +464,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("La prossima volta puoi disegnarmi in un Luna Park?");
-                        dialogueManager.dialogue.sentences.Add("La prossima volta ti muro la finestra.");
+                        dialogueManager.dialogue.sentences.Add("Next time, you could draw me inside an amusement park...");
+                        dialogueManager.dialogue.sentences.Add("Next time, I'll wall your window");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -493,8 +484,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Quando sarò re ti rivolgerai a me come “sua altezza”!");
-                        dialogueManager.dialogue.sentences.Add("Davvero? Ma se sei alto come uno sgabello");
+                        dialogueManager.dialogue.sentences.Add("When I become king, you will address me as ''your highness''!");
+                        dialogueManager.dialogue.sentences.Add("Really? But if you are tall as a stool");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -515,9 +506,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
 
-                        dialogueManager.dialogue.sentences.Add("Ora voglio un'aquila gigante o qualcosa che vola con gli artigli");
-                        dialogueManager.dialogue.sentences.Add("Ok");
-                        dialogueManager.dialogue.sentences.Add("VOGLIO UNO PTERODATTILO");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -540,9 +531,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
 
-                        dialogueManager.dialogue.sentences.Add("Deve avere delle grandi ali! E degli artigli affilatissimi! è magari che sia giovane così che possa crescere insieme a me!");
-                        dialogueManager.dialogue.sentences.Add("Ma tu non puoi crescere.");
-                        dialogueManager.dialogue.sentences.Add("Se divento vecchio e noioso come te non lo voglio di sicuro!");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -563,10 +554,10 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
 
-                        dialogueManager.dialogue.sentences.Add("Com’è l’interno del castello?");
-                        dialogueManager.dialogue.sentences.Add("Ci sono 207 cucine, 453 stanze da letto, 115 bagni e 348 sale da pranzo");
-                        dialogueManager.dialogue.sentences.Add("Come hai fatto a contarle tutte?");
-                        dialogueManager.dialogue.sentences.Add("Ho molto tempo libero.");
+                        dialogueManager.dialogue.sentences.Add("What is the inside of the castle like?");
+                        dialogueManager.dialogue.sentences.Add("There are 207 kitchens, 453 bedrooms, 115 bathrooms, and 348 dining rooms.");
+                        dialogueManager.dialogue.sentences.Add("How did you manage to count them all?");
+                        dialogueManager.dialogue.sentences.Add("I have a lot of free time.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         bambinoCounter2 = 3;
@@ -585,9 +576,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Non ti senti mai solo?");
-                        dialogueManager.dialogue.sentences.Add("E’ anche per questo che voglio un animale domestico! Tu non ti senti mai sola?");
-                        dialogueManager.dialogue.sentences.Add("A volte, ma ho paura ad uscire e disegnare mi aiuta a non pensarci");
+                        dialogueManager.dialogue.sentences.Add("Don't you ever feel alone?");
+                        dialogueManager.dialogue.sentences.Add("Don't YOU ever feel alone?");
+                        dialogueManager.dialogue.sentences.Add("Sometimes, but I'm afraid to go out and draw, it helps me not to think about it.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -605,7 +596,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Bambino");
-                        dialogueManager.dialogue.sentences.Add("GRAZIE PER TUTTO ORA SONO FELICIO");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -632,7 +623,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Non ho il biglietto per usarlo");
+                        dialogueManager.dialogue.sentences.Add("I can't get on the bus. I don't have a ticket.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -650,7 +641,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Mi serve qualcosa per attivare il bruciatore");
+                        dialogueManager.dialogue.sentences.Add("Tsk...the balloon lifting system is not working.\nI need something to light the burner.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -668,7 +659,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Devo avvicinarmi per poter salire!");
+                        dialogueManager.dialogue.sentences.Add("I have to get close to get on board.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -685,7 +676,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Si parte!");
+                        dialogueManager.dialogue.sentences.Add("To infinity and beyond.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         if (AudioManager.instance != null)
@@ -708,7 +699,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Questa gamba di legno fa al caso mio");
+                        dialogueManager.dialogue.sentences.Add("This wooden leg is just what I was looking for.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -729,7 +720,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Apriti sesamo!");
+                        dialogueManager.dialogue.sentences.Add("Open Sesame.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         if (AudioManager.instance != null)
@@ -753,7 +744,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Devo avvicinarmi e scassinare quel lucchetto");
+                        dialogueManager.dialogue.sentences.Add("I need to get closer to pick that lock.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -769,7 +760,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("E' un armadio con un lucchetto");
+                        dialogueManager.dialogue.sentences.Add("It's a wardrobe closed with a padlock.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -785,7 +776,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Mmm... potrei andare a prendere una di quelle gambe di legno nell'armadio");
+                        dialogueManager.dialogue.sentences.Add("Mmm...I could get one of those wooden legs in the wardrobe.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -806,7 +797,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("E' una bella collezione di gambe di legno");
+                        dialogueManager.dialogue.sentences.Add("It's a nice collection of wooden legs. Fascinating.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -825,7 +816,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Calza a pennello");
+                        dialogueManager.dialogue.sentences.Add("Fits like a glove!");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -842,7 +833,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("La leva è rotta, devo sostituirla con qualcosa");
+                        dialogueManager.dialogue.sentences.Add("Contraption does not move.\nThe lever is missing, I have to find something to replace it.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -864,7 +855,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Devo salire sul montacarichi, prima");
+                        dialogueManager.dialogue.sentences.Add("I have to get on the elevator first.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -896,16 +887,16 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
 
 
-                        dialogueManager.dialogue.sentences.Add("oh… OH… OHHHH. Sì questo, lo sento, l’hai preso su una spiaggia vero? Grazie, grazie mille, se chiudo gli occhi posso quasi immaginarlo");
-                        dialogueManager.dialogue.sentences.Add("E oltre al rumore del mare sento...qualcos'altro. E' come una parola che riecheggia.");
-                        dialogueManager.dialogue.sentences.Add("Sembra qualcosa tipo...Abracadabra?");
-                        dialogueManager.dialogue.sentences.Add("Ma che cazz??");
-                        dialogueManager.dialogue.sentences.Add("E sento anche dell'altro, sembra come una filastrocca...");
+                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("And besides the sound of the sea, I hear something else ... it is like a word that echoes.");
+                        dialogueManager.dialogue.sentences.Add("It seems to be like ... Abracadabra?");
+                        dialogueManager.dialogue.sentences.Add("What the fuck??");
+                        dialogueManager.dialogue.sentences.Add("And I hear more, it seems to be a nursery rhyme...");
                         dialogueManager.dialogue.sentences.Add("''In a distant time long ago,\na man tried to soar from a château.''");
                         dialogueManager.dialogue.sentences.Add("''He sought what shines with its own light,\nin the darkness of the night.''");
                         dialogueManager.dialogue.sentences.Add("''But when he flew above the sea,\nhe realized how many things he could see.''");
-                        dialogueManager.dialogue.sentences.Add("Tieni, te l'ho scritta su un foglietto, nel caso volessi un promemoria mentre sei in giro ");
-                        dialogueManager.dialogue.sentences.Add("Uhh... grazie immagino.");
+                        dialogueManager.dialogue.sentences.Add("Here, I wrote it to you on a piece of paper if you want a reminder while you're on the go.");
+                        dialogueManager.dialogue.sentences.Add("Uhh...thanks i guess.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         if (AudioManager.instance != null)
@@ -926,7 +917,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Meglio avvicinarsi, prima");
+                        dialogueManager.dialogue.sentences.Add("Better get closer first.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -949,17 +940,15 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Uomo");
                         dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
 
-                        dialogueManager.dialogue.sentences.Add("Oh oh… buongiorno principessa");
-                        dialogueManager.dialogue.sentences.Add("No guarda, se cerchi qualcuno con sangue reale  si trova 2 quadri più sopra, io sono solo una pittrice.");
-                        dialogueManager.dialogue.sentences.Add("Una pittrice? Ah ma che bel lavoro, li sapresti disegnare dei quadri così belli?");
-                        dialogueManager.dialogue.sentences.Add("Beh questi quadri li ho fatti io");
-                        dialogueManager.dialogue.sentences.Add("OH OH… davvero? Ma allora sarai andata in giro per il mondo!");
-                        dialogueManager.dialogue.sentences.Add("Beh no, ho preso ispirazione da Pinterest");
-                        dialogueManager.dialogue.sentences.Add("What?! Ma dovresti uscire di casa, dovresti vederlo il mondo.");
-                        dialogueManager.dialogue.sentences.Add("Io ormai sono vecchio, stanco e beh... non posso fisicamente uscire da questo quadro.");
-                        dialogueManager.dialogue.sentences.Add("Ma tu, tu hai questa possibilità. Fai un favore questo vecchio, vorrei vedere il mare. Portami qualcosa che mi ricorderà del mare");
+                        dialogueManager.dialogue.sentences.Add("Oh oh...good morning princess.");
+                        dialogueManager.dialogue.sentences.Add("No, listen, if you are looking for someone with royal blood, it is 2 pictures above. I'm just a painter.");
+                        dialogueManager.dialogue.sentences.Add("A painter? Ah, but what a great job, would you be able to paint such beautiful paintings like these?");
+                        dialogueManager.dialogue.sentences.Add("Well, I made these paintings myself.");
+                        dialogueManager.dialogue.sentences.Add("OH OH...really? But then you have traveled the world!");
+                        dialogueManager.dialogue.sentences.Add("Well, no, I got inspiration from Pinterest.");
+                        dialogueManager.dialogue.sentences.Add("Nani ?! But you should get out of your house, you should see the world.I am now old, tired, and well... I can't physically get out of this painting.");
+                        dialogueManager.dialogue.sentences.Add("But you, you have this chance.So please, do a favor to this old man. I'd like to hear the sound of the waves. Bring me something that will remind me of the sea.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -980,9 +969,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Uomo");
 
-                        dialogueManager.dialogue.sentences.Add("Oh, signorina ci conosciamo?");
-                        dialogueManager.dialogue.sentences.Add("Ma ci siamo parlati solo poco fa");
-                        dialogueManager.dialogue.sentences.Add("Oh si certo certo, che sbadato. Allora hai trovato qualcosa che mi ricorderà del mare?");
+                        dialogueManager.dialogue.sentences.Add("Oh, miss, do we know each other?");
+                        dialogueManager.dialogue.sentences.Add("But we spoke a little while ago.");
+                        dialogueManager.dialogue.sentences.Add("Oh yes, sure, sure, how forgetful I am.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -1002,9 +991,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Uomo");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Sai vecchietto, mi ricordi mio nonno");
-                        dialogueManager.dialogue.sentences.Add("Oh, tuo nonno doveva essere un uomo affascinante e facoltoso e virile, ma anche umile e onesto e…");
-                        dialogueManager.dialogue.sentences.Add("Si. Mi ricordi decisamente mio nonno.");
+                        dialogueManager.dialogue.sentences.Add("You know, old man, you remind me of my grandfather.");
+                        dialogueManager.dialogue.sentences.Add("Oh, your grandfather must have been a charming and wealthy and virile man, but also humble and honest and...");
+                        dialogueManager.dialogue.sentences.Add("Yes, you definitely remind me of my grandfather.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -1022,7 +1011,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Uomo");
 
-                        dialogueManager.dialogue.sentences.Add("Amo questa foresta, la foschia le da un senso mistico, però vorrei abbronzarmi almeno una volta nella vita");
+                        dialogueManager.dialogue.sentences.Add("I love this forest, the fog gives it a mystical sense, but I would like to tan at least once in my life.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -1040,7 +1029,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Ehiiiiiii\n...Credo che quel tipo sia sordo, dovrei prima avvicinarmi");
+                        dialogueManager.dialogue.sentences.Add("Helloooooo...\nI think that old man is deaf, I should get close first");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -1082,9 +1071,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Uomo");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Stammi bene vecchio!");
-                        dialogueManager.dialogue.sentences.Add("Comunque ho 20 anni, sono solo molto stressato.");
-                        dialogueManager.dialogue.sentences.Add("Ah.");
+                        dialogueManager.dialogue.sentences.Add("Take care, old man");
+                        dialogueManager.dialogue.sentences.Add("Anyway, I'm actually 20 years old. I'm just very stressed.");
+                        dialogueManager.dialogue.sentences.Add("Oh.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -1106,8 +1095,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Rebeeecca");
 
-                        dialogueManager.dialogue.sentences.Add("Dio non esiste e noi siamo solo degli inutili involucri pluricellulari");
-                        dialogueManager.dialogue.sentences.Add("...what?!");
+                        dialogueManager.dialogue.sentences.Add("God does not exist, and we are only useless multicellular envelopes.");
+                        dialogueManager.dialogue.sentences.Add("...WHAT?!");
                         dialogueManager.dialogue.sentences.Add("ehm...Beeeee!");
 
 
