@@ -47,7 +47,7 @@ public class ViewModeSwap : MonoBehaviour
         if (lockManager.lockPuzzleActive == false)
         {
 
-            if (Input.GetKeyDown(KeyCode.V) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
+            if (Input.GetKeyDown(KeyCode.Space) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
             {
                 EnterFullView();
                 transitionToFull = true;
@@ -55,7 +55,7 @@ public class ViewModeSwap : MonoBehaviour
 
             }
 
-            else if (Input.GetKeyDown(KeyCode.V) && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
+            else if (Input.GetKeyDown(KeyCode.Space) && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
             {
                 ExitFullView();
                 transitionToSingle = true;
