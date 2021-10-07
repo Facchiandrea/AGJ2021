@@ -418,6 +418,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Uomo");
                     dialogueManager.dialogue.names.Add("Uomo");
                     dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Artemisia");
 
                     dialogueManager.dialogue.sentences.Add("oh… OH… OHHHH. Sì questo, lo sento, l’hai preso su una spiaggia vero? Grazie, grazie mille, se chiudo gli occhi posso quasi immaginarlo");
                     dialogueManager.dialogue.sentences.Add("E oltre al rumore del mare sento...qualcos'altro. E' come una parola che riecheggia.");
@@ -427,10 +429,18 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.sentences.Add("''In a distant time long ago,\na man tried to soar from a château.''");
                     dialogueManager.dialogue.sentences.Add("''He sought what shines with its own light\nin the darkness of the night.''");
                     dialogueManager.dialogue.sentences.Add("''But when he flew above the sea,\nhe realized how many things he could see.''");
+                    dialogueManager.dialogue.sentences.Add("Tieni, te l'ho scritta su un foglietto, nel caso volessi un promemoria mentre sei in giro ");
+                    dialogueManager.dialogue.sentences.Add("Uhh... grazie immagino.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.Play("Prendere_oggetto_sfx");
+                    }
+
                 }
+                NPCInteractor.filastroccaUI.SetActive(true);
             }
             else if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name == "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false || NPCInteractor.selection.name == "Uomo" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false)
             {
