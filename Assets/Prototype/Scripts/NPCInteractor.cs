@@ -732,6 +732,7 @@ public class NPCInteractor : MonoBehaviour
                     armadioAperto = true;
                     forcinaUI.SetActive(false);
                     selection.GetChild(1).gameObject.SetActive(false);
+                    selection.GetChild(2).gameObject.SetActive(true);
 
                 }
                 else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == false)

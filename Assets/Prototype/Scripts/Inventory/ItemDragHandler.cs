@@ -311,6 +311,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 NPCInteractor.armadioAperto = true;
                 forcinaUI.SetActive(false);
                 NPCInteractor.selection.GetChild(1).gameObject.SetActive(false);
+                NPCInteractor.selection.GetChild(2).gameObject.SetActive(true);
 
             }
             else if (NPCInteractor.selection.name == "Armadio" && this.gameObject.name != "ForcinaUI" && NPCInteractor.armadioScript.playerInRange == true)

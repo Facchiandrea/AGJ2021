@@ -1073,6 +1073,40 @@ public class ItemSelection : MonoBehaviour
                     }
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 8-----------------------------------
+                    if (selection.name == "Squali")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "Alga")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
 
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 9-----------------------------------
