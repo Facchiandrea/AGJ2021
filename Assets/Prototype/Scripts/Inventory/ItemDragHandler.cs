@@ -409,7 +409,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
             //----------------CONCHIGLIA----------------
 
-            if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name == "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true)
+            if (NPCInteractor.selection.name == "Old Man" && this.gameObject.name == "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true)
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.conchigliaPortata = true;
@@ -422,15 +422,15 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Clear();
                     dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.names.Add("Uomo");
-                    dialogueManager.dialogue.names.Add("Uomo");
-                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Old Man");
+                    dialogueManager.dialogue.names.Add("Old Man");
+                    dialogueManager.dialogue.names.Add("Old Man");
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Uomo");
-                    dialogueManager.dialogue.names.Add("Uomo");
-                    dialogueManager.dialogue.names.Add("Uomo");
-                    dialogueManager.dialogue.names.Add("Uomo");
-                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Old Man");
+                    dialogueManager.dialogue.names.Add("Old Man");
+                    dialogueManager.dialogue.names.Add("Old Man");
+                    dialogueManager.dialogue.names.Add("Old Man");
+                    dialogueManager.dialogue.names.Add("Old Man");
                     dialogueManager.dialogue.names.Add("Artemisia");
 
                     dialogueManager.dialogue.sentences.Add("Oh, finally! Now I can hear the magnificent sound of the waves...");
@@ -454,7 +454,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
                 NPCInteractor.filastroccaUI.SetActive(true);
             }
-            else if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name == "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false || NPCInteractor.selection.name == "Uomo" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false)
+            else if (NPCInteractor.selection.name == "Old Man" && this.gameObject.name == "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false || NPCInteractor.selection.name == "Old Man" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -471,7 +471,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
             }
 
-            else if (NPCInteractor.selection.name == "Uomo" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true)
+            else if (NPCInteractor.selection.name == "Old Man" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -480,7 +480,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Clear();
                     dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.names.Add("Uomo");
+                    dialogueManager.dialogue.names.Add("Old Man");
                     dialogueManager.dialogue.sentences.Add("Mmm, I know this object, and it has nothing to do with the sea.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);

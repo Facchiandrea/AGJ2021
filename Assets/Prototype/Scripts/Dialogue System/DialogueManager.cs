@@ -95,10 +95,11 @@ public class DialogueManager : MonoBehaviour
             AudioManager.instance.Play("Avanti_Dialogo_sfx");
         }
 
-        if (dialogueText.text == "Sembra qualcosa tipo...hocus pocus?" && NPCInteractor.compariPortale) //CONTROLLARE
+        if (dialogueText.text == "It seems to be like... hocus pocus?" && NPCInteractor.compariPortale) //CONTROLLARE
         {
             NPCInteractor.uomo.portale.SetActive(true);
             NPCInteractor.compariPortale = false;
+            Debug.Log("portale comparso");
         }
 
 
@@ -214,7 +215,7 @@ public class DialogueManager : MonoBehaviour
 
         }
 
-        else if (nameText.text == "Uomo") //CONTROLLARE
+        else if (nameText.text == "Old Man") //CONTROLLARE
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(false);

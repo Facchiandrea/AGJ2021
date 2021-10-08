@@ -860,7 +860,7 @@ public class NPCInteractor : MonoBehaviour
                 }
 
                 //------------------UOMO-------------------------
-                if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaUI.activeInHierarchy && uomo.playerInRange == true)
+                if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaUI.activeInHierarchy && uomo.playerInRange == true)
                 {
                     conchigliaUI.SetActive(false);
                     conchigliaPortata = true;
@@ -872,15 +872,15 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
 
@@ -904,7 +904,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                     filastroccaUI.SetActive(true);
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaUI.activeInHierarchy && uomo.playerInRange == false)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaUI.activeInHierarchy && uomo.playerInRange == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -920,7 +920,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 0)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 0)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -929,14 +929,14 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
 
                         dialogueManager.dialogue.sentences.Add("Oh oh...good morning princess.");
                         dialogueManager.dialogue.sentences.Add("No, listen, if you are looking for someone with royal blood, it is 2 pictures above. I'm just a painter.");
@@ -953,7 +953,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                     pickUpConchiglia.canPickUp = true;
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 1)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 1)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -962,9 +962,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
 
                         dialogueManager.dialogue.sentences.Add("Oh, miss, do we know each other?");
                         dialogueManager.dialogue.sentences.Add("But we spoke a little while ago.");
@@ -975,7 +975,7 @@ public class NPCInteractor : MonoBehaviour
                         uomoCounter = 2;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 2)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 2)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -985,7 +985,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("You know, old man, you remind me of my grandfather.");
@@ -997,7 +997,7 @@ public class NPCInteractor : MonoBehaviour
                         uomoCounter = 3;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 3)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 3)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1006,7 +1006,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
 
                         dialogueManager.dialogue.sentences.Add("I love this forest, the fog gives it a mystical sense, but I would like to tan at least once in my life.");
 
@@ -1016,7 +1016,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == false && uomo.playerInRange == false)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1026,14 +1026,14 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.sentences.Add("Helloooooo...\nI think that old man is deaf, I should get close first");
+                        dialogueManager.dialogue.sentences.Add("Helloooooo...\nI think that old man is deaf, I should get close first.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == true && lockManager.itemSelection.portaleAperto == false)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == true && lockManager.itemSelection.portaleAperto == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1042,9 +1042,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man");
 
                         dialogueManager.dialogue.sentences.Add("''In a distant time long ago,\na man tried to soar from a château.''");
                         dialogueManager.dialogue.sentences.Add("''He sought what shines with its own light,\nin the darkness of the night.''");
@@ -1055,7 +1055,7 @@ public class NPCInteractor : MonoBehaviour
 
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Uomo" && conchigliaPortata == true && lockManager.itemSelection.portaleAperto == true)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == true && lockManager.itemSelection.portaleAperto == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1065,7 +1065,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Uomo");
+                        dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("Take care, old man");
