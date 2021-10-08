@@ -207,7 +207,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("Gotcha! It’s a bit big, but I don't think he will complain");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                             if (AudioManager.instance != null)

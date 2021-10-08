@@ -348,16 +348,26 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("A colander?");
                         dialogueManager.dialogue.sentences.Add("Yes, it is perfect as a crown.");
                         dialogueManager.dialogue.sentences.Add("I hate him.");
                         dialogueManager.dialogue.sentences.Add("Don't throw a tantrum. In the 1500s, there was a very powerful king who wore exactly this crown.");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("Okay, but did he have sunglasses and a mustache?");
+                        dialogueManager.dialogue.sentences.Add("...yes.");
+                        dialogueManager.dialogue.sentences.Add("Oh. He had to be really cool! Ok, I accept the crown and to celebrate I will make a giant cake!I have sugar, milk, flour, butter, and lots of CHOCOLATE!");
+                        dialogueManager.dialogue.sentences.Add("Mmm, I don't know, it just seems like something is missing.");
+                        dialogueManager.dialogue.sentences.Add("A person to share this cake with? Like me ;-)");
+                        dialogueManager.dialogue.sentences.Add("Nonsense! I'm sure an ingredient is missing, but I don't remember what. Would you help me to find it? AND THEN BRING IT TO ME!");
+                        dialogueManager.dialogue.sentences.Add("You already owe me. Why should I?");
+                        dialogueManager.dialogue.sentences.Add("Beeecause otherwise I'll start crying aaaand you would hear me in all the paintings!");
+                        dialogueManager.dialogue.sentences.Add("Oh god no! Ok you convinced me, stay there.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -377,14 +387,10 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
-                        dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
 
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("Ah yes, now I remember! I miss the egg!");
+                        dialogueManager.dialogue.sentences.Add("Yes, of course, you remember. I just brought it to you.");
+                        dialogueManager.dialogue.sentences.Add("Hurray! Now I can make a cake! Give me that! Here, take this bus ticket.I don't need it. I don't like traveling.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         if (AudioManager.instance != null)
@@ -409,7 +415,6 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
@@ -482,7 +487,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("When I become king, you will address me as ''your highness''!");
+                        dialogueManager.dialogue.sentences.Add("When I become king, you will address me as ''Your highness''!");
                         dialogueManager.dialogue.sentences.Add("Really? But if you are tall as a stool");
 
 
@@ -503,10 +508,13 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("Sugar, milk, flour, butter, and chocolate... something is missing.");
+                        dialogueManager.dialogue.sentences.Add("My will to help you?");
+                        dialogueManager.dialogue.sentences.Add("I said if you help me, I'll give you a gift!");
+                        dialogueManager.dialogue.sentences.Add("It better be something useful.");
+
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -525,13 +533,16 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
 
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.sentences.Add("What is the inside of the castle like?");
+                        dialogueManager.dialogue.sentences.Add("There are 207 kitchens, 453 bedrooms, 115 bathrooms, and 348 dining rooms.");
+                        dialogueManager.dialogue.sentences.Add("How did you manage to count them all?");
+                        dialogueManager.dialogue.sentences.Add("I have a lot of free time.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -550,37 +561,14 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Bambino");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
-
-                        dialogueManager.dialogue.sentences.Add("What is the inside of the castle like?");
-                        dialogueManager.dialogue.sentences.Add("There are 207 kitchens, 453 bedrooms, 115 bathrooms, and 348 dining rooms.");
-                        dialogueManager.dialogue.sentences.Add("How did you manage to count them all?");
-                        dialogueManager.dialogue.sentences.Add("I have a lot of free time.");
-
-                        dialogueManager.StartDialogue(dialogueManager.dialogue);
-                        bambinoCounter2 = 3;
-                    }
-                }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 3)
-                {
-                    if (dialogueManager.inDialogue == false)
-                    {
-                        dialogueManager.dialogue.sentences.Clear();
-                        dialogueManager.sentences.Clear();
-                        dialogueManager.dialogue.names.Clear();
-                        dialogueManager.names.Clear();
-
-                        dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
-                        dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("Don't you ever feel alone?");
-                        dialogueManager.dialogue.sentences.Add("Don't YOU ever feel alone?");
+                        dialogueManager.dialogue.sentences.Add("No, I have a lot of imaginary friends. Don't YOU ever feel alone?");
                         dialogueManager.dialogue.sentences.Add("Sometimes, but I'm afraid to go out and draw, it helps me not to think about it.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
-                        bambinoCounter2 = 1;
+                        bambinoCounter2 = 0;
                     }
                 }
 
@@ -594,7 +582,12 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Bambino");
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.names.Add("Bambino");
+
+                        dialogueManager.dialogue.sentences.Add("It’s cake time! I looove cooking caaaakes, I loooove eating caaaaakes!");
+                        dialogueManager.dialogue.sentences.Add("Can I have a piece?");
+                        dialogueManager.dialogue.sentences.Add("SHUT UP! It’s a sacred moment.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -891,9 +884,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
 
 
-                        dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                        dialogueManager.dialogue.sentences.Add("And besides the sound of the sea, I hear something else ... it is like a word that echoes.");
-                        dialogueManager.dialogue.sentences.Add("It seems to be like ... Abracadabra?");
+                        dialogueManager.dialogue.sentences.Add("Oh, finally! Now I can hear the magnificent sound of the waves...");
+                        dialogueManager.dialogue.sentences.Add("And besides the sound of the sea, I hear something else... it is like a word that echoes.");
+                        dialogueManager.dialogue.sentences.Add("It seems to be like... hocus pocus?");
                         dialogueManager.dialogue.sentences.Add("What the fuck??");
                         dialogueManager.dialogue.sentences.Add("And I hear more, it seems to be a nursery rhyme...");
                         dialogueManager.dialogue.sentences.Add("''In a distant time long ago,\na brave man tried to soar from a château.''");

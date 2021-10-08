@@ -95,7 +95,7 @@ public class DialogueManager : MonoBehaviour
             AudioManager.instance.Play("Avanti_Dialogo_sfx");
         }
 
-        if (dialogueText.text == "Sembra qualcosa tipo...Abracadabra?" && NPCInteractor.compariPortale) //CONTROLLARE
+        if (dialogueText.text == "Sembra qualcosa tipo...hocus pocus?" && NPCInteractor.compariPortale) //CONTROLLARE
         {
             NPCInteractor.uomo.portale.SetActive(true);
             NPCInteractor.compariPortale = false;

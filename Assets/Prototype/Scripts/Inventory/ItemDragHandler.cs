@@ -102,16 +102,26 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Bambino");
                     dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.names.Add("Bambino");
                     dialogueManager.dialogue.names.Add("Artemisia");
 
                     dialogueManager.dialogue.sentences.Add("A colander?");
                     dialogueManager.dialogue.sentences.Add("Yes, it is perfect as a crown.");
                     dialogueManager.dialogue.sentences.Add("I hate him.");
                     dialogueManager.dialogue.sentences.Add("Don't throw a tantrum. In the 1500s, there was a very powerful king who wore exactly this crown.");
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("Okay, but did he have sunglasses and a mustache?");
+                    dialogueManager.dialogue.sentences.Add("...yes.");
+                    dialogueManager.dialogue.sentences.Add("Oh. He had to be really cool! Ok, I accept the crown and to celebrate I will make a giant cake!I have sugar, milk, flour, butter, and lots of CHOCOLATE!");
+                    dialogueManager.dialogue.sentences.Add("Mmm, I don't know, it just seems like something is missing.");
+                    dialogueManager.dialogue.sentences.Add("A person to share this cake with? Like me ;-)");
+                    dialogueManager.dialogue.sentences.Add("Nonsense! I'm sure an ingredient is missing, but I don't remember what. Would you help me to find it? AND THEN BRING IT TO ME!");
+                    dialogueManager.dialogue.sentences.Add("You already owe me. Why should I?");
+                    dialogueManager.dialogue.sentences.Add("Beeecause otherwise I'll start crying aaaand you would hear me in all the paintings!");
+                    dialogueManager.dialogue.sentences.Add("Oh god no! Ok you convinced me, stay there.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -158,14 +168,10 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Bambino");
                     dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Bambino");
-                    dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Bambino");
 
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("Ah yes, now I remember! I miss the egg!");
+                    dialogueManager.dialogue.sentences.Add("Yes, of course, you remember. I just brought it to you.");
+                    dialogueManager.dialogue.sentences.Add("Hurray! Now I can make a cake! Give me that! Here, take this bus ticket.I don't need it. I don't like traveling.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -188,7 +194,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.dialogue.names.Add("Bambino");
 
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("And how am I supposed to make a cake with this?");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -427,9 +433,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Uomo");
                     dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
-                    dialogueManager.dialogue.sentences.Add("And besides the sound of the sea, I hear something else ... it is like a word that echoes.");
-                    dialogueManager.dialogue.sentences.Add("It seems to be like ... Abracadabra?");
+                    dialogueManager.dialogue.sentences.Add("Oh, finally! Now I can hear the magnificent sound of the waves...");
+                    dialogueManager.dialogue.sentences.Add("And besides the sound of the sea, I hear something else... it is like a word that echoes.");
+                    dialogueManager.dialogue.sentences.Add("It seems to be like... hocus pocus?");
                     dialogueManager.dialogue.sentences.Add("What the fuck??");
                     dialogueManager.dialogue.sentences.Add("And I hear more, it seems to be a nursery rhyme...");
                     dialogueManager.dialogue.sentences.Add("''In a distant time long ago,\na brave man tried to soar from a château.''");
