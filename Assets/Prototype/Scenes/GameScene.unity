@@ -451,9 +451,10 @@ GameObject:
   m_Component:
   - component: {fileID: 11210610}
   - component: {fileID: 11210611}
+  - component: {fileID: 11210612}
   m_Layer: 0
   m_Name: FloorHigh
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,6 +499,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8037462, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &11210612
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11210609}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &16652746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,9 +1294,10 @@ GameObject:
   m_Component:
   - component: {fileID: 41881725}
   - component: {fileID: 41881726}
+  - component: {fileID: 41881727}
   m_Layer: 0
   m_Name: FloorLow
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1332,6 +1355,27 @@ PolygonCollider2D:
       - {x: -10.095058, y: -0.87928176}
       - {x: 10.102315, y: -0.8841667}
       - {x: 10.100368, y: 0.8901805}
+--- !u!50 &41881727
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41881724}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &46501353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,9 +1473,10 @@ GameObject:
   m_Component:
   - component: {fileID: 50220488}
   - component: {fileID: 50220489}
+  - component: {fileID: 50220490}
   m_Layer: 0
   m_Name: FloorMiddle2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1488,6 +1533,27 @@ PolygonCollider2D:
       - {x: -2.6241302, y: 0.22347069}
       - {x: -3.0462227, y: 0.1880827}
       - {x: -3.489953, y: 0.16940904}
+--- !u!50 &50220490
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50220487}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &51887765
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,9 +4749,10 @@ GameObject:
   m_Component:
   - component: {fileID: 176880445}
   - component: {fileID: 176880446}
+  - component: {fileID: 176880447}
   m_Layer: 0
   m_Name: FloorLow
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4746,6 +4813,27 @@ PolygonCollider2D:
       - {x: -10.1, y: -1.0044111}
       - {x: 10.09572, y: -0.9867003}
       - {x: 10.1, y: 0.88999337}
+--- !u!50 &176880447
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176880444}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &184686825
 GameObject:
   m_ObjectHideFlags: 0
@@ -6436,9 +6524,10 @@ GameObject:
   m_Component:
   - component: {fileID: 253091327}
   - component: {fileID: 253091328}
+  - component: {fileID: 253091329}
   m_Layer: 0
   m_Name: FloorConnection
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6508,6 +6597,27 @@ PolygonCollider2D:
       - {x: -6.7202435, y: -2.6561775}
       - {x: 7.2756968, y: -2.6885853}
       - {x: 7.258258, y: -0.8884882}
+--- !u!50 &253091329
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253091326}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &253649870
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,9 +7331,10 @@ GameObject:
   m_Component:
   - component: {fileID: 300384871}
   - component: {fileID: 300384873}
+  - component: {fileID: 300384872}
   m_Layer: 0
   m_Name: FloorHigh
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7242,6 +7353,27 @@ Transform:
   m_Father: {fileID: 1260152058}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &300384872
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300384870}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!61 &300384873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8032,9 +8164,10 @@ GameObject:
   m_Component:
   - component: {fileID: 340460652}
   - component: {fileID: 340460653}
+  - component: {fileID: 340460654}
   m_Layer: 0
   m_Name: FloorLow
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8079,6 +8212,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.2, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &340460654
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340460651}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &342173998
 GameObject:
   m_ObjectHideFlags: 0
@@ -16631,13 +16785,14 @@ GameObject:
   m_Component:
   - component: {fileID: 693161117}
   - component: {fileID: 693161118}
+  - component: {fileID: 693161119}
   m_Layer: 0
   m_Name: FloorMedium
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &693161117
 Transform:
   m_ObjectHideFlags: 0
@@ -16678,6 +16833,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.884856, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &693161119
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693161116}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &694598565
 GameObject:
   m_ObjectHideFlags: 0
@@ -17350,6 +17526,7 @@ GameObject:
   - component: {fileID: 721297134}
   - component: {fileID: 721297132}
   - component: {fileID: 721297135}
+  - component: {fileID: 721297130}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -17365,15 +17542,35 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721297128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -0.4795347, z: 15}
+  m_LocalPosition: {x: -0.08, y: -0.85599256, z: 15}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 2098242726}
   - {fileID: 2080889979}
   - {fileID: 515570344}
+  - {fileID: 1483546306}
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &721297130
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721297128}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83a32e4bae215a8418c81fa61eb50e67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &721297131
 Rigidbody2D:
   serializedVersion: 4
@@ -17442,6 +17639,7 @@ MonoBehaviour:
   viewModeSwap: {fileID: 1849002814}
   movementBlock: 0
   lockManager: {fileID: 250588974}
+  isTouchingGround: 0
 --- !u!58 &721297135
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17652,9 +17850,12 @@ GameObject:
   m_Component:
   - component: {fileID: 750177861}
   - component: {fileID: 750177862}
+  - component: {fileID: 750177863}
+  - component: {fileID: 750177864}
+  - component: {fileID: 750177865}
   m_Layer: 0
   m_Name: FloorMiddle
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17680,7 +17881,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750177860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 1491753baa4f9904f86ab4760dd8ba8a, type: 2}
   m_IsTrigger: 0
@@ -17699,6 +17900,91 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.2, y: 1.78}
   m_EdgeRadius: 0
+--- !u!60 &750177863
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750177860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 1491753baa4f9904f86ab4760dd8ba8a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 10.103791, y: 0.8921709}
+      - {x: 8.0746975, y: 0.8956964}
+      - {x: 6.3283043, y: 0.7102629}
+      - {x: 5.0345025, y: 0.54567146}
+      - {x: 2.943941, y: 0.47554362}
+      - {x: 0.72759944, y: 0.503286}
+      - {x: -1.3176236, y: 0.5295657}
+      - {x: -2.2352846, y: 0.4869616}
+      - {x: -3.2407634, y: 0.3762983}
+      - {x: -5.244987, y: 0.37072325}
+      - {x: -6.6819263, y: 0.38287175}
+      - {x: -6.691864, y: -0.87226105}
+      - {x: 10.098512, y: -0.88962656}
+--- !u!61 &750177864
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750177860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8a5c4b0a4a4cf674fb86b1bdf5f3f4b3, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -7.967667, y: 2.7587132}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5935087, y: 7.253085}
+  m_EdgeRadius: 0
+--- !u!50 &750177865
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750177860}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &752733300
 GameObject:
   m_ObjectHideFlags: 0
@@ -18092,8 +18378,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759184526}
   m_LocalRotation: {x: 0, y: 0, z: 0.5735764, w: 0.8191521}
-  m_LocalPosition: {x: -4.44, y: -7.54, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.62, y: -7.505, z: 10}
+  m_LocalScale: {x: 1.0031271, y: 0.97851133, z: 1}
   m_Children: []
   m_Father: {fileID: 1260152058}
   m_RootOrder: 9
@@ -18708,9 +18994,10 @@ GameObject:
   m_Component:
   - component: {fileID: 792394462}
   - component: {fileID: 792394463}
+  - component: {fileID: 792394464}
   m_Layer: 0
   m_Name: FloorMiddle
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18755,6 +19042,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9473076, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &792394464
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792394461}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &793077164
 GameObject:
   m_ObjectHideFlags: 0
@@ -19719,9 +20027,10 @@ GameObject:
   - component: {fileID: 817066418}
   - component: {fileID: 817066419}
   - component: {fileID: 817066420}
+  - component: {fileID: 817066421}
   m_Layer: 0
   m_Name: Floor/walls
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19797,6 +20106,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mongolfiera: {fileID: 378824505}
+--- !u!50 &817066421
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817066417}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &820330860
 GameObject:
   m_ObjectHideFlags: 0
@@ -21950,9 +22280,10 @@ GameObject:
   m_Component:
   - component: {fileID: 889168363}
   - component: {fileID: 889168365}
+  - component: {fileID: 889168364}
   m_Layer: 0
   m_Name: FloorLow
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21971,6 +22302,27 @@ Transform:
   m_Father: {fileID: 1260152058}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &889168364
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889168362}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!60 &889168365
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -25939,9 +26291,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1085735177}
   - component: {fileID: 1085735178}
+  - component: {fileID: 1085735179}
   m_Layer: 0
   m_Name: FloorMiddle
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26002,6 +26355,27 @@ PolygonCollider2D:
       - {x: -10.099057, y: -0.934265}
       - {x: 10.101942, y: -0.89038444}
       - {x: 10.099349, y: 0.89112276}
+--- !u!50 &1085735179
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085735176}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1092800780
 GameObject:
   m_ObjectHideFlags: 0
@@ -26043,7 +26417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -15.000122}
+  m_AnchoredPosition: {x: 0, y: -15.000061}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &1092800782
@@ -27719,9 +28093,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1142983925}
   - component: {fileID: 1142983926}
+  - component: {fileID: 1142983927}
   m_Layer: 0
   m_Name: FloorHigh
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27766,6 +28141,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.884856, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &1142983927
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142983924}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1144097212
 GameObject:
   m_ObjectHideFlags: 0
@@ -27776,9 +28172,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1144097213}
   - component: {fileID: 1144097214}
+  - component: {fileID: 1144097215}
   m_Layer: 0
   m_Name: FloorConnection
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27823,13 +28220,13 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.7620392, y: -1.1680441}
-      - {x: -2.0918121, y: -0.9466305}
-      - {x: -3.2355003, y: -0.420619}
-      - {x: -4.3585587, y: 0.49985313}
-      - {x: -5.212001, y: 1.3440222}
-      - {x: -6.3646317, y: 1.3658314}
-      - {x: -7.592804, y: 1.3476009}
-      - {x: -10.106796, y: 0.894248}
+      - {x: -1.8741684, y: -0.9466305}
+      - {x: -2.444912, y: -0.7228422}
+      - {x: -2.9573975, y: -0.4327135}
+      - {x: -3.5070038, y: -0.03764057}
+      - {x: -4.2618256, y: 0.51194763}
+      - {x: -5.067981, y: 0.8463148}
+      - {x: -10.100739, y: 0.8881836}
       - {x: -10.112801, y: -2.648756}
       - {x: -5.2, y: -2.67}
       - {x: 10.103484, y: -2.6740437}
@@ -27839,6 +28236,27 @@ PolygonCollider2D:
       - {x: 2.8073845, y: -1.2563496}
       - {x: 0.8459816, y: -1.3165398}
       - {x: 0.21109314, y: -1.2493995}
+--- !u!50 &1144097215
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144097212}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1144845111
 GameObject:
   m_ObjectHideFlags: 0
@@ -28409,13 +28827,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1172437985}
   - component: {fileID: 1172437986}
+  - component: {fileID: 1172437987}
   m_Layer: 0
   m_Name: FloorLow
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1172437985
 Transform:
   m_ObjectHideFlags: 0
@@ -28456,6 +28875,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.295591, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &1172437987
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172437984}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1178177965
 GameObject:
   m_ObjectHideFlags: 0
@@ -28957,7 +29397,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.8348618, y: 0.6382804}
+  m_Offset: {x: 6.8348618, y: 0.41887856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -28968,7 +29408,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9608307, y: 2.7952929}
+  m_Size: {x: 1.9608307, y: 2.7952938}
   m_EdgeRadius: 0
 --- !u!50 &1191300132
 Rigidbody2D:
@@ -32595,9 +33035,10 @@ GameObject:
   - component: {fileID: 1340859509}
   - component: {fileID: 1340859510}
   - component: {fileID: 1340859511}
+  - component: {fileID: 1340859512}
   m_Layer: 0
   m_Name: FloorMiddle
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32675,6 +33116,27 @@ PolygonCollider2D:
       - {x: 3.9090424, y: -2.6760635}
       - {x: 10.100401, y: -2.6655428}
       - {x: 10.095351, y: 3.3500385}
+--- !u!50 &1340859512
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340859508}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1342384118
 GameObject:
   m_ObjectHideFlags: 0
@@ -34911,9 +35373,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1414596772}
   - component: {fileID: 1414596773}
+  - component: {fileID: 1414596774}
   m_Layer: 0
   m_Name: FloorConnection
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34969,6 +35432,27 @@ PolygonCollider2D:
       - {x: -8.152378, y: -0.88937724}
       - {x: -8.158329, y: -2.6770246}
       - {x: -2.4825187, y: -2.1079383}
+--- !u!50 &1414596774
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414596771}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1415730800
 GameObject:
   m_ObjectHideFlags: 0
@@ -36385,9 +36869,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1462193723}
   - component: {fileID: 1462193724}
+  - component: {fileID: 1462193725}
   m_Layer: 0
   m_Name: FloorMiddle
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36432,6 +36917,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.295591, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &1462193725
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462193722}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1466383177
 GameObject:
   m_ObjectHideFlags: 0
@@ -37026,6 +37532,67 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19, y: 10.5}
   m_EdgeRadius: 0
+--- !u!1 &1483546305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483546306}
+  - component: {fileID: 1483546308}
+  - component: {fileID: 1483546307}
+  m_Layer: 0
+  m_Name: GroundDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1483546306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483546305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 721297129}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1483546307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483546305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1886ed3568a5504d868485a67e35527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 721297134}
+--- !u!58 &1483546308
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483546305}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1497462412
 GameObject:
   m_ObjectHideFlags: 0
@@ -38877,9 +39444,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1584831109}
   - component: {fileID: 1584831110}
+  - component: {fileID: 1584831111}
   m_Layer: 0
   m_Name: FloorConnection
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38927,6 +39495,27 @@ PolygonCollider2D:
       - {x: -5.2, y: -2.67}
       - {x: -0.175, y: -2.67}
       - {x: -0.175, y: -0.9}
+--- !u!50 &1584831111
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584831108}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1586593276
 GameObject:
   m_ObjectHideFlags: 0
@@ -40693,9 +41282,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1665555402}
   - component: {fileID: 1665555403}
+  - component: {fileID: 1665555404}
   m_Layer: 0
   m_Name: FloorLow
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40740,6 +41330,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.844822, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &1665555404
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665555401}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1670501619
 GameObject:
   m_ObjectHideFlags: 0
@@ -41807,9 +42418,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1741435696}
   - component: {fileID: 1741435697}
+  - component: {fileID: 1741435698}
   m_Layer: 0
   m_Name: FloorMedium
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41854,6 +42466,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3794632, y: 1.78}
   m_EdgeRadius: 0
+--- !u!50 &1741435698
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741435695}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1745022470
 GameObject:
   m_ObjectHideFlags: 0
@@ -42081,7 +42714,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.6755695, y: 0.19925046}
+  m_Offset: {x: 6.120508, y: 0.19925046}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -42092,7 +42725,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.895504, y: 4.84913}
+  m_Size: {x: 6.0056267, y: 4.84913}
   m_EdgeRadius: 0
 --- !u!114 &1748384939
 MonoBehaviour:
@@ -42248,9 +42881,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1751666406}
   - component: {fileID: 1751666407}
+  - component: {fileID: 1751666408}
   m_Layer: 0
   m_Name: FloorPlatform
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42319,6 +42953,27 @@ PolygonCollider2D:
       - {x: -2.9742408, y: 2.0686874}
       - {x: -0.44198453, y: 2.0359862}
       - {x: 1.8991003, y: 1.976778}
+--- !u!50 &1751666408
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751666405}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1751681715
 GameObject:
   m_ObjectHideFlags: 3
