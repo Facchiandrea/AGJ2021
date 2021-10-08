@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     public bool movementBlock = false;
     public LockManager lockManager;
     private Animator animator;
-    public bool isTouchingGround;
 
 
     private void Awake()
@@ -23,16 +22,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (rb.velocity.y < 0 && isTouchingGround == false)
-        {
-            animator.SetBool("IsFalling", true);
-
-        }
-        else
-        {
-            animator.SetBool("IsFalling", false);
-
-        }
 
         if (viewModeSwap.fullView == false && movementBlock == false && viewModeSwap.transitionToFull == false && viewModeSwap.transitionToSingle == false && lockManager.lockPuzzleActive == false)
         {
