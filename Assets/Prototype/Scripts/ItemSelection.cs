@@ -245,7 +245,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("But how big is this egg?! It could be from a pterodactyl!");
+                            dialogueManager.dialogue.sentences.Add("But how big is this egg?!\nIt could be from a pterodactyl!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -547,7 +547,24 @@ public class ItemSelection : MonoBehaviour
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 2-----------------------------------
 
-                    if (selection.name == "LunaBus")
+                    if (selection.name == "LunaBus" && NPCInteractor.bigliettoUI.activeInHierarchy == true)
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("Now that I think about it, the moon does not shine with its own light. Maybe I should look in another painting.");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    else if (selection.name == "LunaBus" && NPCInteractor.bigliettoUI.activeInHierarchy == false)
                     {
                         if (dialogueManager.inDialogue == false)
                         {
@@ -564,6 +581,7 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
                     }
+
                     if (selection.name == "StazioneBus")
                     {
                         if (dialogueManager.inDialogue == false)
