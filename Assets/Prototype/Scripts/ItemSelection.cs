@@ -713,9 +713,9 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.names.Clear();
 
                             dialogueManager.dialogue.names.Add("Artemisia");
-                            dialogueManager.dialogue.names.Add("Bambino");
+                            dialogueManager.dialogue.names.Add("Prince");
                             dialogueManager.dialogue.names.Add("Artemisia");
-                            dialogueManager.dialogue.names.Add("Bambino");
+                            dialogueManager.dialogue.names.Add("Prince");
                             dialogueManager.dialogue.names.Add("Artemisia");
 
                             dialogueManager.dialogue.sentences.Add("Who knows if that door can lead me inside the castle...");

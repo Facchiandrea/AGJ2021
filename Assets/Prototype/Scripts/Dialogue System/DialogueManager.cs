@@ -185,7 +185,7 @@ public class DialogueManager : MonoBehaviour
 
         }
 
-        else if (nameText.text == "Bambino") //CONTROLLARE
+        else if (nameText.text == "Prince") //CONTROLLARE
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(false);
@@ -199,6 +199,21 @@ public class DialogueManager : MonoBehaviour
             dialogueText.transform.localScale = new Vector3(-1, 1, 1);
 
         }
+        else if (nameText.text == "King") //CONTROLLARE
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(false);
+            bambinoPortrait.SetActive(true);
+            uomoPortrait.SetActive(false);
+            ragazzoPortrait.SetActive(false);
+            pecoraPortrait.SetActive(false);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
+
         else if (nameText.text == "Uomo") //CONTROLLARE
         {
             artemisiaPortrait.SetActive(false);

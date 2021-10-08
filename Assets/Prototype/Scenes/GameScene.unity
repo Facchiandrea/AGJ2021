@@ -42275,7 +42275,7 @@ GameObject:
   - component: {fileID: 1586593279}
   - component: {fileID: 1586593278}
   m_Layer: 10
-  m_Name: Bambino
+  m_Name: Prince
   m_TagString: InactiveNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -330,7 +330,7 @@ public class NPCInteractor : MonoBehaviour
                 }
                 //-----------------BAMBINO----------------
 
-                if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaUI.activeInHierarchy)
+                if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaUI.activeInHierarchy)
                 {
                     scolapastaUI.SetActive(false);
                     scolapastaPortato = true;
@@ -341,23 +341,23 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("A colander?");
                         dialogueManager.dialogue.sentences.Add("Yes, it is perfect as a crown.");
-                        dialogueManager.dialogue.sentences.Add("I hate him.");
+                        dialogueManager.dialogue.sentences.Add("I hate it.");
                         dialogueManager.dialogue.sentences.Add("Don't throw a tantrum. In the 1500s, there was a very powerful king who wore exactly this crown.");
                         dialogueManager.dialogue.sentences.Add("Okay, but did he have sunglasses and a mustache?");
                         dialogueManager.dialogue.sentences.Add("...yes.");
@@ -373,7 +373,7 @@ public class NPCInteractor : MonoBehaviour
                     }
 
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && uovoUI.activeInHierarchy)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && uovoUI.activeInHierarchy)
                 {
                     uovoUI.SetActive(false);
                     uovoPortato = true;
@@ -384,9 +384,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
 
                         dialogueManager.dialogue.sentences.Add("Ah yes, now I remember! I miss the egg!");
                         dialogueManager.dialogue.sentences.Add("Yes, of course, you remember. I just brought it to you.");
@@ -402,7 +402,7 @@ public class NPCInteractor : MonoBehaviour
                     bigliettoUI.SetActive(true);
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 0)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 0)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -411,13 +411,13 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("HEEEEEEY MISSSSSSS!!");
@@ -435,7 +435,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                     pickUpScolapastaScript.canPickUp = true;
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 1)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 1)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -444,7 +444,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("WHY DID YOU DRAW ME AS A PRINCE? I WANT TO BE THE KING! AND I WANT THE CROWN!");
@@ -455,7 +455,7 @@ public class NPCInteractor : MonoBehaviour
                         bambinoCounter1 = 2;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 2)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 2)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -464,7 +464,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("Next time, you could draw me inside an amusement park...");
@@ -475,7 +475,7 @@ public class NPCInteractor : MonoBehaviour
                         bambinoCounter1 = 3;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == false && bambinoCounter1 == 3)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 3)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -484,7 +484,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("When I become king, you will address me as ''Your highness''!");
@@ -496,7 +496,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 0)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 0)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -505,9 +505,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("Sugar, milk, flour, butter, and chocolate... something is missing.");
@@ -524,7 +524,7 @@ public class NPCInteractor : MonoBehaviour
                     pickUpUovoScript.canPickUp = true;
 
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 1)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 1)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -535,9 +535,9 @@ public class NPCInteractor : MonoBehaviour
 
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
 
                         dialogueManager.dialogue.sentences.Add("What is the inside of the castle like?");
                         dialogueManager.dialogue.sentences.Add("There are 207 kitchens, 453 bedrooms, 115 bathrooms, and 348 dining rooms.");
@@ -549,7 +549,7 @@ public class NPCInteractor : MonoBehaviour
                         bambinoCounter2 = 2;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 2)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 2)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -559,7 +559,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("Don't you ever feel alone?");
@@ -572,7 +572,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Bambino" && uovoPortato == true && uovoPortato == true)
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && uovoPortato == true && uovoPortato == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -581,9 +581,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Bambino");
+                        dialogueManager.dialogue.names.Add("King");
 
                         dialogueManager.dialogue.sentences.Add("It’s cake time! I looove cooking caaaakes, I loooove eating caaaaakes!");
                         dialogueManager.dialogue.sentences.Add("Can I have a piece?");

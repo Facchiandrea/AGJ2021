@@ -84,7 +84,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
             //---------------SCOLAPASTA--------------------
 
-            if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name == "ScolapastaUI")
+            if (NPCInteractor.selection.name == "Prince" && this.gameObject.name == "ScolapastaUI")
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.scolapastaPortato = true;
@@ -95,23 +95,23 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Clear();
                     dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Prince");
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Prince");
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Prince");
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Bambino");
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("King");
+                    dialogueManager.dialogue.names.Add("King");
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("King");
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("King");
                     dialogueManager.dialogue.names.Add("Artemisia");
 
                     dialogueManager.dialogue.sentences.Add("A colander?");
                     dialogueManager.dialogue.sentences.Add("Yes, it is perfect as a crown.");
-                    dialogueManager.dialogue.sentences.Add("I hate him.");
+                    dialogueManager.dialogue.sentences.Add("I hate it.");
                     dialogueManager.dialogue.sentences.Add("Don't throw a tantrum. In the 1500s, there was a very powerful king who wore exactly this crown.");
                     dialogueManager.dialogue.sentences.Add("Okay, but did he have sunglasses and a mustache?");
                     dialogueManager.dialogue.sentences.Add("...yes.");
@@ -128,7 +128,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
 
             }
-            else if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name != "ScolapastaUI" && NPCInteractor.scolapastaPortato == false)
+            else if (NPCInteractor.selection.name == "Prince" && this.gameObject.name != "ScolapastaUI" && NPCInteractor.scolapastaPortato == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -137,7 +137,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Clear();
                     dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("Prince");
 
                     dialogueManager.dialogue.sentences.Add("No! I do not want this! That's no good! I need something that makes me look like a king!");
 
@@ -154,7 +154,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
             //---------------UOVO--------------------
 
-            if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name == "UovoUI")
+            if (NPCInteractor.selection.name == "Prince" && this.gameObject.name == "UovoUI")
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.uovoPortato = true;
@@ -165,9 +165,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Clear();
                     dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("King");
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("King");
 
                     dialogueManager.dialogue.sentences.Add("Ah yes, now I remember! I miss the egg!");
                     dialogueManager.dialogue.sentences.Add("Yes, of course, you remember. I just brought it to you.");
@@ -183,7 +183,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
                 bigliettoUI.SetActive(true);
             }
-            else if (NPCInteractor.selection.name == "Bambino" && this.gameObject.name != "UovoUI" && NPCInteractor.scolapastaPortato == true)
+            else if (NPCInteractor.selection.name == "Prince" && this.gameObject.name != "UovoUI" && NPCInteractor.scolapastaPortato == true)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -192,7 +192,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Clear();
                     dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.names.Add("Bambino");
+                    dialogueManager.dialogue.names.Add("King");
 
                     dialogueManager.dialogue.sentences.Add("And how am I supposed to make a cake with this?");
 
