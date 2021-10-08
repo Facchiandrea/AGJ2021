@@ -86,7 +86,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Questo casco è proprio quello che mi serve");
+                            dialogueManager.dialogue.sentences.Add("Sorry, Neil, I hope you don't mind if I borrow it for a little while.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                             if (AudioManager.instance != null)
@@ -107,7 +107,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Questo casco potrebbe servirmi, ma non posso prenderlo da qui");
+                            dialogueManager.dialogue.sentences.Add("That space helmet is perfect, it's definitely something special.\nI should get close to get it.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -125,7 +125,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un casco da astronauta");
+                            dialogueManager.dialogue.sentences.Add("Neil must have left this space helmet here, he was always a little forgetful.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -148,7 +148,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Ho raccolto lo scolapasta");
+                            dialogueManager.dialogue.sentences.Add("Oh yeah! This could be the perfect crown!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                             if (AudioManager.instance != null)
@@ -169,7 +169,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Questo scolapasta potrebbe servirmi, ma non posso prenderlo da qui");
+                            dialogueManager.dialogue.sentences.Add("I might need that colander, but I can't reach it from here.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -186,7 +186,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' uno scolapasta");
+                            dialogueManager.dialogue.sentences.Add("A colander made of gold, whoever used it had a lot of money to spend.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -207,7 +207,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Ho raccolto l'uovo");
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                             if (AudioManager.instance != null)
@@ -228,7 +228,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Questo uovo potrebbe servirmi, ma non posso prenderlo da qui");
+                            dialogueManager.dialogue.sentences.Add("I might need that egg, but I have to be closer to get it.");
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
 
@@ -244,10 +244,8 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.names.Clear();
 
                             dialogueManager.dialogue.names.Add("Artemisia");
-                            dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un uovo");
-                            dialogueManager.dialogue.sentences.Add("Mi piacciono le uova");
+                            dialogueManager.dialogue.sentences.Add("But how big is this egg?! It could be from a pterodactyl!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -267,7 +265,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Questo tappeto di fiori sembra veramente soffice");
+                            dialogueManager.dialogue.sentences.Add("These flowers seem to have a wonderful scent, too bad I can't draw that too. They are also very soft!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -285,7 +283,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Quei materassi sembrano morbidi, peccato siano zozzi da fare schifo");
+                            dialogueManager.dialogue.sentences.Add("To be part of a terrible monster, they look quite fluffy. Although definitely dirty.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -306,7 +304,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Non credo ci sia altro che posso usare, li dentro");
+                            dialogueManager.dialogue.sentences.Add("I don't think there's anything else I can use in there");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -323,7 +321,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Qui c'erano dei fiammiferi quando ho controllato. Bingo!");
+                            dialogueManager.dialogue.sentences.Add("There were matches here when I checked. Bingo!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                             if (AudioManager.instance != null)
@@ -347,7 +345,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e...dei fiammiferi! Potrei farne buon uso");
+                            dialogueManager.dialogue.sentences.Add("It's not nice to rummage through other people's things, but in theory, it's all my property here. So let's see... there's a bottle of water, some sandwiches, and... matches! I could make good use of them.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                             if (AudioManager.instance != null)
@@ -373,7 +371,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Nel cestino c'era qualcosa che potrebbe servirmi, ma sono troppo lontana");
+                            dialogueManager.dialogue.sentences.Add("There was something in the basket I might need, but I'm too far away");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -390,7 +388,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Se mi avvicino potrei sbirciare dentro");
+                            dialogueManager.dialogue.sentences.Add("It's a picnic basket. If I get closer I could peek inside.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -408,7 +406,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un cestino da picnic. Dentro ci sono dei tramezzini, dell'acqua e dei fiammiferi");
+                            dialogueManager.dialogue.sentences.Add("It's not nice to rummage through other people's things, but in theory, it's all my property here. So let's see... there's a bottle of water, some sandwiches, and some matches.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -432,7 +430,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Sì, questa va benissimo, spero che piacerà a quel vecchietto");
+                            dialogueManager.dialogue.sentences.Add("Yes, this is perfect. I hope that the old man will like it.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                             if (AudioManager.instance != null)
@@ -454,7 +452,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Quella conchiglia fa al caso mio, ma è lontana");
+                            dialogueManager.dialogue.sentences.Add("That shell seems to be fine, but I'm far away.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -473,7 +471,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Adoro le conchiglie, questa è quella che mi è venuta meglio");
+                            dialogueManager.dialogue.sentences.Add("I love shells, this is the one I painted best.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -496,7 +494,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Tempo di tornare nel mondo reale!");
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -524,7 +522,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("La forma di questa nuvola mi ricorda un gatto!");
+                            dialogueManager.dialogue.sentences.Add("The shape of this cloud reminds me of a slightly fat cat.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -541,7 +539,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Mi piacerebbe avere una casetta sul lago, forse quella appartiene a qualche pescatore");
+                            dialogueManager.dialogue.sentences.Add("I'd like to have a tiny house on the lake, maybe that one over there belongs to some fisherman.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -561,7 +559,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Luna piena, speriamo di non incontrare lupi mannari. Dovrei depilarmi");
+                            dialogueManager.dialogue.sentences.Add("Goodbye, goodbye, good friends, goodbye. Cause now it's time to go… and then I don't remember.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -578,7 +576,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Almeno questa volta non devo aspettarlo");
+                            dialogueManager.dialogue.sentences.Add("This bus stop is a bit spooky, but that's what I like about this painting.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -595,7 +593,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' la città di Nyu Orc");
+                            dialogueManager.dialogue.sentences.Add("Metropolises are confusing and noisy. I wouldn't like to live there, but they offer a lot of opportunities.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -616,11 +614,11 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.dialogue.names.Add("Artemisia");
                             dialogueManager.dialogue.names.Add("Artemisia");
                             dialogueManager.dialogue.names.Add("Artemisia");
-                            dialogueManager.dialogue.sentences.Add("Mi sembra di vedere qualcosa li...");
+                            dialogueManager.dialogue.sentences.Add("I seem to see something there...");
                             dialogueManager.dialogue.sentences.Add("...");
-                            dialogueManager.dialogue.sentences.Add("Non posso crederci.\nLo ho trovato davvero.");
-                            dialogueManager.dialogue.sentences.Add("E' proprio lui.");
-                            dialogueManager.dialogue.sentences.Add("Sto cazzo.");
+                            dialogueManager.dialogue.sentences.Add("I can't believe it.\nI really found it.");
+                            dialogueManager.dialogue.sentences.Add("It is definitely it.");
+                            dialogueManager.dialogue.sentences.Add("Deez nuts!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -642,7 +640,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' uno spaventapasseri");
+                            dialogueManager.dialogue.sentences.Add("I should have painted this scarecrow with a more menacing look. It's not doing a good job.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -663,7 +661,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Se scendessi ora mi farei male");
+                            dialogueManager.dialogue.sentences.Add("I certainly can't jump because there's nothing to cushion the fall.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -680,7 +678,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("La roba morbida attutirà la caduta, potrei anche scendere ora");
+                            dialogueManager.dialogue.sentences.Add("Okay, now I should be able to come down from here without breaking my legs.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -702,11 +700,11 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.dialogue.names.Add("Bambino");
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Chissà se quella porta mi può condurre all'interno del castello...");
-                            dialogueManager.dialogue.sentences.Add("E'INUTILE, NON CI PUOI ARRIVARE NEANCHE VOLENDO");
-                            dialogueManager.dialogue.sentences.Add("E se ci arrivassi?");
-                            dialogueManager.dialogue.sentences.Add("E' COMUNQUE INUTILE, PERCHE' LA PORTA E' FINTA");
-                            dialogueManager.dialogue.sentences.Add("...ho già perso troppo tempo con questa idiozia, meglio concentrarsi su altro");
+                            dialogueManager.dialogue.sentences.Add("Who knows if that door can lead me inside the castle...");
+                            dialogueManager.dialogue.sentences.Add("IT'S USELESS, YOU CANNOT GET THERE EVEN IF YOU WANTED!");
+                            dialogueManager.dialogue.sentences.Add("And what if I get there?");
+                            dialogueManager.dialogue.sentences.Add("STILL USELESS BECAUSE THE DOOR IS FAKE!");
+                            dialogueManager.dialogue.sentences.Add("...I've already wasted too much time with this nonsense, better concentrate on something else.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -761,10 +759,10 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.dialogue.names.Add("Artemisia");
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un gatto bellissimooo <3");
-                            dialogueManager.dialogue.sentences.Add("...no Artemisia, devi imparare a contenerti, non puoi diventare scema ogni volta che vedi un gatto");
+                            dialogueManager.dialogue.sentences.Add("Awwww, this cat is so cuteeee <3");
+                            dialogueManager.dialogue.sentences.Add("No Artemisia, you have to learn to contain yourself, you can't get silly every time you see a cat.");
                             dialogueManager.dialogue.sentences.Add("...");
-                            dialogueManager.dialogue.sentences.Add("OMMIODDIO UN MICIO CHE DORME CHE TENERO CHE BELLO CIAO MICIO MICIO PSS PSS VIENI A CASA CON ME");
+                            dialogueManager.dialogue.sentences.Add("OMG,  WHAT CUTE, WHAT BEAUTIFUL, HELLO KITTY KITTEN PSS PSS COME HOME WITH ME");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -781,7 +779,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Avevo appena finito Assassin's Creed 2 quando ho pensato di dipingere la macchina volante di Leonardo in questo quadro");
+                            dialogueManager.dialogue.sentences.Add("I painted this ornithopter after playing Assassin's Creed 2. Leonardo da Vinci's inventions have always fascinated me. However, I would never try to fly on one of these!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -802,7 +800,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un cappello di paglia. Diventerò il re dei pirati");
+                            dialogueManager.dialogue.sentences.Add("A straw hat. I'm gonna be the pirate king!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -819,7 +817,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Nah, non è abbastanza esotico");
+                            dialogueManager.dialogue.sentences.Add("It's a hat, but it doesn't seem exotic enough for what I need.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -837,7 +835,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Una volta facevo sempre dei pic nic con i miei genitori, adesso odio uscire di casa");
+                            dialogueManager.dialogue.sentences.Add("I always used to have picnics with my parents, but now I hate leaving my house.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -871,7 +869,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un ombrello");
+                            dialogueManager.dialogue.sentences.Add("It's an umbrella, luckily it doesn't rain in any of these paintings");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -891,7 +889,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Uno dei miei primi quadri, mi stavo ancora esercitando con le proporzioni");
+                            dialogueManager.dialogue.sentences.Add("It's one of my first paintings, and I was still practicing with proportions...");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -908,7 +906,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Direi che questa non posso portarla al vecchio");
+                            dialogueManager.dialogue.sentences.Add("I guess I can't take this to the old man...");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -927,7 +925,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un pallone");
+                            dialogueManager.dialogue.sentences.Add("I've never been good at ball sports. But when I played, I still enjoyed it. ");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -944,7 +942,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Non ho tempo per fermarmi a riposare, voglio uscire da questi quadri");
+                            dialogueManager.dialogue.sentences.Add("I don't have time to stop and relax, I want to get out of these paintings.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -961,7 +959,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Se mi reincarnerò voglio essere un delfino, oppure un orso. Nessuno rompe le palle agli orsi.");
+                            dialogueManager.dialogue.sentences.Add("If I reincarnate, I want to be a dolphin. Or a bear. Nobody bothers the bears.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -978,7 +976,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Quella nave sullo sfondo mi ha ispirato a fare un altro quadro. Da bambina sognavo di fare il pirata e navigare ovunque, poi qualcosa è cambiato.");
+                            dialogueManager.dialogue.sentences.Add("This ship inspired me to do another painting. As a child, I dreamed of being a pirate and sailing everywhere, then something changed.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -998,7 +996,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un pianeta");
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1015,7 +1013,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' una sonda lunare");
+                            dialogueManager.dialogue.sentences.Add("A spacecraft. With the big hips I have, I don't think I can fit in.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1032,7 +1030,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' un satellite");
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1049,7 +1047,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' la bandiera americana");
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1066,7 +1064,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' una stella");
+                            dialogueManager.dialogue.sentences.Add("This is Polaris IV.\nOn this star, I will exile all those people who don't like my paintings.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1144,7 +1142,7 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
                     }
-                    if (selection.name == "Marmittaaa")
+                    if (selection.name == "Tombino")
                     {
                         if (dialogueManager.inDialogue == false)
                         {
@@ -1156,7 +1154,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Vrum vrum trattoroni");
+                            dialogueManager.dialogue.sentences.Add("I hope there isn't a clown in there... or the ninja turtles.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1177,7 +1175,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Vrum vrum trattoroni");
+                            dialogueManager.dialogue.sentences.Add("VROOM VROOM MOTHERFUCKER!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1194,7 +1192,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("La coop sei tu");
+                            dialogueManager.dialogue.sentences.Add("It's the shopping cart with a broken wheel that I always get at the supermarket. Fuck it.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1211,7 +1209,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E' la mia vecchia lavatrice, si era rotta. Ora è nel paradiso delle lavatrici rotte");
+                            dialogueManager.dialogue.sentences.Add("It's my old washing machine, damn it! It always stopped working when I needed it most!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1266,7 +1264,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("E'un cervo");
+                            dialogueManager.dialogue.sentences.Add("Powerful, but shy. An animal that is better not to piss off... but I would like to caress you too much!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1283,7 +1281,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Mi piacciono i lamponi");
+                            dialogueManager.dialogue.sentences.Add("They could be delicious raspberries or poisonous berries. When in doubt, I don't think I'll eat them.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1301,7 +1299,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Mi piacciono i funghi");
+                            dialogueManager.dialogue.sentences.Add("I drew some paintings after eating similar mushrooms.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }

@@ -56,7 +56,6 @@ public class NPCInteractor : MonoBehaviour
 
     public bool compariPortale = false;
 
-    private int tutorialCounter = 0;
     private int bambinoCounter1 = 0;
     private int bambinoCounter2 = 0;
     private int ragazzoCounter = 0;
@@ -188,7 +187,6 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
-                        tutorialCounter = 1;
                     }
 
                 }

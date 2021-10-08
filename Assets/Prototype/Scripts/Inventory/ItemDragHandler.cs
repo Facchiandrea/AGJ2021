@@ -48,8 +48,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Ragazzo");
                     dialogueManager.dialogue.names.Add("Ragazzo");
 
-                    dialogueManager.dialogue.sentences.Add("Sì sì! questo è perfetto! Da sballo! mi dona vero ? Esalta i miei fantastici zigomi!Grazie!");
-                    dialogueManager.dialogue.sentences.Add("Ora puoi tenerti la forcina, tutto sommato non era così figa.");
+                    dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones.Thanks!");
+                    dialogueManager.dialogue.sentences.Add("Now you can keep the hairpin. All in all, it wasn't that cool...");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -70,7 +70,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 dialogueManager.names.Clear();
 
                 dialogueManager.dialogue.names.Add("Ragazzo");
-                dialogueManager.dialogue.sentences.Add("Come dovrei mettermel- ehm, come dovrebbe fare la mia ragazza a mettersi questo?");
+                dialogueManager.dialogue.sentences.Add("How am I supposed to wear it - er, how is my girlfriend supposed to wear this? Nah, not good as a hat.");
 
                 dialogueManager.StartDialogue(dialogueManager.dialogue);
                 dialogueManager.DisplayNextSentence();
@@ -104,14 +104,14 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Bambino");
                     dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.dialogue.sentences.Add("Uno scolapasta?");
-                    dialogueManager.dialogue.sentences.Add("Sì, è perfetto come corona.");
-                    dialogueManager.dialogue.sentences.Add("Lo odio");
-                    dialogueManager.dialogue.sentences.Add("Dai, non fare i capricci.Nel 1500 abitava un re potentissimo, che indossava proprio questa corona, aveva un sacco di sudditi e persino un'aquila GIGANTE come animale domestico");
-                    dialogueManager.dialogue.sentences.Add("WOW, doveva essere un vero figo, sai cosa? Mi piace la corona, ma voglio anche io l’aquila!");
-                    dialogueManager.dialogue.sentences.Add("Ma che… ?! ");
-                    dialogueManager.dialogue.sentences.Add("Con gli artigli!");
-                    dialogueManager.dialogue.sentences.Add("Uff");
+                    dialogueManager.dialogue.sentences.Add("A colander?");
+                    dialogueManager.dialogue.sentences.Add("Yes, it is perfect as a crown.");
+                    dialogueManager.dialogue.sentences.Add("I hate him.");
+                    dialogueManager.dialogue.sentences.Add("Don't throw a tantrum. In the 1500s, there was a very powerful king who wore exactly this crown.");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -129,7 +129,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.dialogue.names.Add("Bambino");
 
-                    dialogueManager.dialogue.sentences.Add("No! Non voglio questo! Non me ne faccio nulla! Mi serve qualcosa che mi faccia sembrare un re!");
+                    dialogueManager.dialogue.sentences.Add("No! I do not want this! That's no good! I need something that makes me look like a king!");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -161,11 +161,11 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Artemisia");
                     dialogueManager.dialogue.names.Add("Bambino");
 
-                    dialogueManager.dialogue.sentences.Add("WOW… che cos'è?");
-                    dialogueManager.dialogue.sentences.Add("Questo, mio stupido bambino, è un uovo di pterodattilo.");
-                    dialogueManager.dialogue.sentences.Add("DAVVERO? lo voglio! LO VOGLIO! Ma ce li avrà gli artigli?");
-                    dialogueManager.dialogue.sentences.Add("… Sì");
-                    dialogueManager.dialogue.sentences.Add("Dai dammelo, ecco, te lo scambio per questo biglietto dell'autobus, io non me ne faccio nulla, non mi piace viaggiare.");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -188,7 +188,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.dialogue.names.Add("Bambino");
 
-                    dialogueManager.dialogue.sentences.Add("Nooooo! Questo non c'entra nulla con uccelli GIGANTI!");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -230,7 +230,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.dialogue.sentences.Add("Si parte!");
+                    dialogueManager.dialogue.sentences.Add("To infinity and beyond.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -253,7 +253,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.dialogue.sentences.Add("Devo avvicinarmi per poter salire");
+                    dialogueManager.dialogue.sentences.Add("I have to get close to get on board.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -274,7 +274,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.dialogue.sentences.Add("Come dovrei accenderlo con questo?");
+                    dialogueManager.dialogue.sentences.Add("How am I supposed to light the burner with this?");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -298,7 +298,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Apriti sesamo!");
+                    dialogueManager.dialogue.sentences.Add("Open Sesame.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -324,7 +324,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Come dovrei aprirlo con questo?");
+                    dialogueManager.dialogue.sentences.Add("How am I supposed to open it with this?");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -342,7 +342,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Devo avvicinarmi e scassinare quel lucchetto");
+                    dialogueManager.dialogue.sentences.Add("I need to get closer to pick that lock.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -366,7 +366,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Calza a pennello");
+                    dialogueManager.dialogue.sentences.Add("Fits like a glove!");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -383,7 +383,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Nope, non va bene");
+                    dialogueManager.dialogue.sentences.Add("Nope, that won't work.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -422,16 +422,16 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Uomo");
                     dialogueManager.dialogue.names.Add("Artemisia");
 
-                    dialogueManager.dialogue.sentences.Add("oh… OH… OHHHH. Sì questo, lo sento, l’hai preso su una spiaggia vero? Grazie, grazie mille, se chiudo gli occhi posso quasi immaginarlo");
-                    dialogueManager.dialogue.sentences.Add("E oltre al rumore del mare sento...qualcos'altro. E' come una parola che riecheggia.");
-                    dialogueManager.dialogue.sentences.Add("Sembra qualcosa tipo...Abracadabra?");
-                    dialogueManager.dialogue.sentences.Add("Ma che cazz??");
-                    dialogueManager.dialogue.sentences.Add("E sento anche dell'altro, sembra come una filastrocca...");
+                    dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                    dialogueManager.dialogue.sentences.Add("And besides the sound of the sea, I hear something else ... it is like a word that echoes.");
+                    dialogueManager.dialogue.sentences.Add("It seems to be like ... Abracadabra?");
+                    dialogueManager.dialogue.sentences.Add("What the fuck??");
+                    dialogueManager.dialogue.sentences.Add("And I hear more, it seems to be a nursery rhyme...");
                     dialogueManager.dialogue.sentences.Add("''In a distant time long ago,\na man tried to soar from a château.''");
-                    dialogueManager.dialogue.sentences.Add("''He sought what shines with its own light\nin the darkness of the night.''");
+                    dialogueManager.dialogue.sentences.Add("''He sought what shines with its own light,\nin the darkness of the night.''");
                     dialogueManager.dialogue.sentences.Add("''But when he flew above the sea,\nhe realized how many things he could see.''");
-                    dialogueManager.dialogue.sentences.Add("Tieni, te l'ho scritta su un foglietto, nel caso volessi un promemoria mentre sei in giro ");
-                    dialogueManager.dialogue.sentences.Add("Uhh... grazie immagino.");
+                    dialogueManager.dialogue.sentences.Add("Here, I wrote it to you on a piece of paper if you want a reminder while you're on the go.");
+                    dialogueManager.dialogue.sentences.Add("Uhh...thanks i guess.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -453,7 +453,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Artemisia");
-                    dialogueManager.dialogue.sentences.Add("Meglio avvicinarsi, prima");
+                    dialogueManager.dialogue.sentences.Add("Better get closer first");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
@@ -470,7 +470,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.names.Clear();
 
                     dialogueManager.dialogue.names.Add("Uomo");
-                    dialogueManager.dialogue.sentences.Add("Mmmm, ma conosco questo oggetto e non c'entra nulla con il mare");
+                    dialogueManager.dialogue.sentences.Add("Mmm, I know this object, and it has nothing to do with the sea.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();

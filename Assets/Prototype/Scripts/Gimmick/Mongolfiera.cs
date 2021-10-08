@@ -132,7 +132,7 @@ public class Mongolfiera : MonoBehaviour
 
                 dialogueManager.dialogue.names.Add("Artemisia");
 
-                dialogueManager.dialogue.sentences.Add("Mmm...forse dovrei prima avere una destinazione");
+                dialogueManager.dialogue.sentences.Add("Now I could use the balloon, but I need to set a destination first.");
 
                 dialogueManager.StartDialogue(dialogueManager.dialogue);
                 dialogueManager.DisplayNextSentence();
@@ -152,7 +152,7 @@ public class Mongolfiera : MonoBehaviour
 
                 dialogueManager.dialogue.names.Add("Artemisia");
 
-                dialogueManager.dialogue.sentences.Add("Mmm...forse dovrei prima impostare la rotta per il luogo da cui sono partita");
+                dialogueManager.dialogue.sentences.Add("Mmm... maybe I should first set the course for the place I started from.");
 
                 dialogueManager.StartDialogue(dialogueManager.dialogue);
                 dialogueManager.DisplayNextSentence();
