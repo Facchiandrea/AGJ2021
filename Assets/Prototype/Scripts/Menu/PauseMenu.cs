@@ -19,11 +19,21 @@ public class PauseMenu : MonoBehaviour
             if (inPause && inMenuOption == false)
             {
                 Continue();
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.Play("Click_Back_sfx");
+                }
+
             }
             else if (inPause && inMenuOption == true)
             {
                 optionsMenu.SetActive(false);
                 pauseMenu.SetActive(true);
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.Play("Click_Back_sfx");
+                }
+
             }
             else
             {
@@ -35,8 +45,23 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void OptionBack()
+    {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Click_Back_sfx");
+        }
+
+        optionsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
     public void ToOptions()
     {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Click_sfx");
+        }
+
         inMenuOption = true;
         optionsMenu.SetActive(true);
         pauseMenu.SetActive(false);
@@ -44,6 +69,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Continue()
     {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Click_sfx");
+        }
+
         if (dialogueManager.inDialogue == false)
         {
             Time.timeScale = 1;
@@ -54,6 +84,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void ReturnToMenu()
     {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Click_sfx");
+        }
+
         StartCoroutine(ChangeSceneCoroutine());
         AudioManager.instance.StopAllSounds();
         fadePanel.SetActive(true);

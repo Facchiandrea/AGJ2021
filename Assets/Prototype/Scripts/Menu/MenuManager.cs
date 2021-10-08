@@ -20,29 +20,44 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
         {
-            if (inAudioOptions)
+            BackOption();
+            if (AudioManager.instance != null)
             {
-                inAudioOptions = false;
-                inCredits = false;
-                startingScreen.SetActive(true);
-                audioScreen.SetActive(false);
-                creditScreen.SetActive(false);
+                AudioManager.instance.Play("Click_Back_sfx");
+            }
 
-            }
-            else if (inCredits)
-            {
-                inAudioOptions = false;
-                inCredits = false;
-                startingScreen.SetActive(true);
-                audioScreen.SetActive(false);
-                creditScreen.SetActive(false);
-
-            }
-            else
-            {
-                Quitting();
-            }
         }
+    }
+
+    public void BackOption()
+    {
+        if (inAudioOptions)
+        {
+            inAudioOptions = false;
+            inCredits = false;
+            startingScreen.SetActive(true);
+            audioScreen.SetActive(false);
+            creditScreen.SetActive(false);
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play("Click_Back_sfx");
+            }
+
+        }
+        else if (inCredits)
+        {
+            inAudioOptions = false;
+            inCredits = false;
+            startingScreen.SetActive(true);
+            audioScreen.SetActive(false);
+            creditScreen.SetActive(false);
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play("Click_Back_sfx");
+            }
+
+        }
+
     }
 
     public void Play()
@@ -51,6 +66,10 @@ public class MenuManager : MonoBehaviour
         AudioManager.instance.FadeOutAllSounds();
         Invoke("LoadNextScene", 2f);
         fadeIn.SetActive(true);
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Click_sfx");
+        }
 
     }
 
@@ -73,6 +92,11 @@ public class MenuManager : MonoBehaviour
         startingScreen.SetActive(false);
         audioScreen.SetActive(true);
         creditScreen.SetActive(false);
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Click_sfx");
+        }
+
     }
     public void CreditsButton()
     {
@@ -82,6 +106,11 @@ public class MenuManager : MonoBehaviour
         startingScreen.SetActive(false);
         audioScreen.SetActive(false);
         creditScreen.SetActive(true);
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Click_sfx");
+        }
+
     }
 
 }
