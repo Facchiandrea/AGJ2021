@@ -2042,6 +2042,24 @@ MonoBehaviour:
     fadeInTime: 0
     fadeOutTime: 0
     source: {fileID: 0}
+  - name: Click_sfx
+    clip: {fileID: 8300000, guid: 92c72b9831630ca4e90edd8a8c4ece57, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Click_Back_sfx
+    clip: {fileID: 8300000, guid: ed19ecf5804117d45872c006bec2ffdf, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
   currentMusic:
     name: 
     clip: {fileID: 0}
