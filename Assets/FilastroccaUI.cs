@@ -18,9 +18,9 @@ public class FilastroccaUI : MonoBehaviour
             dialogueManager.dialogue.names.Add("Artemisia");
             dialogueManager.dialogue.names.Add("Artemisia");
 
-            dialogueManager.dialogue.sentences.Add("''In a distant time long ago,\na man tried to soar from a château.''");
-            dialogueManager.dialogue.sentences.Add("''He sought what shines with its own light\nin the darkness of the night.''");
-            dialogueManager.dialogue.sentences.Add("''But when he flew above the sea,\nhe realized how many things he could see.''");
+            dialogueManager.dialogue.sentences.Add("''In a distant time long ago,\na brave man tried to soar from a château.''");
+            dialogueManager.dialogue.sentences.Add("''He traveled far and wide in all the nations,\nseeing beautiful landscapes and ancient civilizations.''");
+            dialogueManager.dialogue.sentences.Add("''And in the end he left this world,\nto reach what shines with its own light,\nin the darkness of the night.''");
 
 
             dialogueManager.StartDialogue(dialogueManager.dialogue);

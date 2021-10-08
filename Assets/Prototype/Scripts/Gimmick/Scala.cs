@@ -35,7 +35,7 @@ public class Scala : MonoBehaviour
 
                 dialogueManager.dialogue.names.Add("Artemisia");
 
-                dialogueManager.dialogue.sentences.Add("Questa scala non porta a niente.");
+                dialogueManager.dialogue.sentences.Add("This ladder leads nowhere.");
 
                 dialogueManager.StartDialogue(dialogueManager.dialogue);
 

@@ -31,7 +31,7 @@ public class LockManager : MonoBehaviour
 
     private void Update()
     {
-        if (counter1 == 2 && counter2 == 4 && counter3 == 6)
+        if (counter1 == 2 && counter2 == 6 && counter3 == 4)
         {
             counter1 = 0;
             itemSelection.portaleAperto = true;
