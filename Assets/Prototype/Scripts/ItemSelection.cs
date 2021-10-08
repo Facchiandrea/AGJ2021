@@ -1106,6 +1106,41 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
                     }
+                    if (selection.name == "Corallo")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "Relitto")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+
                     if (selection.name == "Alga")
                     {
                         if (dialogueManager.inDialogue == false)
