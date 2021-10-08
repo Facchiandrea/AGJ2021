@@ -797,7 +797,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("I painted this ornithopter after playing Assassin's Creed 2. Leonardo da Vinci's inventions have always fascinated me. However, I would never try to fly on one of these!");
+                            dialogueManager.dialogue.sentences.Add("I painted this ornithopter after playing Assassin's Creed II. Leonardo da Vinci's inventions have always fascinated me. However, I would never try to fly on one of these!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
