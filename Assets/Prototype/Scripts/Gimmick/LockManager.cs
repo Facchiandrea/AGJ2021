@@ -38,7 +38,10 @@ public class LockManager : MonoBehaviour
             catene.GetComponent<Animator>().SetBool("Open", true);
             ExitPuzzle();
             Debug.Log("Sbloccato");
-
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play("Click_Lucchetto_sfx");
+            }
         }
     }
     public void PuzzleLockStart()

@@ -114,6 +114,11 @@ public class Swapper : MonoBehaviour
             selectedPaint1.GetChild(0).gameObject.SetActive(false);
             OnPaintSelected = false;
             selectedPaint1 = null;
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play("Selezionare_Quadro_sfx");
+            }
+
         }
 
         if (Input.GetMouseButtonDown(0) && PaintHovered)
@@ -124,6 +129,10 @@ public class Swapper : MonoBehaviour
                 selection.GetChild(0).gameObject.SetActive(true);
                 selectionCounter++;
                 selectedPaint1 = selection.transform;
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.Play("Selezionare_Quadro_sfx");
+                }
 
             }
             else if (selectionCounter == 1)
@@ -132,6 +141,11 @@ public class Swapper : MonoBehaviour
                 selection.GetChild(0).gameObject.SetActive(true);
                 selectionCounter++;
                 selectedPaint2 = selection.transform;
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.Play("Selezionare_Quadro_sfx");
+                }
+
             }
         }
 

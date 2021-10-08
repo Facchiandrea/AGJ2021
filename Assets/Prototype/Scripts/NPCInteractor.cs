@@ -809,6 +809,11 @@ public class NPCInteractor : MonoBehaviour
                     montacarichi.montacarichiRiparato = true;
                     if (dialogueManager.inDialogue == false)
                     {
+                        if (AudioManager.instance != null)
+                        {
+                            AudioManager.instance.Play("Gamba_Leva_sfx");
+                        }
+
                         dialogueManager.dialogue.sentences.Clear();
                         dialogueManager.sentences.Clear();
                         dialogueManager.dialogue.names.Clear();

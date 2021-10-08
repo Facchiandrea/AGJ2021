@@ -90,6 +90,11 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }*/
         dialogueText.text = sentence;
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Avanti_Dialogo_sfx");
+        }
+
         if (dialogueText.text == "Sembra qualcosa tipo...Abracadabra?" && NPCInteractor.compariPortale) //CONTROLLARE
         {
             NPCInteractor.uomo.portale.SetActive(true);

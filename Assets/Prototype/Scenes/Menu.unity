@@ -1818,7 +1818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MenuMusic
-    clip: {fileID: 8300000, guid: f008f491f48f3fe4ea098ad1798c8b7f, type: 3}
+    clip: {fileID: 8300000, guid: 3ab4de2a8e5b0ab4bbce32a49b1698d7, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1826,17 +1826,8 @@ MonoBehaviour:
     fadeInTime: 0.01
     fadeOutTime: 1
     source: {fileID: 0}
-  - name: GameBGM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
-    loop: 1
-    type: 0
-    priority: 128
-    volume: 1
-    fadeInTime: 2
-    fadeOutTime: 2
-    source: {fileID: 0}
   - name: ScoglieraAM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 17226236c573b1f4dbedacdce4375a71, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1845,7 +1836,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: RuraleAM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: d9836d670b548f94fb635d2569001da3, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1854,7 +1845,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: MongolfieraAM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 74a9309c69c60bd429103c4eabb83cc0, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1881,7 +1872,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: SpiaggiaAM
-    clip: {fileID: 8300000, guid: f008f491f48f3fe4ea098ad1798c8b7f, type: 3}
+    clip: {fileID: 8300000, guid: 61d26c2d3761f8f49b2edbc6a9cab531, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1890,7 +1881,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: LunaAM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: de1c3ecd7f99b864a8e1a83a11d9dd29, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1908,7 +1899,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: "Citt\xE0AM"
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 6a4896e35065296459c08c0d67736d71, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1917,7 +1908,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: TempleAM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 764863e2dfa51234e98300b0878e1dbd, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1926,7 +1917,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: DiscaricaAM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 7b23ab4cd43d291458973a79652a0372, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1935,7 +1926,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: BoscoAM
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: cb9b52445a34f6c4b922db461a5c753e, type: 3}
     loop: 1
     type: 0
     priority: 128
@@ -1944,7 +1935,7 @@ MonoBehaviour:
     fadeOutTime: 1
     source: {fileID: 0}
   - name: Beeee_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 61282adc40d9e1a45a3b05cec6f4c97f, type: 3}
     loop: 0
     type: 1
     priority: 128
@@ -1953,7 +1944,7 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: Beeee_strano_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 4f9634430154e624389a7f1b997ced7f, type: 3}
     loop: 0
     type: 1
     priority: 128
@@ -1962,7 +1953,7 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: Fuoco_mongolfiera_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: aa3375d4b2ee46b4e8515944be006d79, type: 3}
     loop: 0
     type: 1
     priority: 128
@@ -1971,7 +1962,7 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: Aprire_armadio_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 9e956fc6a77de8046a0f9b4e2ee8f3dc, type: 3}
     loop: 0
     type: 1
     priority: 128
@@ -1980,7 +1971,7 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: Prendere_oggetto_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 77c1c80df9310d24c86ce512f87b4d05, type: 3}
     loop: 0
     type: 1
     priority: 128
@@ -1989,16 +1980,7 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: Spostare_quadro_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
-    loop: 0
-    type: 1
-    priority: 128
-    volume: 1
-    fadeInTime: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: Abbassare_ponte_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: ac97d41dcc1b5aa43a9e4f0ac6ae679a, type: 3}
     loop: 0
     type: 1
     priority: 128
@@ -2007,7 +1989,7 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: Prendere_autobus_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 84ade44a3224f3647b853044b9c868ed, type: 3}
     loop: 0
     type: 1
     priority: 128
@@ -2017,6 +1999,42 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Scale_sfx
     clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Selezionare_Quadro_sfx
+    clip: {fileID: 8300000, guid: e6099e17cf96ae34c82e6de0e39c9f5c, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Avanti_Dialogo_sfx
+    clip: {fileID: 8300000, guid: 4365a63fd9944894bad4669829001177, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Gamba_Leva_sfx
+    clip: {fileID: 8300000, guid: ddbcd38feec44384bb940c05f979e2af, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Click_Lucchetto_sfx
+    clip: {fileID: 8300000, guid: 8b220f2d5950bd2488b0c4984a78c4ba, type: 3}
     loop: 0
     type: 1
     priority: 128
