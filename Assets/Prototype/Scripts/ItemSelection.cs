@@ -1279,7 +1279,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("A huge pile of trash. If I look closely, I'm sure I'll find my old right sock, lost way back in 2002.");
+                            dialogueManager.dialogue.sentences.Add("A huge pile of trash. If I look closely, I'm sure I'll find my old right sock, which I lost a long time ago.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }

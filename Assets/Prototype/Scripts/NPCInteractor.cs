@@ -390,7 +390,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Add("Ah yes, now I remember! I miss the egg!");
                         dialogueManager.dialogue.sentences.Add("Yes, of course, you remember. I just brought it to you.");
-                        dialogueManager.dialogue.sentences.Add("Hurray! Now I can make a cake! Give me that! Here, take this bus ticket.I don't need it. I don't like traveling.");
+                        dialogueManager.dialogue.sentences.Add("Hurray! Now I can make a cake! Give me that! Here, take this bus ticket. I don't need it. I don't like traveling.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                         if (AudioManager.instance != null)
@@ -944,7 +944,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("Well, I made these paintings myself.");
                         dialogueManager.dialogue.sentences.Add("OH OH...really? But then you have traveled the world!");
                         dialogueManager.dialogue.sentences.Add("Well, no, I got inspiration from Pinterest.");
-                        dialogueManager.dialogue.sentences.Add("Nani ?! But you should get out of your house, you should see the world.I am now old, tired, and well... I can't physically get out of this painting.");
+                        dialogueManager.dialogue.sentences.Add("Nani?! But you should get out of your house, you should see the world.I am now old, tired, and well... I can't physically get out of this painting.");
                         dialogueManager.dialogue.sentences.Add("But you, you have this chance.So please, do a favor to this old man. I'd like to hear the sound of the waves. Bring me something that will remind me of the sea.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);

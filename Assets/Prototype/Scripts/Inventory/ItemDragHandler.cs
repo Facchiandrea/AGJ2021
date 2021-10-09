@@ -171,7 +171,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
                     dialogueManager.dialogue.sentences.Add("Ah yes, now I remember! I miss the egg!");
                     dialogueManager.dialogue.sentences.Add("Yes, of course, you remember. I just brought it to you.");
-                    dialogueManager.dialogue.sentences.Add("Hurray! Now I can make a cake! Give me that! Here, take this bus ticket.I don't need it. I don't like traveling.");
+                    dialogueManager.dialogue.sentences.Add("Hurray! Now I can make a cake! Give me that! Here, take this bus ticket. I don't need it. I don't like traveling.");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
