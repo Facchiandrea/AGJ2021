@@ -1831,7 +1831,7 @@ MonoBehaviour:
     loop: 1
     type: 0
     priority: 128
-    volume: 1
+    volume: 0.9
     fadeInTime: 1
     fadeOutTime: 1
     source: {fileID: 0}
@@ -1885,7 +1885,7 @@ MonoBehaviour:
     loop: 1
     type: 0
     priority: 128
-    volume: 1
+    volume: 0.8
     fadeInTime: 1
     fadeOutTime: 1
     source: {fileID: 0}
@@ -1930,7 +1930,7 @@ MonoBehaviour:
     loop: 1
     type: 0
     priority: 128
-    volume: 1
+    volume: 0.9
     fadeInTime: 1
     fadeOutTime: 1
     source: {fileID: 0}
