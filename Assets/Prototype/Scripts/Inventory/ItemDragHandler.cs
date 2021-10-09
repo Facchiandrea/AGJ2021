@@ -62,7 +62,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
 
             }
-            else if (NPCInteractor.selection.name == "RagazzoCheVuoleIlCasco" && this.gameObject.name != "CascoUI")
+            else if (NPCInteractor.selection.name == "RagazzoCheVuoleIlCasco" && this.gameObject.name != "CascoUI" && NPCInteractor.cascoPortato == false)
             {
                 dialogueManager.dialogue.sentences.Clear();
                 dialogueManager.sentences.Clear();
@@ -185,7 +185,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
                 bigliettoUI.SetActive(true);
             }
-            else if (NPCInteractor.selection.name == "Prince" && this.gameObject.name != "UovoUI" && NPCInteractor.scolapastaPortato == true)
+            else if (NPCInteractor.selection.name == "Prince" && this.gameObject.name != "UovoUI" && NPCInteractor.scolapastaPortato == true && NPCInteractor.uovoPortato == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
@@ -493,7 +493,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
             }
 
-            else if (NPCInteractor.selection.name == "Old Man" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true)
+            else if (NPCInteractor.selection.name == "Old Man" && this.gameObject.name != "ConchigliaUI" && NPCInteractor.uomo.playerInRange == true && NPCInteractor.conchigliaPortata == false)
             {
                 if (dialogueManager.inDialogue == false)
                 {
