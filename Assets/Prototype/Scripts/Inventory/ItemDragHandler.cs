@@ -19,13 +19,13 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
-        NPCInteractor.dragging = true;
+        //NPCInteractor.dragging = true;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         CheckInterations();
-        NPCInteractor.dragging = false;
+        //NPCInteractor.dragging = false;
     }
 
     public void CheckInterations()

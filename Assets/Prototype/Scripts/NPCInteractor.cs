@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class NPCInteractor : MonoBehaviour
 {
@@ -72,7 +71,7 @@ public class NPCInteractor : MonoBehaviour
             _selectionItem = null;
             selection = null;
         }
-        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false && dragging == false)
+        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false) //&& dragging == false)
         {
             int layerMask = LayerMask.GetMask("NPCs");
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -130,7 +129,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("Hey, nice to meet you. Not many people pass here! I am Tut, but you can call me Orial, and I like to explain things to people.");
                         dialogueManager.dialogue.sentences.Add("You are a strange guy.");
                         dialogueManager.dialogue.sentences.Add("Listen, do you want to get out of this place? Then let me do my job.");
-                        dialogueManager.dialogue.sentences.Add("As you can see, we are inside a painting, but you do not belong to this place. You are the one who designed us all.");
+                        dialogueManager.dialogue.sentences.Add("As you can see, we are inside a painting, but you do not belong to this place. You are the one who painted us all.");
                         dialogueManager.dialogue.sentences.Add("I have no idea how you can escape, but maybe someone else can help you. I know that a little boy lives in the painting with the castle, you could visit him.");
                         dialogueManager.dialogue.sentences.Add("I remember. He is one of the characters I painted. But how do I get there?");
                         dialogueManager.dialogue.sentences.Add("To move from one painting to another, you will have to make sure that the road in the painting you are in, and the road in the painting you want to go to, are aligned.");
