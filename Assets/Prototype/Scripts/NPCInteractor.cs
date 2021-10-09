@@ -207,8 +207,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Ragazzo");
-                        dialogueManager.dialogue.names.Add("Ragazzo");
+                        dialogueManager.dialogue.names.Add("Cool dude");
+                        dialogueManager.dialogue.names.Add("Cool dude");
 
                         dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones.Thanks!");
                         dialogueManager.dialogue.sentences.Add("Now you can keep the hairpin. All in all, it wasn't that cool...");
@@ -231,10 +231,10 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Ragazzo");
+                        dialogueManager.dialogue.names.Add("Dude");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Ragazzo");
-                        dialogueManager.dialogue.names.Add("Ragazzo");
+                        dialogueManager.dialogue.names.Add("Dude");
+                        dialogueManager.dialogue.names.Add("Dude");
 
                         dialogueManager.dialogue.sentences.Add("You finally arrived!\nMmm, I reminded you thinner...but, wait, you are not my girlfriend!");
                         dialogueManager.dialogue.sentences.Add("I guess not.");
@@ -255,7 +255,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Ragazzo");
+                        dialogueManager.dialogue.names.Add("Dude");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("A hat! Yes, a cool hat. Maybe something special...");
@@ -277,9 +277,9 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Ragazzo");
+                        dialogueManager.dialogue.names.Add("Dude");
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Ragazzo");
+                        dialogueManager.dialogue.names.Add("Dude");
 
                         dialogueManager.dialogue.sentences.Add("Ah, I can't wait to see my girlfriend. She has beautiful colors and awesome brushstrokes");
                         dialogueManager.dialogue.sentences.Add("I don't remember this girl.");
@@ -300,7 +300,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Ragazzo");
+                        dialogueManager.dialogue.names.Add("Dude");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("This hairpin is really cool.");
@@ -321,7 +321,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Clear();
                         dialogueManager.names.Clear();
 
-                        dialogueManager.dialogue.names.Add("Ragazzo");
+                        dialogueManager.dialogue.names.Add("Cool dude");
 
                         dialogueManager.dialogue.sentences.Add("Look at me! I'm an astronaut! I can't see very well with this space helmet... ANYBODY HERE??");
 
@@ -1084,7 +1084,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.names.Clear();
 
                         dialogueManager.dialogue.names.Add("Artemisia");
-                        dialogueManager.dialogue.names.Add("Old Man");
+                        dialogueManager.dialogue.names.Add("Old Man?");
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("Take care, old man");

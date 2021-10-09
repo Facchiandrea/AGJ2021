@@ -1065,7 +1065,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("Many people still believe the moon landing was fake. Lol.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1101,7 +1101,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("It's more likely to get killed by a falling coconut than by a shark, but I guess I'll stay away from them anyway, just in case.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1118,7 +1118,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("I'd like to see the coral reef, but I'm afraid to travel. So I think I'll be satisfied with seeing it in documentaries.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1135,7 +1135,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("Under the sea, under the sea!\nDarling it’s better, down where it’s wetter, take it from me!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1153,7 +1153,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("That's how fishes get high.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }

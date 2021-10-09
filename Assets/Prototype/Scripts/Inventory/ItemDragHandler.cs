@@ -45,8 +45,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Clear();
                     dialogueManager.names.Clear();
 
-                    dialogueManager.dialogue.names.Add("Ragazzo");
-                    dialogueManager.dialogue.names.Add("Ragazzo");
+                    dialogueManager.dialogue.names.Add("Cool dude");
+                    dialogueManager.dialogue.names.Add("Cool dude");
 
                     dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones.Thanks!");
                     dialogueManager.dialogue.sentences.Add("Now you can keep the hairpin. All in all, it wasn't that cool...");
@@ -69,7 +69,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 dialogueManager.dialogue.names.Clear();
                 dialogueManager.names.Clear();
 
-                dialogueManager.dialogue.names.Add("Ragazzo");
+                dialogueManager.dialogue.names.Add("Dude");
                 dialogueManager.dialogue.sentences.Add("How am I supposed to wear it - er, how is my girlfriend supposed to wear this? Nah, not good as a hat.");
 
                 dialogueManager.StartDialogue(dialogueManager.dialogue);

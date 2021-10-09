@@ -157,7 +157,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.transform.localScale = new Vector3(-1, 1, 1);
 
         }
-        else if (nameText.text == "Ragazzo") //CONTROLLARE
+        else if (nameText.text == "Dude") //CONTROLLARE
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(false);
@@ -171,6 +171,21 @@ public class DialogueManager : MonoBehaviour
             dialogueText.transform.localScale = new Vector3(-1, 1, 1);
 
         }
+        else if (nameText.text == "Cool dude") //CONTROLLARE
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(false);
+            bambinoPortrait.SetActive(false);
+            uomoPortrait.SetActive(false);
+            ragazzoPortrait.SetActive(true);
+            pecoraPortrait.SetActive(false);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
+
         else if (nameText.text == "Rebeeecca" || nameText.text == "Beeeatrice" || nameText.text == "Beeeth" || nameText.text == "Baaarbara")
         {
             artemisiaPortrait.SetActive(false);
@@ -216,6 +231,20 @@ public class DialogueManager : MonoBehaviour
         }
 
         else if (nameText.text == "Old Man") //CONTROLLARE
+        {
+            artemisiaPortrait.SetActive(false);
+            tutorialPortrait.SetActive(false);
+            bambinoPortrait.SetActive(false);
+            uomoPortrait.SetActive(true);
+            ragazzoPortrait.SetActive(false);
+            pecoraPortrait.SetActive(false);
+
+            dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
+            nameText.transform.localScale = new Vector3(-1, 1, 1);
+            dialogueText.transform.localScale = new Vector3(-1, 1, 1);
+
+        }
+        else if (nameText.text == "Old Man?") //CONTROLLARE
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(false);
