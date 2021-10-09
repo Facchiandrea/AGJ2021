@@ -72,12 +72,7 @@ public class NPCInteractor : MonoBehaviour
             _selectionItem = null;
             selection = null;
         }
-        if (EventSystem.current.IsPointerOverGameObject() && dragging == false)
-        {
-
-        }
-
-        else if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
+        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false && dragging == false)
         {
             int layerMask = LayerMask.GetMask("NPCs");
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);

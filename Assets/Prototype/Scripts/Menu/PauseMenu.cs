@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
             {
                 optionsMenu.SetActive(false);
                 pauseMenu.SetActive(true);
+                inMenuOption = false;
                 if (AudioManager.instance != null)
                 {
                     AudioManager.instance.Play("Click_Back_sfx");
@@ -51,7 +52,7 @@ public class PauseMenu : MonoBehaviour
         {
             AudioManager.instance.Play("Click_Back_sfx");
         }
-
+        inMenuOption = false;
         optionsMenu.SetActive(false);
         pauseMenu.SetActive(true);
     }
