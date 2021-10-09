@@ -88,6 +88,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 this.gameObject.SetActive(false);
                 NPCInteractor.scolapastaPortato = true;
+                NPCInteractor.cascoTesta.SetActive(true);
+
                 if (dialogueManager.inDialogue == false)
                 {
                     dialogueManager.dialogue.sentences.Clear();

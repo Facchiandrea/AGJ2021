@@ -15,11 +15,12 @@ public class NPCInteractor : MonoBehaviour
     public PickUpCasco pickUpCascoScript;
     public bool cascoPortato = false;
 
-
+    public GameObject cascoTesta;
     public PickUpScolapasta pickUpScolapastaScript;
     public PickUpUovo pickUpUovoScript;
     public bool scolapastaPortato = false;
     public bool uovoPortato = false;
+
 
     public GameObject player;
     public Transform posizioneStazione1;
@@ -115,6 +116,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Tut Orial");
@@ -131,7 +133,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("As you can see, we are inside a painting, but you do not belong to this place. You are the one who designed us all.");
                         dialogueManager.dialogue.sentences.Add("I have no idea how you can escape, but maybe someone else can help you. I know that a little boy lives in the painting with the castle, you could visit him.");
                         dialogueManager.dialogue.sentences.Add("I remember. He is one of the characters I painted. But how do I get there?");
-                        dialogueManager.dialogue.sentences.Add("To move from one painting to another, you will have to make sure that the road in the painting you are in, and the road in the painting you want to go to, are aligned. If they have different heights, you will not be able to pass!");
+                        dialogueManager.dialogue.sentences.Add("To move from one painting to another, you will have to make sure that the road in the painting you are in, and the road in the painting you want to go to, are aligned.");
+                        dialogueManager.dialogue.sentences.Add("If they have different heights, you will not be able to pass!");
                         dialogueManager.dialogue.sentences.Add("Press SPACE to change the view, then click a painting to select it. By selecting a painting first and then a second one, you will swap them places!");
                         dialogueManager.dialogue.sentences.Add("BEWARE, however, the paintings in the corners where there are people and the painting in which you are currently, CANNOT be moved.");
                         dialogueManager.dialogue.sentences.Add("Ok, clear. If I forget, I'll ask again. Is there anything else I need to know?");
@@ -163,6 +166,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Tut Orial");
+                        dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Tut Orial");
                         dialogueManager.dialogue.names.Add("Tut Orial");
@@ -174,7 +178,8 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Add("Uh, could you explain again?");
                         dialogueManager.dialogue.sentences.Add("Sure, that's what I'm here for!");
-                        dialogueManager.dialogue.sentences.Add("To move from one painting to another, you will have to make sure that the road in the painting you are in, and the road in the painting you want to go to, are aligned. If they have different heights, you will not be able to pass!");
+                        dialogueManager.dialogue.sentences.Add("To move from one painting to another, you will have to make sure that the road in the painting you are in, and the road in the painting you want to go to, are aligned.");
+                        dialogueManager.dialogue.sentences.Add("If they have different heights, you will not be able to pass!");
                         dialogueManager.dialogue.sentences.Add("Press SPACE to change the view, then click a painting to select it. By selecting a painting first and then a second one, you will swap them places!");
                         dialogueManager.dialogue.sentences.Add("BEWARE, however, the paintings in the corners where there are people and the painting in which you are currently, CANNOT be moved.");
                         dialogueManager.dialogue.sentences.Add("Is there anything else?");
@@ -335,6 +340,7 @@ public class NPCInteractor : MonoBehaviour
                 {
                     scolapastaUI.SetActive(false);
                     scolapastaPortato = true;
+                    cascoTesta.SetActive(true);
                     if (dialogueManager.inDialogue == false)
                     {
                         dialogueManager.dialogue.sentences.Clear();
@@ -417,6 +423,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Prince");
+                        dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
                         dialogueManager.dialogue.names.Add("Prince");
                         dialogueManager.dialogue.names.Add("Artemisia");
@@ -425,7 +432,8 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("...Hi.");
                         dialogueManager.dialogue.sentences.Add("Are you the one who drew me?");
                         dialogueManager.dialogue.sentences.Add("I'm afraid so.");
-                        dialogueManager.dialogue.sentences.Add("Well...I wanted to ask you...\nWHY AM I NOT THE KING ?! I WANT TO BE THE KING!\nI need a crown that suits my rank! If you help me, I'll give you a nice gift!");
+                        dialogueManager.dialogue.sentences.Add("Well...I wanted to ask you...\nWHY AM I NOT THE KING ?! I WANT TO BE THE KING!\nI need a crown that suits my rank!");
+                        dialogueManager.dialogue.sentences.Add("If you help me, I'll give you a nice gift!");
                         dialogueManager.dialogue.sentences.Add("Why should I help you? I have already regretted having created you.");
                         dialogueManager.dialogue.sentences.Add("PLEASE?");
                         dialogueManager.dialogue.sentences.Add("Uff… okay");

@@ -26,6 +26,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject bambinoPortrait;
     public GameObject uomoPortrait;
     public GameObject pecoraPortrait;
+    public GameObject kingPortrait;
+    public GameObject cooldDudePortrait;
+
 
     public NPCInteractor NPCInteractor;
 
@@ -124,6 +127,8 @@ public class DialogueManager : MonoBehaviour
             uomoPortrait.SetActive(false);
             ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(1, 1, 1);
             nameText.transform.localScale = new Vector3(1, 1, 1);
@@ -137,6 +142,8 @@ public class DialogueManager : MonoBehaviour
             uomoPortrait.SetActive(false);
             ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -151,6 +158,8 @@ public class DialogueManager : MonoBehaviour
             uomoPortrait.SetActive(false);
             ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -165,6 +174,8 @@ public class DialogueManager : MonoBehaviour
             uomoPortrait.SetActive(false);
             ragazzoPortrait.SetActive(true);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -177,8 +188,10 @@ public class DialogueManager : MonoBehaviour
             tutorialPortrait.SetActive(false);
             bambinoPortrait.SetActive(false);
             uomoPortrait.SetActive(false);
-            ragazzoPortrait.SetActive(true);
+            ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(true);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -194,6 +207,8 @@ public class DialogueManager : MonoBehaviour
             uomoPortrait.SetActive(false);
             ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(true);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -209,6 +224,8 @@ public class DialogueManager : MonoBehaviour
             uomoPortrait.SetActive(false);
             ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -219,10 +236,12 @@ public class DialogueManager : MonoBehaviour
         {
             artemisiaPortrait.SetActive(false);
             tutorialPortrait.SetActive(false);
-            bambinoPortrait.SetActive(true);
+            bambinoPortrait.SetActive(false);
             uomoPortrait.SetActive(false);
             ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(true);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -238,6 +257,8 @@ public class DialogueManager : MonoBehaviour
             uomoPortrait.SetActive(true);
             ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);
@@ -252,6 +273,8 @@ public class DialogueManager : MonoBehaviour
             uomoPortrait.SetActive(true);
             ragazzoPortrait.SetActive(false);
             pecoraPortrait.SetActive(false);
+            kingPortrait.SetActive(false);
+            cooldDudePortrait.SetActive(false);
 
             dialogueParent.transform.localScale = new Vector3(-1, 1, 1);
             nameText.transform.localScale = new Vector3(-1, 1, 1);

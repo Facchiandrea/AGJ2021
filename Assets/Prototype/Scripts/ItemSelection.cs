@@ -1214,6 +1214,57 @@ public class ItemSelection : MonoBehaviour
                     }
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 10-----------------------------------
+                    if (selection.name == "Pappagallo")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("I'd like to have a parrot, but it would probably learn to swear. A lot.");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "Tempio")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("I painted this picture after reading a book about the Maya city of Uxmal, which was founded in the 6th century.");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
+                    if (selection.name == "Insetto")
+                    {
+                        if (dialogueManager.inDialogue == false)
+                        {
+
+                            dialogueManager.dialogue.sentences.Clear();
+                            dialogueManager.sentences.Clear();
+                            dialogueManager.dialogue.names.Clear();
+                            dialogueManager.names.Clear();
+
+                            dialogueManager.dialogue.names.Add("Artemisia");
+
+                            dialogueManager.dialogue.sentences.Add("Oh no, another bug!");
+
+                            dialogueManager.StartDialogue(dialogueManager.dialogue);
+                        }
+                    }
 
                     //-------------------------ALTRI OGGETTI DEL DIPINTO 11-----------------------------------
                     if (selection.name == "Marmitta")
