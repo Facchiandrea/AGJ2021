@@ -208,7 +208,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Gotcha! It’s a bit big, but I don't think he will complain");
+                            dialogueManager.dialogue.sentences.Add("Gotcha! It’s a bit big, but I don't think he will complain.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                             if (AudioManager.instance != null)
@@ -577,7 +577,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("Goodbye, goodbye, good friends, goodbye. Cause now it's time to go… and then I don't remember.");
+                            dialogueManager.dialogue.sentences.Add("Goodbye, goodbye, good friends, goodbye.\nCause now it's time to go…\nand then I don't remember.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -659,7 +659,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("I should have painted this scarecrow with a more menacing look. It's not doing a good job.");
+                            dialogueManager.dialogue.sentences.Add("I should have painted this scarecrow with a more menacing look.\nIt's not doing a good job.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -757,7 +757,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("I liked the idea of ​​painting the castle as separate from everything and everyone, but I think the owners are happy with it.");
+                            dialogueManager.dialogue.sentences.Add("I liked the idea of ​​painting the castle as separate from everything and everyone, but I think the owners aren't happy with it.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -781,7 +781,7 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.dialogue.sentences.Add("Awwww, this cat is so cuteeee <3");
                             dialogueManager.dialogue.sentences.Add("No Artemisia, you have to learn to contain yourself, you can't act like an idiot every time you see a cat.");
                             dialogueManager.dialogue.sentences.Add("...");
-                            dialogueManager.dialogue.sentences.Add("OMG,  WHAT CUTE, WHAT BEAUTIFUL, HELLO KITTY KITTEN PSS PSS COME HOME WITH ME");
+                            dialogueManager.dialogue.sentences.Add("OMG,  WHAT CUTE, WHAT BEAUTIFUL, HELLO KITTY KITTEN PSS PSS COME HOME WITH ME.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -798,7 +798,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("I painted this ornithopter after playing Assassin's Creed II. Leonardo da Vinci's inventions have always fascinated me. However, I would never try to fly on one of these!");
+                            dialogueManager.dialogue.sentences.Add("I painted this ornithopter after playing Assassin's Creed II.\nLeonardo da Vinci's inventions have always fascinated me. However, I would never try to fly on one of these!");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1049,7 +1049,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("It is one of Elon Musk's satellites. With this, I will have access to the internet from my small town of 10 inhabitants.");
+                            dialogueManager.dialogue.sentences.Add("It is one of Elon Musk's satellites.\nWith this, I will have access to the internet from my small town of 10 inhabitants.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }

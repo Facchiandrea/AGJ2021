@@ -215,7 +215,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Cool dude");
                         dialogueManager.dialogue.names.Add("Cool dude");
 
-                        dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones.Thanks!");
+                        dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones. Thanks!");
                         dialogueManager.dialogue.sentences.Add("Now you can keep the hairpin. All in all, it wasn't that cool...");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -368,7 +368,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("Don't throw a tantrum. In the 1500s, there was a very powerful king who wore exactly this crown.");
                         dialogueManager.dialogue.sentences.Add("Okay, but did he have sunglasses and a mustache?");
                         dialogueManager.dialogue.sentences.Add("...yes.");
-                        dialogueManager.dialogue.sentences.Add("Oh. He had to be really cool! Ok, I accept the crown and to celebrate I will make a giant cake!I have sugar, milk, flour, butter, and lots of CHOCOLATE!");
+                        dialogueManager.dialogue.sentences.Add("Oh. He had to be really cool! Ok, I accept the crown and to celebrate I will make a giant cake! I have sugar, milk, flour, butter, and lots of CHOCOLATE!");
                         dialogueManager.dialogue.sentences.Add("Mmm, I don't know, it just seems like something is missing.");
                         dialogueManager.dialogue.sentences.Add("A person to share this cake with? Like me ;-)");
                         dialogueManager.dialogue.sentences.Add("Nonsense! I'm sure an ingredient is missing, but I don't remember what. Would you help me to find it? AND THEN BRING IT TO ME!");
@@ -432,10 +432,10 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("...Hi.");
                         dialogueManager.dialogue.sentences.Add("Are you the one who drew me?");
                         dialogueManager.dialogue.sentences.Add("I'm afraid so.");
-                        dialogueManager.dialogue.sentences.Add("Well...I wanted to ask you...\nWHY AM I NOT THE KING ?! I WANT TO BE THE KING!\nI need a crown that suits my rank!");
+                        dialogueManager.dialogue.sentences.Add("Well...I wanted to ask you...\nWHY AM I NOT THE KING?! I WANT TO BE THE KING!\nI need a crown that suits my rank!");
                         dialogueManager.dialogue.sentences.Add("If you help me, I'll give you a nice gift!");
                         dialogueManager.dialogue.sentences.Add("Why should I help you? I have already regretted having created you.");
-                        dialogueManager.dialogue.sentences.Add("PLEASE?");
+                        dialogueManager.dialogue.sentences.Add("PLEEEEEEASE?");
                         dialogueManager.dialogue.sentences.Add("Uff… okay");
 
 
@@ -477,7 +477,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("Next time, you could draw me inside an amusement park...");
-                        dialogueManager.dialogue.sentences.Add("Next time, I'll wall your window");
+                        dialogueManager.dialogue.sentences.Add("Next time, I'll wall your window.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -497,7 +497,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Artemisia");
 
                         dialogueManager.dialogue.sentences.Add("When I become king, you will address me as ''Your highness''!");
-                        dialogueManager.dialogue.sentences.Add("Really? But if you are tall as a stool");
+                        dialogueManager.dialogue.sentences.Add("Really? But if you are tall as a stool.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -573,7 +573,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Add("Don't you ever feel alone?");
                         dialogueManager.dialogue.sentences.Add("No, I have a lot of imaginary friends. Don't YOU ever feel alone?");
-                        dialogueManager.dialogue.sentences.Add("Sometimes, but I'm afraid to go out and draw, it helps me not to think about it.");
+                        dialogueManager.dialogue.sentences.Add("Sometimes, but I'm afraid to go out, and painting helps me not to think about it.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -659,7 +659,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Artemisia");
 
-                        dialogueManager.dialogue.sentences.Add("Tsk...the balloon lifting system is not working.\nI need something to light the burner.");
+                        dialogueManager.dialogue.sentences.Add("Tsk... the balloon lifting system is not working.\nI need something to light the burner.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
@@ -965,14 +965,14 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.names.Add("Old Man");
                         dialogueManager.dialogue.names.Add("Old Man");
 
-                        dialogueManager.dialogue.sentences.Add("Oh oh...good morning princess.");
+                        dialogueManager.dialogue.sentences.Add("Oh oh...\ngood morning princess.");
                         dialogueManager.dialogue.sentences.Add("No, listen, if you are looking for someone with royal blood, it is 2 pictures above. I'm just a painter.");
                         dialogueManager.dialogue.sentences.Add("A painter? Ah, but what a great job, would you be able to paint such beautiful paintings like these?");
                         dialogueManager.dialogue.sentences.Add("Well, I made these paintings myself.");
-                        dialogueManager.dialogue.sentences.Add("OH OH...really? But then you have traveled the world!");
+                        dialogueManager.dialogue.sentences.Add("OH OH... really? But then you have traveled the world!");
                         dialogueManager.dialogue.sentences.Add("Well, no, I got inspiration from Pinterest.");
-                        dialogueManager.dialogue.sentences.Add("Nani?! But you should get out of your house, you should see the world.I am now old, tired, and well... I can't physically get out of this painting.");
-                        dialogueManager.dialogue.sentences.Add("But you, you have this chance.So please, do a favor to this old man. I'd like to hear the sound of the waves. Bring me something that will remind me of the sea.");
+                        dialogueManager.dialogue.sentences.Add("Nani?! But you should get out of your house, you should see the world. I am now old, tired, and well... I can't physically get out of this painting.");
+                        dialogueManager.dialogue.sentences.Add("But you, you have this chance. So please, do a favor to this old man. I'd like to hear the sound of the waves. Bring me something that will remind me of the sea.");
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
 
@@ -1121,7 +1121,7 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.sentences.Add("God does not exist, and we are only useless multicellular envelopes.");
                         dialogueManager.dialogue.sentences.Add("...WHAT?!");
-                        dialogueManager.dialogue.sentences.Add("ehm...Beeeee!");
+                        dialogueManager.dialogue.sentences.Add("Ehm... Beeeee!");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);

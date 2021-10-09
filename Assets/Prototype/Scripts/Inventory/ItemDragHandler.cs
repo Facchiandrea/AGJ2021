@@ -49,7 +49,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Add("Cool dude");
                     dialogueManager.dialogue.names.Add("Cool dude");
 
-                    dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones.Thanks!");
+                    dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones. Thanks!");
                     dialogueManager.dialogue.sentences.Add("Now you can keep the hairpin. All in all, it wasn't that cool...");
 
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
@@ -118,7 +118,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.sentences.Add("Don't throw a tantrum. In the 1500s, there was a very powerful king who wore exactly this crown.");
                     dialogueManager.dialogue.sentences.Add("Okay, but did he have sunglasses and a mustache?");
                     dialogueManager.dialogue.sentences.Add("...yes.");
-                    dialogueManager.dialogue.sentences.Add("Oh. He had to be really cool! Ok, I accept the crown and to celebrate I will make a giant cake!I have sugar, milk, flour, butter, and lots of CHOCOLATE!");
+                    dialogueManager.dialogue.sentences.Add("Oh. He had to be really cool! Ok, I accept the crown and to celebrate I will make a giant cake! I have sugar, milk, flour, butter, and lots of CHOCOLATE!");
                     dialogueManager.dialogue.sentences.Add("Mmm, I don't know, it just seems like something is missing.");
                     dialogueManager.dialogue.sentences.Add("A person to share this cake with? Like me ;-)");
                     dialogueManager.dialogue.sentences.Add("Nonsense! I'm sure an ingredient is missing, but I don't remember what. Would you help me to find it? AND THEN BRING IT TO ME!");
