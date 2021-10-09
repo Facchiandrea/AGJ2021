@@ -20,7 +20,7 @@ public class OpenCloseInventory : MonoBehaviour
         thisRectTransform = this.gameObject.GetComponent<RectTransform>();
 
         closedPosition = new Vector2(0, 0);
-        openedPosition = new Vector2(thisRectTransform.anchoredPosition.x, thisRectTransform.anchoredPosition.y - 150f);
+        openedPosition = new Vector2(thisRectTransform.anchoredPosition.x, thisRectTransform.anchoredPosition.y - 200f);
     }
     public void OpenCloseInventoryButton()
     {

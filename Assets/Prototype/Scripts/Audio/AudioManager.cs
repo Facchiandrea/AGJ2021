@@ -82,8 +82,12 @@ public class AudioManager : MonoBehaviour
     {
         foreach (Sound s in sounds)
         {
-            if (s != currentMusic)
-                StartCoroutine(StartFadeOut(s, 0));
+            if (s.type == Type.Music)
+            {
+                if (s != currentMusic)
+                    StartCoroutine(StartFadeOut(s, 0));
+
+            }
         }
     }
 

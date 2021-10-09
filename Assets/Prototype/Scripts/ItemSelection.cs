@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 public class ItemSelection : MonoBehaviour
 {
     public ViewModeSwap viewModeSwap;
@@ -28,7 +29,11 @@ public class ItemSelection : MonoBehaviour
             selection = null;
         }
 
-        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
+        if (EventSystem.current.IsPointerOverGameObject() && NPCInteractor.dragging == false)
+        {
+
+        }
+        else if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
         {
             int layerMask = LayerMask.GetMask("ObjectsLayer");
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
