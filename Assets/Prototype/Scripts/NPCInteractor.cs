@@ -25,6 +25,7 @@ public class NPCInteractor : MonoBehaviour
     public Transform posizioneStazione1;
     public Transform posizioneStazione2;
     public bool stazione1 = true;
+    public bool autobusInRange;
 
     public PickUpFiammiferi pickUpFiammiferi;
     public bool fiammiferiInInventario = false;
@@ -595,7 +596,7 @@ public class NPCInteractor : MonoBehaviour
                 }
                 //-----------------AUTOBUS----------------
 
-                if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true)
+                if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true && autobusInRange == true)
                 {
                     ViaggioInAutobus();
                     if (AudioManager.instance != null)
@@ -604,6 +605,23 @@ public class NPCInteractor : MonoBehaviour
                     }
 
                 }
+                else if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true && autobusInRange == false)
+                {
+                    if (dialogueManager.inDialogue == false)
+                    {
+
+                        dialogueManager.dialogue.sentences.Clear();
+                        dialogueManager.sentences.Clear();
+                        dialogueManager.dialogue.names.Clear();
+                        dialogueManager.names.Clear();
+
+                        dialogueManager.dialogue.names.Add("Artemisia");
+                        dialogueManager.dialogue.sentences.Add("I have to get close to get on the bus!");
+
+                        dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    }
+                }
+
                 else if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == false)
                 {
                     if (dialogueManager.inDialogue == false)
@@ -620,6 +638,7 @@ public class NPCInteractor : MonoBehaviour
 
                     }
                 }
+
                 //-----------------Mongolfiera----------------
                 if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == false && mongolfieraScript.traveling == false)
                 {
@@ -1181,18 +1200,18 @@ public class NPCInteractor : MonoBehaviour
     {
         if (stazione1 == true)
         {
+
             bigliettoUI.SetActive(false);
             Invoke("PlayerTP", 1f);
             fadeInOut.FadeIn();
-            Debug.Log("VadoAStazione2");
 
         }
         else if (stazione1 == false)
         {
+
             bigliettoUI.SetActive(false);
             Invoke("PlayerTP", 1f);
             fadeInOut.FadeIn();
-            Debug.Log("VadoAStazione1");
         }
 
     }
@@ -1203,12 +1222,16 @@ public class NPCInteractor : MonoBehaviour
         {
             stazione1 = false;
             player.transform.position = posizioneStazione2.position;
+            player.GetComponent<Animator>().SetBool("IsWalking", false);
         }
         else if (stazione1 == false)
         {
             stazione1 = true;
             player.transform.position = posizioneStazione1.position;
+            player.GetComponent<Animator>().SetBool("IsWalking", false);
+
         }
 
     }
+
 }

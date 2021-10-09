@@ -209,7 +209,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
             //---------------AUTOBUS--------------------
 
-            if (NPCInteractor.selection.name == "Autobus" && this.gameObject.name == "BigliettoUI")
+            if (NPCInteractor.selection.name == "Autobus" && this.gameObject.name == "BigliettoUI" && NPCInteractor.autobusInRange == true)
             {
                 NPCInteractor.ViaggioInAutobus();
                 if (AudioManager.instance != null)
@@ -218,6 +218,26 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
 
             }
+            else if (NPCInteractor.selection.name == "Autobus" && this.gameObject.name == "BigliettoUI" && NPCInteractor.autobusInRange == false)
+            {
+                if (dialogueManager.inDialogue == false)
+                {
+
+                    dialogueManager.dialogue.sentences.Clear();
+                    dialogueManager.sentences.Clear();
+                    dialogueManager.dialogue.names.Clear();
+                    dialogueManager.names.Clear();
+
+                    dialogueManager.dialogue.names.Add("Artemisia");
+                    dialogueManager.dialogue.sentences.Add("I have to get close to get on the bus!");
+
+                    dialogueManager.StartDialogue(dialogueManager.dialogue);
+                    dialogueManager.DisplayNextSentence();
+
+                }
+            }
+
+
             else
             {
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;

@@ -225,6 +225,8 @@ public class Mongolfiera : MonoBehaviour
         player.GetComponent<Rigidbody2D>().gravityScale = 1.5f;
 
         player.transform.position = ArrivoPlayerFuori.position;
+        player.GetComponent<Animator>().SetBool("IsWalking", false);
+
         transform.GetChild(1).gameObject.SetActive(false);
         player.GetComponentInChildren<SpriteRenderer>().enabled = true;
         playerMovement.movementBlock = false;
@@ -235,6 +237,8 @@ public class Mongolfiera : MonoBehaviour
         player.GetComponent<Rigidbody2D>().gravityScale = 1.5f;
 
         player.transform.position = InizioPlayerFuori.position;
+        player.GetComponent<Animator>().SetBool("IsWalking", false);
+
         transform.GetChild(1).gameObject.SetActive(false);
         player.GetComponentInChildren<SpriteRenderer>().enabled = true;
         playerMovement.movementBlock = false;
