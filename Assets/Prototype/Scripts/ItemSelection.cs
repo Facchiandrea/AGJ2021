@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 public class ItemSelection : MonoBehaviour
 {
     public ViewModeSwap viewModeSwap;
@@ -30,7 +31,7 @@ public class ItemSelection : MonoBehaviour
 
         if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
         {
-            int layerMask = LayerMask.GetMask("ObjectsLayer");
+            int layerMask = LayerMask.GetMask("ObjectsLayer") | LayerMask.GetMask("UI");
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, 1000f, layerMask);
 
@@ -64,8 +65,10 @@ public class ItemSelection : MonoBehaviour
     {
         if (lockManager.lockPuzzleActive == false)
         {
-
-            if (Input.GetMouseButtonDown(0))
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+            }
+            else if (Input.GetMouseButtonDown(0))
             {
                 if (selection != null)
                 {

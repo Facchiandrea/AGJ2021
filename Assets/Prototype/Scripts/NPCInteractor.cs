@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class NPCInteractor : MonoBehaviour
 {
@@ -91,8 +92,11 @@ public class NPCInteractor : MonoBehaviour
     {
         if (lockManager.lockPuzzleActive == false)
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+            }
 
-            if (selection != null && fadeInOut.fadeTransition == false)
+            else if (selection != null && fadeInOut.fadeTransition == false)
             {
                 //-----------------TUTORIAL----------------
                 if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == false)
