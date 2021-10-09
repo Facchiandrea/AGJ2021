@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("IsWalking", false);
             rb.velocity = new Vector2(0, rb.velocity.y);
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
     }
 }

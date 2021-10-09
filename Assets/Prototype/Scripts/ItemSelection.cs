@@ -778,7 +778,7 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.dialogue.names.Add("Artemisia");
 
                             dialogueManager.dialogue.sentences.Add("Awwww, this cat is so cuteeee <3");
-                            dialogueManager.dialogue.sentences.Add("No Artemisia, you have to learn to contain yourself, you can't get silly every time you see a cat.");
+                            dialogueManager.dialogue.sentences.Add("No Artemisia, you have to learn to contain yourself, you can't act like an idiot every time you see a cat.");
                             dialogueManager.dialogue.sentences.Add("...");
                             dialogueManager.dialogue.sentences.Add("OMG,  WHAT CUTE, WHAT BEAUTIFUL, HELLO KITTY KITTEN PSS PSS COME HOME WITH ME");
 
@@ -1014,7 +1014,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("I've always found Saturn's rings fascinating. They are made of billions of small chunks of ice and rock coated with other materials such as dust.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
@@ -1048,7 +1048,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("It is one of Elon Musk's satellites. With this, I will have access to the internet from my small town of 10 inhabitants.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }

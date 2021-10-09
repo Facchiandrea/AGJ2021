@@ -139,7 +139,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("But know that you can't pick up an item until you know you need it. When you realize you need an item you already found while exploring, come back for it!");
                         dialogueManager.dialogue.sentences.Add("Actually, these pants don't have pockets. I don't want to carry useless stuff with me.");
                         dialogueManager.dialogue.sentences.Add("And if by chance I get lost, and I don't know where to go?");
-                        dialogueManager.dialogue.sentences.Add("If you really don't know what to do, you can consult the .txt file in the game folder.");
+                        dialogueManager.dialogue.sentences.Add("If you really don't know what to do, you can download the .txt file with the solution from the Itch.Io page.");
                         dialogueManager.dialogue.sentences.Add("I understand. I hope I won't need it.");
                         dialogueManager.dialogue.sentences.Add("We all hope so.");
 
@@ -182,7 +182,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("But know that you can't pick up an item until you know you need it. When you realize you need an item you already found while exploring, come back for it!");
                         dialogueManager.dialogue.sentences.Add("Right, I don't have pockets, and I don't want to carry useless stuff with me.");
                         dialogueManager.dialogue.sentences.Add("And where is the txt file with the solution?");
-                        dialogueManager.dialogue.sentences.Add("In the game folder!");
+                        dialogueManager.dialogue.sentences.Add("You can download it from the Itch.Io page!");
                         dialogueManager.dialogue.sentences.Add("I understand. If I need the explanation again, I'll be back!");
                         dialogueManager.dialogue.sentences.Add("Let's hope not!");
 
