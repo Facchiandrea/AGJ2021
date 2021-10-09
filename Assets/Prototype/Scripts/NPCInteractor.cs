@@ -57,7 +57,7 @@ public class NPCInteractor : MonoBehaviour
     public DialogueManager dialogueManager;
 
     public bool compariPortale = false;
-    public bool dragging;
+    //public bool dragging;
     private int bambinoCounter1 = 0;
     private int bambinoCounter2 = 0;
     private int ragazzoCounter = 0;
@@ -71,7 +71,7 @@ public class NPCInteractor : MonoBehaviour
             _selectionItem = null;
             selection = null;
         }
-        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false) //&& dragging == false)
+        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
         {
             int layerMask = LayerMask.GetMask("NPCs");
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);

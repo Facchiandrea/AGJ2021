@@ -28,7 +28,7 @@ public class ItemSelection : MonoBehaviour
             selection = null;
         }
 
-        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)// && NPCInteractor.dragging == false)
+        if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
         {
             int layerMask = LayerMask.GetMask("ObjectsLayer");
             Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
