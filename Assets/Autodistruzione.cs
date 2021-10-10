@@ -11,7 +11,7 @@ public class Autodistruzione : MonoBehaviour
 
     public IEnumerator AutodistruzioneCoroutine()
     {
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(2f);
         gameObject.SetActive(false);
 
     }

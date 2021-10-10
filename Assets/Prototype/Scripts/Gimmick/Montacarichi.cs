@@ -30,9 +30,14 @@ public class Montacarichi : MonoBehaviour
 
     public void SpostamentoInMontacarichi()
     {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.Play("Spostamento_Montacarichi_sfx");
+        }
+
         playerMovement.movementBlock = true;
         playerMovement.rb.velocity = new Vector2(0, playerMovement.rb.velocity.y);
-
+        playerMovement.GetComponent<Animator>().SetBool("IsWalking", false);
         if (montacarichiATerra == true)
         {
             traveling = true;

@@ -1998,7 +1998,7 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: Scale_sfx
-    clip: {fileID: 8300000, guid: 3fbabfec42bcc0b4682abac60ce37011, type: 3}
+    clip: {fileID: 8300000, guid: 09dfcb18f60157049bba5930198a4c52, type: 3}
     loop: 0
     type: 1
     priority: 128
@@ -2053,6 +2053,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Click_Back_sfx
     clip: {fileID: 8300000, guid: ed19ecf5804117d45872c006bec2ffdf, type: 3}
+    loop: 0
+    type: 1
+    priority: 128
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Spostamento_Montacarichi_sfx
+    clip: {fileID: 8300000, guid: fb1fb0b210ac5da4095fe85773576c7c, type: 3}
     loop: 0
     type: 1
     priority: 128
