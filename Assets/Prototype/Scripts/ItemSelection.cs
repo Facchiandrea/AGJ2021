@@ -496,8 +496,14 @@ public class ItemSelection : MonoBehaviour
                             dialogueManager.names.Clear();
 
                             dialogueManager.dialogue.names.Add("Artemisia");
+                            dialogueManager.dialogue.names.Add("Artemisia");
+                            dialogueManager.dialogue.names.Add("Artemisia");
+                            dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("PLACEHOLDER");
+                            dialogueManager.dialogue.sentences.Add("Wow, it's over, it's really over.\nI will miss traveling within these paintings, and I will miss the characters I have met. Even the annoying kid.");
+                            dialogueManager.dialogue.sentences.Add("It was nice to travel. I stopped doing it in real life, but now I'd like to see these places firsthand.");
+                            dialogueManager.dialogue.sentences.Add("I should take a vacation, take a break from work and visit my parents.");
+                            dialogueManager.dialogue.sentences.Add("I think this adventure did me good, but now the time has come to move out. I have to get out of this place and also from my home.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
