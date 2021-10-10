@@ -490,7 +490,7 @@ public class ItemSelection : MonoBehaviour
                     {
                         lockManager.PuzzleLockStart();
                     }
-                    else if (selection.name == "Portale" && portaleAperto == true)
+                    else if (selection.name == "Portale" && portaleAperto == true && lockManager.oraPuoiCliccare == true)
                     {
                         if (dialogueManager.inDialogue == false)
                         {

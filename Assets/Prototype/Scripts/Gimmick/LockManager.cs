@@ -8,11 +8,16 @@ public class LockManager : MonoBehaviour
     public ItemSelection itemSelection;
     public bool lockPuzzleActive = false;
     public GameObject puzzlePanel;
-    public GameObject catene;
+    public GameObject portaleIncatenato;
+    public GameObject aperto;
+    public GameObject scatenato;
+
 
     public TextMeshProUGUI num1TXT;
     public TextMeshProUGUI num2TXT;
     public TextMeshProUGUI num3TXT;
+
+    public bool oraPuoiCliccare = false;
 
     public int counter1;
     public int counter2;
@@ -35,14 +40,36 @@ public class LockManager : MonoBehaviour
         {
             counter1 = 0;
             itemSelection.portaleAperto = true;
-            catene.GetComponent<Animator>().SetBool("Open", true);
             ExitPuzzle();
-            Debug.Log("Sbloccato");
+            StartCoroutine(Dissolvi());
+            scatenato.SetActive(true);
+
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.Play("Click_Lucchetto_sfx");
             }
         }
+    }
+
+    public IEnumerator Dissolvi()
+    {
+        float progress = 0;
+
+        while (progress < 1f)
+        {
+            float newAlpha = Mathf.Lerp(1f, 0f, (progress / 1f));
+            portaleIncatenato.GetComponent<SpriteRenderer>().color = new Color(portaleIncatenato.GetComponent<SpriteRenderer>().color.r, portaleIncatenato.GetComponent<SpriteRenderer>().color.g, portaleIncatenato.GetComponent<SpriteRenderer>().color.b, newAlpha);
+            progress += Time.deltaTime;
+            yield return null;
+        }
+        new WaitForSeconds(1f);
+        portaleIncatenato.GetComponent<SpriteRenderer>().color = new Color(portaleIncatenato.GetComponent<SpriteRenderer>().color.r, portaleIncatenato.GetComponent<SpriteRenderer>().color.g, portaleIncatenato.GetComponent<SpriteRenderer>().color.b, 0);
+        aperto.SetActive(true);
+        scatenato.SetActive(false);
+        oraPuoiCliccare = true;
+
+        yield return null;
+
     }
     public void PuzzleLockStart()
     {
