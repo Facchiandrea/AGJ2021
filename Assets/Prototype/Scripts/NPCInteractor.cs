@@ -92,11 +92,11 @@ public class NPCInteractor : MonoBehaviour
     {
         if (lockManager.lockPuzzleActive == false)
         {
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-            }
+            //if (EventSystem.current.IsPointerOverGameObject())
+            //{
+            //}
 
-            else if (selection != null && fadeInOut.fadeTransition == false)
+            if (selection != null && fadeInOut.fadeTransition == false)
             {
                 //-----------------TUTORIAL----------------
                 if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == false)

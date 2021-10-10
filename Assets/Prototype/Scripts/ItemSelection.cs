@@ -65,10 +65,10 @@ public class ItemSelection : MonoBehaviour
     {
         if (lockManager.lockPuzzleActive == false)
         {
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-            }
-            else if (Input.GetMouseButtonDown(0))
+            //if (EventSystem.current.IsPointerOverGameObject())
+            //{
+            //}
+            if (Input.GetMouseButtonDown(0))
             {
                 if (selection != null)
                 {
