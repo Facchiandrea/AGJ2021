@@ -16,6 +16,7 @@ public class ItemSelection : MonoBehaviour
     public PickUpCasco pickUpCasco;
     public LockManager lockManager;
     public bool portaleAperto;
+    public bool endSequenceStarted = false;
 
     public GameObject whiteScreen;
     public GameObject scrittaFinale;
@@ -47,6 +48,7 @@ public class ItemSelection : MonoBehaviour
 
     private void EndSequence()
     {
+        endSequenceStarted = true;
         whiteScreen.SetActive(true);
         scrittaFinale.SetActive(true);
         StartCoroutine(ToMenuCoroutine());
@@ -507,7 +509,10 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }
-                        EndSequence();
+                        if (endSequenceStarted == false)
+                        {
+                            EndSequence();
+                        }
                     }
 
                     //---------------------SCALA--------------------------
