@@ -439,7 +439,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.dialogue.sentences.Add("If you help me, I'll give you a nice gift!");
                         dialogueManager.dialogue.sentences.Add("Why should I help you? I have already regretted having created you.");
                         dialogueManager.dialogue.sentences.Add("PLEEEEEEASE?");
-                        dialogueManager.dialogue.sentences.Add("Uff… okay");
+                        dialogueManager.dialogue.sentences.Add("Uff… okay.");
 
 
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
