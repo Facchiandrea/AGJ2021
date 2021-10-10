@@ -20,6 +20,7 @@ public class ItemSelection : MonoBehaviour
 
     public GameObject whiteScreen;
     public GameObject scrittaFinale;
+    public GameObject scrittaFinale2;
 
     private void FixedUpdate()
     {
@@ -51,6 +52,7 @@ public class ItemSelection : MonoBehaviour
         endSequenceStarted = true;
         whiteScreen.SetActive(true);
         scrittaFinale.SetActive(true);
+        scrittaFinale2.SetActive(true);
         StartCoroutine(ToMenuCoroutine());
     }
 
@@ -58,6 +60,7 @@ public class ItemSelection : MonoBehaviour
     public IEnumerator ToMenuCoroutine()
     {
         lockManager.lockPuzzleActive = true;
+        AudioManager.instance.FadeOut("BoscoAM");
         yield return new WaitForSeconds(15f);
         lockManager.lockPuzzleActive = false;
         SceneManager.LoadScene(0);
