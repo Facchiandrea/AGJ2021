@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class ItemSelection : MonoBehaviour
 {
     public ViewModeSwap viewModeSwap;
-    private Transform _selectionItem;
+    public Transform _selectionItem;
     public Transform selection;
     public MorbidDetector MorbidDetector;
     public NPCInteractor NPCInteractor;
@@ -1065,7 +1065,7 @@ public class ItemSelection : MonoBehaviour
 
                             dialogueManager.dialogue.names.Add("Artemisia");
 
-                            dialogueManager.dialogue.sentences.Add("It is one of Elon Musk's satellites.\nWith this, I will have access to the internet from my small town of 10 inhabitants.");
+                            dialogueManager.dialogue.sentences.Add("It is one of Elon Musk's satellites.\nWith this, I will have access to the internet from my small town.");
 
                             dialogueManager.StartDialogue(dialogueManager.dialogue);
                         }

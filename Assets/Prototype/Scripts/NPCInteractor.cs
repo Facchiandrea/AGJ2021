@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class NPCInteractor : MonoBehaviour
 {
     public FadeInOut fadeInOut;
     public ViewModeSwap viewModeSwap;
-    private Transform _selectionItem;
+    public Transform _selectionItem;
     public Transform selection;
 
     public bool tutorialFinito;
@@ -64,6 +65,9 @@ public class NPCInteractor : MonoBehaviour
     private int ragazzoCounter = 0;
     private int uomoCounter = 0;
 
+    //fixes
+    public TMP_Text dudeName;
+
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -98,6 +102,11 @@ public class NPCInteractor : MonoBehaviour
 
             if (selection != null && fadeInOut.fadeTransition == false)
             {
+                //fix
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Debug.Log("clickete");
+                }
                 //-----------------TUTORIAL----------------
                 if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == false)
                 {
@@ -217,6 +226,9 @@ public class NPCInteractor : MonoBehaviour
 
                         dialogueManager.dialogue.names.Add("Cool dude");
                         dialogueManager.dialogue.names.Add("Cool dude");
+
+                        //fix
+                        dudeName.text = "Cool  Dude";
 
                         dialogueManager.dialogue.sentences.Add("Yes, yes! This is perfect! Rocking! Suits me, right ? It enhances my awesome cheekbones. Thanks!");
                         dialogueManager.dialogue.sentences.Add("Now you can keep the hairpin. All in all, it wasn't that cool...");
@@ -688,6 +700,7 @@ public class NPCInteractor : MonoBehaviour
                 else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == true && mongolfieraScript.traveling == false)
                 {
                     mongolfieraScript.ViaggioInMongolfiera();
+
                     if (dialogueManager.inDialogue == false)
                     {
                         dialogueManager.dialogue.sentences.Clear();

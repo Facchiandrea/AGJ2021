@@ -46,6 +46,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.dialogue.names.Clear();
                     dialogueManager.names.Clear();
 
+                    //fix
+                    NPCInteractor.dudeName.text = "Cool  Dude";
+
                     dialogueManager.dialogue.names.Add("Cool dude");
                     dialogueManager.dialogue.names.Add("Cool dude");
 
@@ -250,6 +253,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             if (NPCInteractor.selection.name == "Mongolfiera" && this.gameObject.name == "FiammiferiUI" && NPCInteractor.mongolfieraScript.playerInRange == true && NPCInteractor.mongolfieraScript.traveling == false)
             {
                 NPCInteractor.mongolfieraScript.ViaggioInMongolfiera();
+
                 if (dialogueManager.inDialogue == false)
                 {
                     dialogueManager.dialogue.sentences.Clear();
@@ -422,7 +426,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
                     dialogueManager.StartDialogue(dialogueManager.dialogue);
                     dialogueManager.DisplayNextSentence();
                 }
-                NPCInteractor.gambaLeva.SetActive(true);
+                //NPCInteractor.gambaLeva.SetActive(true);
             }
 
             else
@@ -515,6 +519,12 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 transform.GetComponent<RectTransform>().anchoredPosition = startPos;
             }
+
+            //Fix
+            NPCInteractor.selection.GetChild(0).gameObject.SetActive(false);
+            NPCInteractor._selectionItem = null;
+            NPCInteractor.selection = null;
+
 
         }
         else
