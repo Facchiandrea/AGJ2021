@@ -1224,6 +1224,10 @@ public class NPCInteractor : MonoBehaviour
     {
         if (stazione1 == true)
         {
+            //fix
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            player.GetComponent<Animator>().SetBool("IsWalking", false);
 
             bigliettoUI.SetActive(false);
             Invoke("PlayerTP", 1f);
@@ -1232,6 +1236,10 @@ public class NPCInteractor : MonoBehaviour
         }
         else if (stazione1 == false)
         {
+            //fix
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            player.GetComponent<Animator>().SetBool("IsWalking", false);
 
             bigliettoUI.SetActive(false);
             Invoke("PlayerTP", 1f);

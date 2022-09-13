@@ -17,12 +17,19 @@ public class Scala : MonoBehaviour
     {
         if (scalaChecker.scalaTrovata && fadeInOut.fadeTransition == false)
         {
+            //fix
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            player.GetComponent<Animator>().SetBool("IsWalking", false);
+
+
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.Play("Scale_sfx");
             }
             fadeInOut.FadeIn();
             Invoke("Teleporting", 1f);
+
         }
         else if (scalaChecker.scalaTrovata == false)
         {
