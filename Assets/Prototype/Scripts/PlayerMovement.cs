@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public LockManager lockManager;
     private Animator animator;
 
+    public Joystick joystick;
+
 
     private void Awake()
     {
@@ -25,7 +27,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (viewModeSwap.fullView == false && movementBlock == false && viewModeSwap.transitionToFull == false && viewModeSwap.transitionToSingle == false && lockManager.lockPuzzleActive == false)
         {
-            horizontalMovement = Input.GetAxisRaw("Horizontal");
+            if (joystick.Horizontal >= 0.9f)
+            {
+                horizontalMovement = 1;
+            }
+            else if (joystick.Horizontal <= -0.9f)
+            {
+                horizontalMovement = -1;
+            }
+            else
+            {
+                horizontalMovement = 0;
+            }
+
+            //horizontalMovement = Input.GetAxisRaw("Horizontal");
             if (horizontalMovement > 0f)
             {
                 animator.SetBool("IsWalking", true);
