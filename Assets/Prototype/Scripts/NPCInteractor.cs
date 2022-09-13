@@ -103,11 +103,6 @@ public class NPCInteractor : MonoBehaviour
 
             if (selection != null && fadeInOut.fadeTransition == false)
             {
-                //fix
-                if (Input.GetMouseButtonDown(0))
-                {
-                    Debug.Log("clickete");
-                }
                 //-----------------TUTORIAL----------------
                 if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == false)
                 {
