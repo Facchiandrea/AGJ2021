@@ -22,6 +22,10 @@ public class ItemSelection : MonoBehaviour
     public GameObject scrittaFinale;
     public GameObject scrittaFinale2;
 
+
+    //fix
+    public OpenCloseInventory openCloseInventory;
+
     private void FixedUpdate()
     {
         if (_selectionItem != null)
@@ -68,11 +72,9 @@ public class ItemSelection : MonoBehaviour
     }
     private void Update()
     {
-        if (lockManager.lockPuzzleActive == false)
+        if (lockManager.lockPuzzleActive == false && openCloseInventory.cursorOnInventory == false) //fix added && condition
         {
-            //if (EventSystem.current.IsPointerOverGameObject())
-            //{
-            //}
+
             if (Input.GetMouseButtonDown(0))
             {
                 if (selection != null)

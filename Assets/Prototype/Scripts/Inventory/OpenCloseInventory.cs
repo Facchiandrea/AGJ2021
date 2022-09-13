@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class OpenCloseInventory : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class OpenCloseInventory : MonoBehaviour
     RectTransform thisRectTransform;
 
     public RectTransform inventoryBarRectTransform;
+
+    //fix
+    public bool cursorOnInventory;
 
     private void Start()
     {
@@ -37,6 +41,16 @@ public class OpenCloseInventory : MonoBehaviour
 
     private void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())    // is the touch on the GUI
+        {
+            cursorOnInventory = true;
+        }
+
+        else
+        {
+            cursorOnInventory = false;
+        }
+
         float step = speed * Time.deltaTime;
 
         if (inventoryOpen == true && thisRectTransform.anchoredPosition.y != openedPosition.y)

@@ -65,8 +65,12 @@ public class NPCInteractor : MonoBehaviour
     private int ragazzoCounter = 0;
     private int uomoCounter = 0;
 
-    //fixes
+    //fix
     public TMP_Text dudeName;
+
+    //fix
+    public OpenCloseInventory openCloseInventory;
+
 
     private void FixedUpdate()
     {
@@ -94,11 +98,8 @@ public class NPCInteractor : MonoBehaviour
 
     private void Update()
     {
-        if (lockManager.lockPuzzleActive == false)
+        if (lockManager.lockPuzzleActive == false && openCloseInventory.cursorOnInventory == false) //fix added && condition
         {
-            //if (EventSystem.current.IsPointerOverGameObject())
-            //{
-            //}
 
             if (selection != null && fadeInOut.fadeTransition == false)
             {
