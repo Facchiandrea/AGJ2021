@@ -74,7 +74,6 @@ public class ItemSelection : MonoBehaviour
     {
         if (lockManager.lockPuzzleActive == false && openCloseInventory.cursorOnInventory == false) //fix added && condition
         {
-
             if (Input.GetMouseButtonDown(0))
             {
                 if (selection != null)
