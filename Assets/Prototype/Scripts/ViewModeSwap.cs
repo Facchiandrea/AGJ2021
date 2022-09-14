@@ -36,6 +36,8 @@ public class ViewModeSwap : MonoBehaviour
     private float timerCameraTransition = 1.2f;
     private float timer;
 
+    private float deltaMagnitudeDiff;
+
     private void Start()
     {
         fullView = false;
@@ -46,8 +48,27 @@ public class ViewModeSwap : MonoBehaviour
     {
         if (lockManager.lockPuzzleActive == false)
         {
+            if (Input.touchCount == 2)
+            {
+                Touch touchZero = Input.GetTouch(0);
+                Touch touchOne = Input.GetTouch(1);
+                Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+                Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
 
-            if (Input.GetKeyDown(KeyCode.Space) && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
+                // Find the magnitude of the vector (the distance) between the touches in each frame.
+                float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+                float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+                // Find the difference in the distances between each frame.
+                deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+
+                //Debug.Log(deltaMagnitudeDiff.ToString());
+            }
+            else
+            {
+                deltaMagnitudeDiff = 0;
+            }
+            if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff < 0 && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
             {
                 EnterFullView();
                 transitionToFull = true;
@@ -55,7 +76,7 @@ public class ViewModeSwap : MonoBehaviour
 
             }
 
-            else if (Input.GetKeyDown(KeyCode.Space) && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
+            else if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff > 0 && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
             {
                 ExitFullView();
                 transitionToSingle = true;
