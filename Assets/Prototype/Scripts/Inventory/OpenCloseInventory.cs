@@ -41,14 +41,28 @@ public class OpenCloseInventory : MonoBehaviour
 
     private void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())    // is the touch on the GUI
+        if (EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))    // is the touch on the GUI
         {
-            cursorOnInventory = true;
+            PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+            eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+
+            for (int i = 0; i < results.Count; i++)
+            {
+                if (results[i].gameObject.layer == 5)
+                {
+                    cursorOnInventory = true;
+                    Debug.Log("On UI");
+                }
+            }
         }
 
         else
         {
             cursorOnInventory = false;
+            Debug.Log("Not on UI");
+
         }
 
         float step = speed * Time.deltaTime;

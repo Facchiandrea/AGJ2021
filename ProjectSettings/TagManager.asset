@@ -15,6 +15,7 @@ TagManager:
   - NPC
   - Luna
   - Floor
+  - Joystick
   layers:
   - Default
   - TransparentFX
