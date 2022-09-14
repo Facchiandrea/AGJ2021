@@ -53,7 +53,6 @@ public class OpenCloseInventory : MonoBehaviour
                 if (results[i].gameObject.layer == 5)
                 {
                     cursorOnInventory = true;
-                    Debug.Log("On UI");
                 }
             }
         }
@@ -61,7 +60,7 @@ public class OpenCloseInventory : MonoBehaviour
         else
         {
             cursorOnInventory = false;
-            Debug.Log("Not on UI");
+
 
         }
 
