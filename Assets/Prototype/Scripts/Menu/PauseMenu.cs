@@ -16,34 +16,40 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && dialogueManager.inDialogue == false)
         {
-            if (inPause && inMenuOption == false)
-            {
-                Continue();
-                if (AudioManager.instance != null)
-                {
-                    AudioManager.instance.Play("Click_Back_sfx");
-                }
-
-            }
-            else if (inPause && inMenuOption == true)
-            {
-                optionsMenu.SetActive(false);
-                pauseMenu.SetActive(true);
-                inMenuOption = false;
-                if (AudioManager.instance != null)
-                {
-                    AudioManager.instance.Play("Click_Back_sfx");
-                }
-
-            }
-            else
-            {
-                Time.timeScale = 0;
-                inPause = true;
-                optionsMenu.SetActive(false);
-                pauseMenu.SetActive(true);
-            }
+            PauseButton();
         }
+    }
+    public void PauseButton()
+    {
+        Debug.Log("Pause");
+        if (inPause && inMenuOption == false)
+        {
+            Continue();
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play("Click_Back_sfx");
+            }
+
+        }
+        else if (inPause && inMenuOption == true)
+        {
+            optionsMenu.SetActive(false);
+            pauseMenu.SetActive(true);
+            inMenuOption = false;
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play("Click_Back_sfx");
+            }
+
+        }
+        else
+        {
+            Time.timeScale = 0;
+            inPause = true;
+            optionsMenu.SetActive(false);
+            pauseMenu.SetActive(true);
+        }
+
     }
 
     public void OptionBack()
