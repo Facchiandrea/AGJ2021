@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class HeadphonesMSGScript : MonoBehaviour
 {
+    public static bool FirstTime = true;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DeactivatePanel", 4f);
+        if (FirstTime)
+        {
+            Invoke("DeactivatePanel", 4f);
+            FirstTime = false;
+        }
+        else
+        {
+            DeactivatePanel();
+        }
     }
 
     public void DeactivatePanel()
