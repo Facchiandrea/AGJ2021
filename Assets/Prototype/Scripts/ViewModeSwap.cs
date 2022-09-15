@@ -26,6 +26,7 @@ public class ViewModeSwap : MonoBehaviour
     public Mongolfiera mongolfiera;
     public DialogueManager dialogueManager;
     public LockManager lockManager;
+    public HintButtonScript hintButtonScript;
 
     [HideInInspector]
     public bool fullView;
@@ -48,7 +49,7 @@ public class ViewModeSwap : MonoBehaviour
     {
         if (lockManager.lockPuzzleActive == false)
         {
-            if (Input.touchCount == 2)
+            if (Input.touchCount == 2 && hintButtonScript.showPrompts == false || Input.touchCount == 3 && hintButtonScript.showPrompts == true)
             {
                 Touch touchZero = Input.GetTouch(0);
                 Touch touchOne = Input.GetTouch(1);
@@ -68,7 +69,7 @@ public class ViewModeSwap : MonoBehaviour
             {
                 deltaMagnitudeDiff = 0;
             }
-            if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff < 0 && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
+            if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff < -0.5f && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
             {
                 EnterFullView();
                 transitionToFull = true;
@@ -76,7 +77,7 @@ public class ViewModeSwap : MonoBehaviour
 
             }
 
-            else if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff > 0 && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
+            else if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff > 0.5f && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
             {
                 ExitFullView();
                 transitionToSingle = true;
