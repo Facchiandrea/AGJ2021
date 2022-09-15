@@ -38,7 +38,7 @@ public class ItemSelection : MonoBehaviour
         if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
         {
             int layerMask = LayerMask.GetMask("ObjectsLayer") | LayerMask.GetMask("UI");
-            Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 cubeRay = Camera.main.ScreenToWorldPoint(new Vector2(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y));
             RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, 1000f, layerMask);
 
             if (cubeHit && cubeHit.transform.CompareTag("Item"))
