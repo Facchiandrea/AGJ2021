@@ -10,20 +10,31 @@ public class HintButtonScript : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        ShowPrompts();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        HidePrompts();
+    }
+
+    public void ShowPrompts()
+    {
         foreach (var item in Painting1Prompts)
         {
             item.SetActive(true);
         }
         showPrompts = true;
+
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    public void HidePrompts()
     {
         foreach (var item in Painting1Prompts)
         {
             item.SetActive(false);
         }
         showPrompts = false;
-    }
 
+    }
 }

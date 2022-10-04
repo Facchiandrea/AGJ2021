@@ -70,6 +70,8 @@ public class NPCInteractor : MonoBehaviour
 
     //fix
     public OpenCloseInventory openCloseInventory;
+    public TouchManager touchManager;
+
 
 
     private void FixedUpdate()
@@ -83,7 +85,7 @@ public class NPCInteractor : MonoBehaviour
         if (viewModeSwap.fullView == false && viewModeSwap.transitionToSingle == false)
         {
             int layerMask = LayerMask.GetMask("NPCs");
-            Vector2 cubeRay = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 cubeRay = Camera.main.ScreenToWorldPoint(new Vector2(Input.GetTouch(touchManager.fingerNum).position.x, Input.GetTouch(touchManager.fingerNum).position.y));
             RaycastHit2D cubeHit = Physics2D.Raycast(cubeRay, Vector2.zero, 1000f, layerMask);
 
             if (cubeHit && cubeHit.transform.CompareTag("NPC"))
@@ -104,7 +106,7 @@ public class NPCInteractor : MonoBehaviour
             if (selection != null && fadeInOut.fadeTransition == false)
             {
                 //-----------------TUTORIAL----------------
-                if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == false)
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Tutorial" && tutorialFinito == false)
                 {
                     tutorialFinito = true;
 
@@ -160,7 +162,7 @@ public class NPCInteractor : MonoBehaviour
                     }
 
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Tutorial" && tutorialFinito == true)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Tutorial" && tutorialFinito == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -207,7 +209,7 @@ public class NPCInteractor : MonoBehaviour
 
                 //-----------------RAGAZZO----------------
 
-                if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoUI.activeInHierarchy == true)
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "RagazzoCheVuoleIlCasco" && cascoUI.activeInHierarchy == true)
                 {
                     cascoUI.SetActive(false);
                     cascoPortato = true;
@@ -238,7 +240,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 0)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 0)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -262,7 +264,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                     pickUpCascoScript.canPickUp = true;
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 1)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 1)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -284,7 +286,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 2)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 2)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -307,7 +309,7 @@ public class NPCInteractor : MonoBehaviour
                         ragazzoCounter = 3;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 3)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == false && ragazzoCounter == 3)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -328,7 +330,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == true)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "RagazzoCheVuoleIlCasco" && cascoPortato == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -347,7 +349,7 @@ public class NPCInteractor : MonoBehaviour
                 }
                 //-----------------BAMBINO----------------
 
-                if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaUI.activeInHierarchy)
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && scolapastaUI.activeInHierarchy)
                 {
                     scolapastaUI.SetActive(false);
                     scolapastaPortato = true;
@@ -391,7 +393,7 @@ public class NPCInteractor : MonoBehaviour
                     }
 
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && uovoUI.activeInHierarchy)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && uovoUI.activeInHierarchy)
                 {
                     uovoUI.SetActive(false);
                     uovoPortato = true;
@@ -420,7 +422,7 @@ public class NPCInteractor : MonoBehaviour
                     bigliettoUI.SetActive(true);
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 0)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 0)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -455,7 +457,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                     pickUpScolapastaScript.canPickUp = true;
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 1)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 1)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -475,7 +477,7 @@ public class NPCInteractor : MonoBehaviour
                         bambinoCounter1 = 2;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 2)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 2)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -495,7 +497,7 @@ public class NPCInteractor : MonoBehaviour
                         bambinoCounter1 = 3;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 3)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && scolapastaPortato == false && bambinoCounter1 == 3)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -516,7 +518,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 0)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 0)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -544,7 +546,7 @@ public class NPCInteractor : MonoBehaviour
                     pickUpUovoScript.canPickUp = true;
 
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 1)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 1)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -569,7 +571,7 @@ public class NPCInteractor : MonoBehaviour
                         bambinoCounter2 = 2;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 2)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && scolapastaPortato == true && uovoPortato == false && bambinoCounter2 == 2)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -592,7 +594,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Prince" && uovoPortato == true && uovoPortato == true)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Prince" && uovoPortato == true && uovoPortato == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -615,7 +617,7 @@ public class NPCInteractor : MonoBehaviour
                 }
                 //-----------------AUTOBUS----------------
 
-                if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true && autobusInRange == true)
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true && autobusInRange == true)
                 {
                     ViaggioInAutobus();
                     if (AudioManager.instance != null)
@@ -624,7 +626,7 @@ public class NPCInteractor : MonoBehaviour
                     }
 
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true && autobusInRange == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == true && autobusInRange == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -641,7 +643,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Autobus" && bigliettoUI.activeInHierarchy == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -659,7 +661,7 @@ public class NPCInteractor : MonoBehaviour
                 }
 
                 //-----------------Mongolfiera----------------
-                if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == false && mongolfieraScript.traveling == false)
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Mongolfiera" && fiammiferiInInventario == false && mongolfieraScript.traveling == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -677,7 +679,7 @@ public class NPCInteractor : MonoBehaviour
 
                     pickUpFiammiferi.canPickUp = true;
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == false && mongolfieraScript.traveling == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == false && mongolfieraScript.traveling == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -693,7 +695,7 @@ public class NPCInteractor : MonoBehaviour
                         dialogueManager.StartDialogue(dialogueManager.dialogue);
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == true && mongolfieraScript.traveling == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Mongolfiera" && fiammiferiInInventario == true && mongolfieraScript.playerInRange == true && mongolfieraScript.traveling == false)
                 {
                     mongolfieraScript.ViaggioInMongolfiera();
 
@@ -719,7 +721,7 @@ public class NPCInteractor : MonoBehaviour
                 }
 
                 //-----------------Armadio----------------
-                if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == true && gambaPresa == false && pickUpGamba.canPickUp == true && dialogueManager.inDialogue == false)
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == true && gambaPresa == false && pickUpGamba.canPickUp == true && dialogueManager.inDialogue == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -740,7 +742,7 @@ public class NPCInteractor : MonoBehaviour
 
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == true && dialogueManager.inDialogue == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == true && dialogueManager.inDialogue == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -765,7 +767,7 @@ public class NPCInteractor : MonoBehaviour
                     selection.GetChild(2).gameObject.SetActive(true);
 
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Armadio" && forcinaUI.activeInHierarchy && armadioScript.playerInRange == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -781,7 +783,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Armadio" && armadioAperto == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -797,7 +799,7 @@ public class NPCInteractor : MonoBehaviour
 
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == false && gambaPresa == false && pickUpGamba.canPickUp == true)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Armadio" && armadioAperto == true && armadioScript.playerInRange == false && gambaPresa == false && pickUpGamba.canPickUp == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -818,7 +820,7 @@ public class NPCInteractor : MonoBehaviour
 
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Armadio" && gambaPresa == true || Input.GetMouseButtonDown(0) && selection.name == "Armadio" && armadioAperto == true && gambaPresa == false && pickUpGamba.canPickUp == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Armadio" && gambaPresa == true || Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Armadio" && armadioAperto == true && gambaPresa == false && pickUpGamba.canPickUp == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -835,7 +837,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
                 //------------------MONTACARICHI-------------
-                if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && gambaUI.activeInHierarchy)
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Montacarichi" && gambaUI.activeInHierarchy)
                 {
                     gambaUI.SetActive(false);
                     montacarichi.montacarichiRiparato = true;
@@ -859,7 +861,7 @@ public class NPCInteractor : MonoBehaviour
                     gambaLeva.SetActive(true);
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.montacarichiRiparato == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Montacarichi" && montacarichi.montacarichiRiparato == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -877,11 +879,11 @@ public class NPCInteractor : MonoBehaviour
                     pickUpGamba.canPickUp = true;
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == true && montacarichi.montacarichiRiparato == true && montacarichi.traveling == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Montacarichi" && montacarichi.playerInRange == true && montacarichi.montacarichiRiparato == true && montacarichi.traveling == false)
                 {
                     montacarichi.SpostamentoInMontacarichi();
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Montacarichi" && montacarichi.playerInRange == false && montacarichi.montacarichiRiparato == true)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Montacarichi" && montacarichi.playerInRange == false && montacarichi.montacarichiRiparato == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -899,7 +901,7 @@ public class NPCInteractor : MonoBehaviour
                 }
 
                 //------------------UOMO-------------------------
-                if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaUI.activeInHierarchy && uomo.playerInRange == true)
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaUI.activeInHierarchy && uomo.playerInRange == true)
                 {
                     conchigliaUI.SetActive(false);
                     conchigliaPortata = true;
@@ -943,7 +945,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                     filastroccaUI.SetActive(true);
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaUI.activeInHierarchy && uomo.playerInRange == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaUI.activeInHierarchy && uomo.playerInRange == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -959,7 +961,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 0)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 0)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -992,7 +994,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                     pickUpConchiglia.canPickUp = true;
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 1)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 1)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1014,7 +1016,7 @@ public class NPCInteractor : MonoBehaviour
                         uomoCounter = 2;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 2)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 2)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1036,7 +1038,7 @@ public class NPCInteractor : MonoBehaviour
                         uomoCounter = 3;
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 3)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == true && uomoCounter == 3)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1055,7 +1057,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaPortata == false && uomo.playerInRange == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1072,7 +1074,7 @@ public class NPCInteractor : MonoBehaviour
                     }
                 }
 
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == true && lockManager.itemSelection.portaleAperto == false)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaPortata == true && lockManager.itemSelection.portaleAperto == false)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1094,7 +1096,7 @@ public class NPCInteractor : MonoBehaviour
 
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && selection.name == "Old Man" && conchigliaPortata == true && lockManager.itemSelection.portaleAperto == true)
+                else if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Old Man" && conchigliaPortata == true && lockManager.itemSelection.portaleAperto == true)
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1118,7 +1120,7 @@ public class NPCInteractor : MonoBehaviour
                 }
 
                 //------------------PECORE-------------------------
-                if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 3")
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Pecora 3")
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1144,7 +1146,7 @@ public class NPCInteractor : MonoBehaviour
                         }
                     }
                 }
-                if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 1")
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Pecora 1")
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1165,7 +1167,7 @@ public class NPCInteractor : MonoBehaviour
 
                     }
                 }
-                if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 2")
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Pecora 2")
                 {
                     if (dialogueManager.inDialogue == false)
                     {
@@ -1188,7 +1190,7 @@ public class NPCInteractor : MonoBehaviour
 
                 }
 
-                if (Input.GetMouseButtonDown(0) && selection.name == "Pecora 4")
+                if (Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended && selection.name == "Pecora 4")
                 {
                     if (dialogueManager.inDialogue == false)
                     {

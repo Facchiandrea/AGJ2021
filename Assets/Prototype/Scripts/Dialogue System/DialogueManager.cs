@@ -31,6 +31,9 @@ public class DialogueManager : MonoBehaviour
 
 
     public NPCInteractor NPCInteractor;
+    public HintButtonScript hintButtonScript;
+    public TouchManager touchManager;
+
 
     void Awake()
     {
@@ -42,7 +45,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (inDialogue && Input.GetMouseButtonDown(0))
+        if (inDialogue && Input.touches[touchManager.fingerNum].phase == TouchPhase.Ended)
         {
             DisplayNextSentence();
         }
@@ -54,6 +57,7 @@ public class DialogueManager : MonoBehaviour
         blackPanel.SetActive(true);
         animator.SetBool("isOpen", true);
 
+        hintButtonScript.HidePrompts();
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -292,5 +296,11 @@ public class DialogueManager : MonoBehaviour
         blackPanel.SetActive(false);
         animator.SetBool("isOpen", false);
         Time.timeScale = 1;
+
+        dialogue.sentences.Clear();
+        sentences.Clear();
+        dialogue.names.Clear();
+        names.Clear();
+
     }
 }
