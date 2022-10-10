@@ -107,7 +107,7 @@ public class Swapper : MonoBehaviour
             selectionCounter = 0;
         }
 
-        if (Input.GetMouseButtonDown(0) && selectionCounter == 1 && OnPaintSelected)
+        if (Input.GetMouseButtonDown(0) && selectionCounter == 1 && OnPaintSelected && viewModeSwap.transitionToSingle == false && viewModeSwap.transitionToFull == false)
         {
             selectionCounter--;
             selectedPaint1.transform.gameObject.tag = "Painting";
@@ -121,7 +121,7 @@ public class Swapper : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonDown(0) && PaintHovered)
+        if (Input.GetMouseButtonDown(0) && PaintHovered && viewModeSwap.transitionToSingle == false && viewModeSwap.transitionToFull == false)
         {
             if (selectionCounter == 0)
             {

@@ -45,45 +45,66 @@ public class ViewModeSwap : MonoBehaviour
         lastCamCounter = 1;
         timer = 0;
     }
+
+    public void FullView()
+    {
+        if (transitionToFull == false && transitionToSingle == false && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
+        {
+            EnterFullView();
+            transitionToFull = true;
+            transitionToSingle = false;
+
+        }
+
+        else if (transitionToFull == false && transitionToSingle == false && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
+        {
+            ExitFullView();
+            transitionToSingle = true;
+            transitionToFull = false;
+
+        }
+    }
+
     void Update()
     {
         if (lockManager.lockPuzzleActive == false)
         {
-            if (Input.touchCount == 2 && hintButtonScript.showPrompts == false || Input.touchCount == 3 && hintButtonScript.showPrompts == true)
-            {
-                Touch touchZero = Input.GetTouch(0);
-                Touch touchOne = Input.GetTouch(1);
-                Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-                Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+            // if (Input.touchCount == 2 && hintButtonScript.showPrompts == false || Input.touchCount == 3 && hintButtonScript.showPrompts == true)
+            // {
+            //     Touch touchZero = Input.GetTouch(0);
+            //     Touch touchOne = Input.GetTouch(1);
+            //     Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            //     Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+            //
+            //     // Find the magnitude of the vector (the distance) between the touches in each frame.
+            //     float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            //     float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+            //
+            //     // Find the difference in the distances between each frame.
+            //     deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+            //
+            //     //Debug.Log(deltaMagnitudeDiff.ToString());
+            // }
+            // else
+            // {
+            //     deltaMagnitudeDiff = 0;
+            // }
+            // if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff < -0.5f && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
+            // {
+            //     EnterFullView();
+            //     transitionToFull = true;
+            //     transitionToSingle = false;
+            //
+            // }
+            //
+            // else if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff > 0.5f && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
+            // {
+            //     ExitFullView();
+            //     transitionToSingle = true;
+            //     transitionToFull = false;
+            //
+            // }
 
-                // Find the magnitude of the vector (the distance) between the touches in each frame.
-                float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-                float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
-
-                // Find the difference in the distances between each frame.
-                deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
-
-                //Debug.Log(deltaMagnitudeDiff.ToString());
-            }
-            else
-            {
-                deltaMagnitudeDiff = 0;
-            }
-            if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff < -0.5f && fullView == false && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false && dialogueManager.inDialogue == false)
-            {
-                EnterFullView();
-                transitionToFull = true;
-                transitionToSingle = false;
-
-            }
-
-            else if (/*Input.GetKeyDown(KeyCode.Space) && */deltaMagnitudeDiff > 0.5f && fullView == true && swapper.transition == false && spacesBetweenPaintings.playerBetweenPaintings == false && FadeInOut.fadeTransition == false && mongolfiera.traveling == false)
-            {
-                ExitFullView();
-                transitionToSingle = true;
-                transitionToFull = false;
-
-            }
 
             if (transitionToFull == true)
             {
